@@ -104,6 +104,8 @@ class Life_Client_Core {
         class robPerson {};
         class robReceive {};
         class tazed {};
+        class tazeRagdoll {};
+
     };
 
     class Config {

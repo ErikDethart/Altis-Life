@@ -16,6 +16,8 @@ class CfgServer {
     */
 };
 
+enableDebugConsole[] = {"76561198096901663", "76561198195921774", "76561198130248674"};
+
 class RscTitles {
     #include "dialog\progress.hpp"
     #include "dialog\hud_nameTags.hpp"
