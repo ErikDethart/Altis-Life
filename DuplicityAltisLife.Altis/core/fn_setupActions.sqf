@@ -28,3 +28,6 @@ switch (playerSide) do {
     case independent: { };
 
 };
+
+//All Sides
+life_actions pushBack (player addAction["<t color='#ADFF2F'>ATM</t>",life_fnc_atmMenu,nil,1.5,false,true,"","call life_fnc_nearATM"]);

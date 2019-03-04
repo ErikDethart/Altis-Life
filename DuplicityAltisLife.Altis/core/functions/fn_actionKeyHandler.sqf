@@ -17,13 +17,6 @@ if (playerSide isEqualTo west && {player getVariable ["isEscorting",false]}) exi
     [] call life_fnc_copInteractionMenu;
 };
 
-if (LIFE_SETTINGS(getNumber,"global_ATM") isEqualTo 1) then{
-    //Check if the player is near an ATM.
-    if ((call life_fnc_nearATM) && {!dialog}) exitWith {
-        [] call life_fnc_atmMenu;
-    };
-};
-
 if (isNull _curObject) exitWith {
     if (_isWater) then {
         _fish = (nearestObjects[player,(LIFE_SETTINGS(getArray,"animaltypes_fish")),3]) select 0;

@@ -16031,7 +16031,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_NOTF_ATM"",life_fnc_atmMenu,"""",0,false,false,"""",' isNull objectParent player && player distance _target < 4 '];";
+				init="this enableSimulation false; this allowDamage false;";
 			};
 			id=545;
 			type="Land_Atm_02_F";
@@ -16073,7 +16073,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_NOTF_ATM"",life_fnc_atmMenu,"""",0,false,false,"""",' isNull objectParent player && player distance _target < 4 '];";
+				init="this enableSimulation false; this allowDamage false;";
 			};
 			id=546;
 			type="Land_Atm_02_F";
@@ -16114,7 +16114,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_NOTF_ATM"",life_fnc_atmMenu,"""",0,false,false,"""",' isNull objectParent player && player distance _target < 4 '];";
+				init="this enableSimulation false; this allowDamage false;";
 			};
 			id=547;
 			type="Land_Atm_02_F";
@@ -16156,7 +16156,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_NOTF_ATM"",life_fnc_atmMenu,"""",0,false,false,"""",' isNull objectParent player && player distance _target < 4 '];";
+				init="this enableSimulation false; this allowDamage false;";
 			};
 			id=548;
 			type="Land_Atm_02_F";
@@ -16198,7 +16198,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_NOTF_ATM"",life_fnc_atmMenu,"""",0,false,false,"""",' isNull objectParent player && player distance _target < 4 '];";
+				init="this enableSimulation false; this allowDamage false;";
 			};
 			id=549;
 			type="Land_Atm_02_F";
@@ -16240,7 +16240,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_NOTF_ATM"",life_fnc_atmMenu,"""",0,false,false,"""",' isNull objectParent player && player distance _target < 4 '];";
+				init="this enableSimulation false; this allowDamage false;";
 			};
 			id=550;
 			type="Land_Atm_02_F";
@@ -16281,7 +16281,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_NOTF_ATM"",life_fnc_atmMenu,"""",0,false,false,"""",' isNull objectParent player && player distance _target < 4 '];";
+				init="this enableSimulation false; this allowDamage false;";
 			};
 			id=551;
 			type="Land_Atm_02_F";
@@ -16323,7 +16323,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_NOTF_ATM"",life_fnc_atmMenu,"""",0,false,false,"""",' isNull objectParent player && player distance _target < 4 '];";
+				init="this enableSimulation false; this allowDamage false;";
 				name="a1";
 			};
 			id=552;
@@ -16366,7 +16366,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_NOTF_ATM"",life_fnc_atmMenu,"""",0,false,false,"""",' isNull objectParent player && player distance _target < 4 '];";
+				init="this enableSimulation false; this allowDamage false;";
 			};
 			id=553;
 			type="Land_Atm_02_F";
@@ -16408,7 +16408,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_NOTF_ATM"",life_fnc_atmMenu,"""",0,false,false,"""",' isNull objectParent player && player distance _target < 4 '];";
+				init="this enableSimulation false; this allowDamage false;";
 			};
 			id=554;
 			type="Land_Atm_02_F";
@@ -16450,7 +16450,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_NOTF_ATM"",life_fnc_atmMenu,"""",0,false,false,"""",' isNull objectParent player && player distance _target < 4 '];";
+				init="this enableSimulation false; this allowDamage false;";
 			};
 			id=555;
 			type="Land_Atm_02_F";
@@ -16492,7 +16492,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_NOTF_ATM"",life_fnc_atmMenu,"""",0,false,false,"""",' isNull objectParent player && player distance _target < 4 '];";
+				init="this enableSimulation false; this allowDamage false;";
 			};
 			id=556;
 			type="Land_Atm_02_F";
@@ -16534,7 +16534,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_NOTF_ATM"",life_fnc_atmMenu,"""",0,false,false,"""",' isNull objectParent player && player distance _target < 4 '];";
+				init="this enableSimulation false; this allowDamage false;";
 			};
 			id=557;
 			type="Land_Atm_02_F";
@@ -16576,7 +16576,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_NOTF_ATM"",life_fnc_atmMenu,"""",0,false,false,"""",' isNull objectParent player && player distance _target < 4 '];";
+				init="this enableSimulation false; this allowDamage false;";
 			};
 			id=558;
 			type="Land_Atm_02_F";
@@ -16618,7 +16618,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_NOTF_ATM"",life_fnc_atmMenu,"""",0,false,false,"""",' isNull objectParent player && player distance _target < 4 '];";
+				init="this enableSimulation false; this allowDamage false;";
 			};
 			id=559;
 			type="Land_Atm_02_F";
@@ -16660,7 +16660,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_NOTF_ATM"",life_fnc_atmMenu,"""",0,false,false,"""",' isNull objectParent player && player distance _target < 4 '];";
+				init="this enableSimulation false; this allowDamage false;";
 			};
 			id=560;
 			type="Land_Atm_02_F";
@@ -16702,7 +16702,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_NOTF_ATM"",life_fnc_atmMenu,"""",0,false,false,"""",' isNull objectParent player && player distance _target < 4 '];";
+				init="this enableSimulation false; this allowDamage false;";
 			};
 			id=561;
 			type="Land_Atm_02_F";
@@ -19217,7 +19217,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_NOTF_ATM"",life_fnc_atmMenu,"""",0,false,false,"""",' isNull objectParent player && player distance _target < 4 '];";
+				init="this enableSimulation false; this allowDamage false;";
 			};
 			id=621;
 			type="Land_Atm_02_F";
@@ -19259,7 +19259,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_NOTF_ATM"",life_fnc_atmMenu,"""",0,false,false,"""",' isNull objectParent player && player distance _target < 4 '];";
+				init="this enableSimulation false; this allowDamage false;";
 			};
 			id=622;
 			type="Land_Atm_02_F";
@@ -19301,7 +19301,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_NOTF_ATM"",life_fnc_atmMenu,"""",0,false,false,"""",' isNull objectParent player && player distance _target < 4 '];";
+				init="this enableSimulation false; this allowDamage false;";
 			};
 			id=623;
 			type="Land_Atm_02_F";
@@ -19343,7 +19343,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_NOTF_ATM"",life_fnc_atmMenu,"""",0,false,false,"""",' isNull objectParent player && player distance _target < 4 '];";
+				init="this enableSimulation false; this allowDamage false;";
 			};
 			id=624;
 			type="Land_Atm_02_F";
@@ -19800,7 +19800,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_NOTF_ATM"",life_fnc_atmMenu,"""",0,false,false,"""",' isNull objectParent player && player distance _target < 4 '];";
+				init="this enableSimulation false; this allowDamage false;";
 			};
 			id=635;
 			type="Land_Atm_02_F";
@@ -19841,7 +19841,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_NOTF_ATM"",life_fnc_atmMenu,"""",0,false,false,"""",' isNull objectParent player && player distance _target < 4 '];";
+				init="this enableSimulation false; this allowDamage false;";
 			};
 			id=636;
 			type="Land_Atm_01_F";
@@ -21081,7 +21081,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_NOTF_ATM"",life_fnc_atmMenu,"""",0,false,false,"""",' isNull objectParent player && player distance _target < 4 '];";
+				init="this enableSimulation false; this allowDamage false;";
 			};
 			id=666;
 			type="Land_Atm_01_F";
@@ -22319,7 +22319,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_NOTF_ATM"",life_fnc_atmMenu,"""",0,false,false,"""",' isNull objectParent player && player distance _target < 4 '];";
+				init="this enableSimulation false; this allowDamage false;";
 			};
 			id=696;
 			type="Land_Atm_01_F";
