@@ -35,7 +35,7 @@ if (_projectile in ["B_762x51_Ball","762x54_Ball"] && "acc_pointer_IR" in (prima
 };
 
 //Handle The MX
-if (_projectile in ["B_65x39_Caseless"] && ["30Rnd_65x39_caseless_mag"] in primaryWeaponMagazine _source) then {
+if (currentMagazine _source == "30Rnd_65x39_caseless_mag") then {
   if (life_isknocked || (_unit getVariable ["restrained",false])) exitWith {
     [] spawn life_fnc_hudUpdate;
     _damage = 0;
