@@ -1,46 +1,65 @@
 #include "..\..\script_macros.hpp"
+
 /*
     File: fn_handleDamage.sqf
     Author: Bryan "Tonic" Boardwine
-
     Description:
-    Handles damage, specifically for handling the 'tazer' pistol and nothing else.
+    Handles Rubber Bullets
 */
+
+//Vars And Stuff
 params [
-    ["_unit",objNull,[objNull]],
-    ["_part","",[""]],
-    ["_damage",0,[0]],
-    ["_source",objNull,[objNull]],
-    ["_projectile","",[""]],
-    ["_index",0,[0]]
+  ["_unit",objNull,[objNull]],
+  ["_part","",[""]],
+  ["_damage",0,[0]],
+  ["_source",objNull,[objNull]],
+  ["_projectile","",[""]],
+  ["_index",0,[0]]
 ];
 
-if (!isNull _source && {_source != _unit}) then {
-    if (side _source isEqualTo west) then {
-        if (currentWeapon _source in ["hgun_P07_snds_F","arifle_SDAR_F"] && _projectile in ["B_9x21_Ball","B_556x45_dual"]) then {
-            if (alive _unit) then {
-                if (playerSide isEqualTo civilian && {!life_istazed}) then {
-                    private _distance = 35;
-                    if (_projectile isEqualTo "B_556x45_dual") then {_distance = 100};
-                    if (_unit distance _source < _distance) then {
-                        if !(isNull objectParent _unit) then {
-                            if (typeOf (vehicle _unit) isEqualTo "B_Quadbike_01_F") then {
-                                _unit action ["Eject",vehicle _unit];
-                                [_unit,_source] spawn life_fnc_tazed;
-                            };
-                        } else {
-                            [_unit,_source] spawn life_fnc_tazed;
-                        };
-                    };
-                };
-                _damage = if (_part isEqualTo "") then {
-                    damage _unit;
-                } else { 
-                    _unit getHit _part;
-                };
-            };
-        };
-    };
+//Check Our Projectile
+if (isNull _source || _source isEqualTo _unit || _unit getVariable["Revive",false]) exitWith {};
+
+//Handle The 7.62's
+if (_projectile in ["B_762x51_Ball","762x54_Ball"] && "acc_pointer_IR" in (primaryWeaponItems _source)) then {
+  if (life_isknocked || (_unit getVariable ["restrained",false])) exitWith {
+    [] spawn life_fnc_hudUpdate;
+    _damage = 0;
+    _damage;
+  };
+  if ((((getDammage _unit) + _damage) >= 0.90)) then {
+    _damage = 0;
+    if (typeOf (vehicle player) == "B_Quadbike_01_F") then { player action ["Eject",vehicle player]; };
+    [_unit,_source] spawn life_fnc_tazed;
+  };
+};
+
+//Handle The MX
+if (_projectile in ["B_65x39_Caseless"] && ["30Rnd_65x39_caseless_mag"] in primaryWeaponMagazine _source) then {
+  if (life_isknocked || (_unit getVariable ["restrained",false])) exitWith {
+    [] spawn life_fnc_hudUpdate;
+    _damage = 0;
+    _damage;
+  };
+  if ((((getDammage _unit) + _damage) >= 0.90)) then {
+    _damage = 0;
+    if (typeOf (vehicle player) == "B_Quadbike_01_F") then { player action ["Eject",vehicle player]; };
+    [_unit,_source] spawn life_fnc_tazed;
+  };
+};
+
+//Handle Other Rubbers
+if (_projectile in LIFE_SETTINGS(getArray,"rubber_whitelist")) then {
+  if (life_isknocked || (_unit getVariable ["restrained",false])) exitWith {
+    [] spawn life_fnc_hudUpdate;
+    _damage = 0;
+    _damage;
+  };
+  if ((((getDammage _unit) + _damage) >= 0.90)) then {
+    _damage = 0;
+    if (typeOf (vehicle player) == "B_Quadbike_01_F") then { player action ["Eject",vehicle player]; };
+    [_unit,_source] spawn life_fnc_tazed;
+  };
 };
 
 [] spawn life_fnc_hudUpdate;
