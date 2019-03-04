@@ -20,7 +20,7 @@ class Life_atm_management {
             x = 0.35;
             y = 0.2 + (11 / 250);
             w = 0.3;
-            h = 0.652 - (22 / 250) - (1 / 25);
+            h = 0.652 - (22 / 250);
         };
     };
 
@@ -38,6 +38,12 @@ class Life_atm_management {
             colorBackground[] = {0, 0, 0, 0};
             idc = -1;
             text = "$STR_ATM_Title";
+            class attributes {
+				font = "PuristaLight";
+				color = "#E5E5E5";
+				align = "center";
+				shadow = "true";
+			}
             x = 0.35;
             y = 0.2;
             w = 0.6;
@@ -47,6 +53,12 @@ class Life_atm_management {
         class WithdrawButton: Life_RscButtonMenu {
             idc = -1;
             text = "$STR_ATM_Withdraw";
+            class attributes {
+				font = "PuristaLight";
+				color = "#E5E5E5";
+				align = "center";
+				shadow = "true";
+			}
             colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
             onButtonClick = "[] call life_fnc_bankWithdraw";
             x = 0.425;
@@ -58,6 +70,12 @@ class Life_atm_management {
         class DepositButton: Life_RscButtonMenu {
             idc = -1;
             text = "$STR_ATM_Deposit";
+            class attributes {
+				font = "PuristaLight";
+				color = "#E5E5E5";
+				align = "center";
+				shadow = "true";
+			}
             colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
             onButtonClick = "[] call life_fnc_bankDeposit";
             x = 0.425;
@@ -87,6 +105,12 @@ class Life_atm_management {
         class TransferButton: Life_RscButtonMenu {
             idc = -1;
             text = "$STR_ATM_Transfer";
+            class attributes {
+				font = "PuristaLight";
+				color = "#E5E5E5";
+				align = "center";
+				shadow = "true";
+			}
             colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
             onButtonClick = "[] call life_fnc_bankTransfer";
             x = 0.425;
@@ -98,6 +122,12 @@ class Life_atm_management {
         class DepositAllButton : TransferButton {
             idc = 2705;
             text = "$STR_ATM_DepositAll";
+            class attributes {
+				font = "PuristaLight";
+				color = "#E5E5E5";
+				align = "center";
+				shadow = "true";
+			}
             colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
             onButtonClick = "[] call life_fnc_depositAll";
             x = 0.365;
@@ -105,12 +135,34 @@ class Life_atm_management {
             w = 0.275;
         };
 
+        class DebitCardButton : TransferButton {
+            idc = 2705;
+            text = "Get Debit Card";
+            class attributes {
+				font = "PuristaLight";
+				color = "#E5E5E5";
+				align = "center";
+				shadow = "true";
+			}
+            colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
+            onButtonClick = "[] call life_fnc_getDebitCard";
+            x = 0.365;
+            y = 0.752;
+            w = 0.275;
+        };
+
         class CloseButtonKey: Life_RscButtonMenu {
             idc = -1;
             text = "$STR_Global_Close";
+            class attributes {
+				font = "PuristaLight";
+				color = "#E5E5E5";
+				align = "center";
+				shadow = "true";
+			}
             onButtonClick = "closeDialog 0;";
             x = 0.35;
-            y = 0.812 - (1 / 25);
+            y = 0.812;
             w = (6.25 / 40);
             h = (1 / 25);
         };

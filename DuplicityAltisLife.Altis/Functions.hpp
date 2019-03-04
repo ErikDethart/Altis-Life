@@ -155,6 +155,7 @@ class Life_Client_Core {
         class gangDeposit {};
         class depositAll {};
         class garageLBChange {};
+        class getDebitCard {};
         class impoundMenu {};
         class progressBar {};
         class safeFix {};

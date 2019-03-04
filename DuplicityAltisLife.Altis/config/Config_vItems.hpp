@@ -855,4 +855,15 @@ class VirtualItems {
         edible = 100;
         icon = "icons\ico_muttonLeg.paa";
     };
+
+    class debitCard {
+        variable = "debitCard";
+        displayName = "STR_Item_DebitCard";
+        weight = 0;
+        buyPrice = -1;
+        sellPrice = -1;
+        illegal = false;
+        edible = -1;
+        icon = "icons\ico_pickaxe.paa";
+    };
 };
