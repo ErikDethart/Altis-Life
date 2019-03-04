@@ -153,7 +153,7 @@ class Life_Client_Core {
         class bankWithdraw {};
         class displayHandler {};
         class gangDeposit {};
-        class gangWithdraw {};
+        class depositAll {};
         class garageLBChange {};
         class impoundMenu {};
         class progressBar {};
