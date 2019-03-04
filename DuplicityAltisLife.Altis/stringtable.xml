@@ -979,16 +979,16 @@
             <Portuguese>Depositar</Portuguese>
             <Polish>Deopozyt</Polish>
         </Key>
-        <Key ID="STR_ATM_WithdrawGang">
-            <Original>Withdraw: Gang</Original>
-            <Czech>Odstoupit: Gang</Czech>
-            <French>Retirer: Gang</French>
-            <Spanish>Retirar: Pandilla</Spanish>
+        <Key ID="STR_ATM_DepositAll">
+            <Original>Deposit All</Original>
+            <Czech></Czech>
+            <French></French>
+            <Spanish></Spanish>
             <Russian></Russian>
-            <Portuguese>Sacar: gangue</Portuguese>
-            <Italian>Ritira: Gang</Italian>
-            <Polish>Wycofaj: Gang</Polish>
-            <German>Abheben: Gang</German>
+            <Portuguese></Portuguese>
+            <Italian></Italian>
+            <Polish></Polish>
+            <German></German>
         </Key>
         <Key ID="STR_ATM_DepositGang">
             <Original>Deposit: Gang</Original>
@@ -1199,8 +1199,8 @@
             <Portuguese>Você depositou R$%1 na sua conta bancária</Portuguese>
             <Polish>Zdeponowałeś na koncie bankowym $%1</Polish>
         </Key>
-        <Key ID="STR_ATM_DepositSuccessG">
-            <Original>You have deposited $%1 into your gang's bank account</Original>
+        <Key ID="STR_ATM_DepositSuccessAll">
+            <Original>You have deposited $%1 into your bank account</Original>
             <Czech>Máte uloženy $%1 na bankovní účet svého gangu</Czech>
             <Spanish>Has depositado $%1 en la cuenta de tu pandilla</Spanish>
             <Russian></Russian>
