@@ -7,16 +7,25 @@
 	//Amount (number)
 	//Allow Debit (bool)
 //Return: (bool) will the transaction be successful
-private _return;
+private _return = false;
 params [
-	[_amount, 0],
-	[_allowDebit, true]
+	["_amount", 0],
+	["_allowDebit", true]
 ];
 
+systemchat format ["Amount: %1", str(_amount)];
+systemchat format ["Allow Debit: %1", str(_allowDebit)];
+
 if (_allowDebit && life_inv_debitCard > 0) then {
-	_return = (_amount <= (BANK + CASH));
+	if ((BANK + CASH) >= _amount) then {
+		_return = true;
+	};
 } else {
-	_return = (_amount <= CASH);
+	if (CASH >= _amount) then {
+		_return = true;
+	};
 };
+
+systemchat format ["Return: %1", str(_return)];
 
 _return;

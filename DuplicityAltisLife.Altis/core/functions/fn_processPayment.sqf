@@ -12,8 +12,8 @@ private _return = false;
 private _oldCash = CASH;
 
 params [
-	[_amount, 0],
-	[_allowDebit, true]
+	["_amount", 0],
+	["_allowDebit", true]
 ];
 
 if ([_amount, _allowDebit] call life_fnc_checkFunds) then {
