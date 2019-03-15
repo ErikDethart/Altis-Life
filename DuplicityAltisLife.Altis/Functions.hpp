@@ -188,6 +188,7 @@ class Life_Client_Core {
         class fetchCfgDetails {};
         class fetchDeadGear {};
         class fetchVehInfo {};
+        class formatName {};
         class isDamaged {};
         class giveDiff {};
         class handleDamage {};
@@ -208,6 +209,7 @@ class Life_Client_Core {
         class numberText {};
         class onFired {};
         class onTakeItem {};
+        class playerMarker{};
         class playerSkins {};
         class playerTags {};
         class postNewsBroadcast {};
