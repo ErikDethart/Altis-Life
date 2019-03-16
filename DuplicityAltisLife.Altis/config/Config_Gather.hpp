@@ -72,9 +72,9 @@ Example 2:
     class Minerals {
         class copper_unrefined {
             amount = 2;
-            zones[] = { "low_yield_1" };
+            zones[] = { "copper_mine" };
             item = "pickaxe";
-            mined[] = { {"copper_unrefined",0,50},{"iron_unrefined",50,85},{"diamond_uncut",85,100} };
+            mined[] = {"copper_unrefined"};
             zoneSize = 30;
         };
 
