@@ -276,15 +276,19 @@ class Life_Client_Core {
         class storageBox {};
     };
 
-    class Medical_System {
-        file = "core\medical";
-        class deathScreen {};
+    class Medic {
+        file = "core\medic";
         class medicLights {};
         class medicLoadout {};
         class medicMarkers {};
-        class medicRequest {};
         class medicSiren {};
         class medicSirenLights {};
+    };
+
+    class Medical_System {
+        file = "core\medical";
+        class deathScreen {};
+        class medicRequest {};
         class onPlayerKilled {};
         class onPlayerRespawn {};
         class requestMedic {};
