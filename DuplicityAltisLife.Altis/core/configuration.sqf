@@ -84,9 +84,13 @@ life_vehicles = [];
 /*
     Master Array of items?
 */
+
+life_itemModels = [];
+
 //Setup variable inv vars.
 {
     missionNamespace setVariable [ITEM_VARNAME(configName _x), 0];
+    life_itemModels pushBackUnique ITEM_MODEL(configName _x);
 } forEach ("true" configClasses (missionConfigFile >> "VirtualItems"));
 
 /* Setup the BLAH! */
