@@ -166,8 +166,33 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         icon = "icons\ico_defibrillator.paa";
-        worldModel = "Land_Suitcase_F";
+        worldModel = "Land_Defibrillator_F";
     };
+
+    class firstAidKit {
+        variable = "firstAidKit";
+        displayName = "STR_Item_Defibrillator";
+        weight = 4;
+        buyPrice = 900;
+        sellPrice = 450;
+        illegal = false;
+        edible = -1;
+        icon = "icons\ico_defibrillator.paa";
+        worldModel = "Land_Defibrillator_F";
+    };
+
+    class defibrillator {
+        variable = "defibrillator";
+        displayName = "STR_Item_Defibrillator";
+        weight = 4;
+        buyPrice = 900;
+        sellPrice = 450;
+        illegal = false;
+        edible = -1;
+        icon = "icons\ico_defibrillator.paa";
+        worldModel = "Land_Defibrillator_F";
+    };
+    
 
     class toolkit {
         variable = "toolkit";
@@ -178,7 +203,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         icon = "\a3\weapons_f\items\data\UI\gear_toolkit_ca.paa";
-        worldModel = "Land_Suitcase_F";
+        worldModel = "Land_Wrench_F";
     };
 
     class fuelEmpty {
@@ -226,7 +251,7 @@ class VirtualItems {
         illegal = true;
         edible = -1;
         icon = "icons\ico_lockpick.paa";
-        worldModel = "Land_Suitcase_F";
+        worldModel = "Land_Screwdriver_V1_F";
     };
 
     class goldbar {
