@@ -160,9 +160,9 @@ class VirtualItems {
     class defibrillator {
         variable = "defibrillator";
         displayName = "STR_Item_Defibrillator";
-        weight = 4;
-        buyPrice = 900;
-        sellPrice = 450;
+        weight = 20;
+        buyPrice = 1000;
+        sellPrice = 500;
         illegal = false;
         edible = -1;
         icon = "icons\ico_defibrillator.paa";
@@ -171,28 +171,51 @@ class VirtualItems {
 
     class firstAidKit {
         variable = "firstAidKit";
-        displayName = "STR_Item_Defibrillator";
-        weight = 4;
-        buyPrice = 900;
-        sellPrice = 450;
+        displayName = "STR_Item_FirstAid";
+        weight = 1;
+        buyPrice = 50;
+        sellPrice = 25;
         illegal = false;
         edible = -1;
-        icon = "icons\ico_defibrillator.paa";
-        worldModel = "Land_Defibrillator_F";
+        icon = "\a3\weapons_f\items\data\UI\gear_FirstAidKit_ca.paa";
+        worldModel = "Land_Bandage_F";
     };
 
-    class defibrillator {
-        variable = "defibrillator";
-        displayName = "STR_Item_Defibrillator";
-        weight = 4;
-        buyPrice = 900;
-        sellPrice = 450;
+    class medKit {
+        variable = "medKit";
+        displayName = "STR_Item_MedKit";
+        weight = 10;
+        buyPrice = 750;
+        sellPrice = 375;
+        illegal = false;
+        edible = -1;
+        icon = "\a3\weapons_f\items\data\UI\gear_medikit_ca.paa";
+        worldModel = "Land_FirstAidKit_01_closed_F";
+    };
+    
+    class bloodBag {
+        variable = "bloodBag";
+        displayName = "STR_Item_BloodBag";
+        weight = 3;
+        buyPrice = 250;
+        sellPrice = 125;
         illegal = false;
         edible = -1;
         icon = "icons\ico_defibrillator.paa";
-        worldModel = "Land_Defibrillator_F";
+        worldModel = "Land_BloodBag_F";
     };
-    
+
+    class adrenaline {
+        variable = "adrenaline";
+        displayName = "STR_Item_Adrenaline";
+        weight = 1;
+        buyPrice = 1000;
+        sellPrice = 500;
+        illegal = false;
+        edible = -1;
+        icon = "icons\ico_defibrillator.paa";
+        worldModel = "MedicalGarbage_01_Injector_F";
+    };
 
     class toolkit {
         variable = "toolkit";
