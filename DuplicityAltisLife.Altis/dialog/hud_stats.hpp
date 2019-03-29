@@ -19,7 +19,10 @@ class playerHUD {
         Life_RscProgress_HUDWater,
         Life_RscStructuredText_HUDFood,
         Life_RscStructuredText_HUDHealth,
-        Life_RscStructuredText_HUDWater
+        Life_RscStructuredText_HUDWater,
+        Life_RscPicture_SaveBackground,
+        Life_RscPicture_DBIcon,
+        Life_RscStructuredText_SaveText
     };
 
     /* Progress Bars */
@@ -70,5 +73,33 @@ class playerHUD {
     class Life_RscStructuredText_HUDWater: Life_RscStructuredText_HUDCommon {
         idc = 1202;
         y = 1.1;
+    };
+
+    /* Sync Notification */
+    class Life_RscPicture_SaveBackground: Life_RscPicture {
+        idc = 1300;
+        text = "#(argb,8,8,3)color(0.1,0.1,0.1,0.6)";
+        x = (-0.7125 - 0.25);
+        y = 0;
+        w = 0.25;
+        h = 0.08;
+    };
+
+    class Life_RscPicture_DBIcon: Life_RscPicture {
+        idc = 1301;
+        text = "icons\ico_saveNOTF.paa";
+        x = (-0.5125 - 0.25);
+        y = 0;
+        w = 0.05;
+        h = 0.08;
+    };
+
+    class Life_RscStructuredText_SaveText: Life_RscStructuredText {
+        idc = 1302;
+        text = "Player info synced to database.";
+        x = (-0.7125 - 0.25);
+        y = 0;
+        w = 0.2;
+        h = 0.08;
     };
 };
