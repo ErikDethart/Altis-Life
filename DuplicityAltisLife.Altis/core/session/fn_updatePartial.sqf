@@ -61,3 +61,5 @@ if (life_HC_isActive) then {
 } else {
     _packet remoteExecCall ["DB_fnc_updatePartial",RSERV];
 };
+
+[] spawn life_fnc_syncNotify;
