@@ -35,4 +35,3 @@ player linkItem "ItemGPS";
 player linkItem "O_NVGoggles_urb_F";
 
 [] call life_fnc_playerSkins;
-[] call life_fnc_saveGear;

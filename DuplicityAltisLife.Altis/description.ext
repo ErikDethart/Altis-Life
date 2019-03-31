@@ -60,6 +60,12 @@ class CfgSounds {
         titles[] = {};
     };
 
+    class save {
+        name = "save";
+        sound[] = {"\sounds\save.ogg", 1.0, 1};
+        titles[] = {};
+    };
+
     class harvest {
         name = "harvest";
         sound[] = {"\sounds\harvest.ogg", 1.0, 1};

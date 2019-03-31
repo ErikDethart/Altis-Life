@@ -103,8 +103,7 @@ switch (playerSide) do {
     };
 };
 
-life_gear = _this select 8;
-call life_fnc_loadGear;
+[(_this select 8)]call life_fnc_loadGear;
 
 if (count (_this select (_count - 1)) > 0) then {
     {life_vehicles pushBack _x;} forEach (_this select (_count - 1));
