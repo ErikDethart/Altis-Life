@@ -6,19 +6,46 @@
     Updates ALL player information in the database.
     Information gets passed here from the client side file: core\session\fn_updateRequest.sqf
 */
-private ["_uid","_side","_cash","_bank","_licenses","_gear","_stats","_name","_alive","_position","_query","_thread"];
-_uid = [_this,0,"",[""]] call BIS_fnc_param;
-_name = [_this,1,"",[""]] call BIS_fnc_param;
-_side = [_this,2,sideUnknown,[civilian]] call BIS_fnc_param;
-_cash = [_this,3,0,[0]] call BIS_fnc_param;
-_bank = [_this,4,5000,[0]] call BIS_fnc_param;
-_licenses = [_this,5,[],[[]]] call BIS_fnc_param;
-_gear = [_this,6,[],[[]]] call BIS_fnc_param;
-_stats = [_this,7,[100,100],[[]]] call BIS_fnc_param;
-_alive = [_this,9,false,[true]] call BIS_fnc_param;
-_position = [_this,10,[],[[]]] call BIS_fnc_param;
+private "_query";
 
-//Get to those error checks.
+params[
+    ["_unit", objNull, [objNull]],
+    ["_cash", 0, [0]],
+    ["_bank", 0, [0]],
+    ["_hunger", 0, [0]],
+    ["_thirst", 0, [0]],
+    ["_arrested", false, [true]],
+    ["_licenses", [], [[]]],
+    ["_vItems", [], [[]]]
+];
+
+private _uid = getPlayerUID _unit;
+private _name = name _unit;
+private _side = side group _unit;
+private _stats = [_hunger, _thirst, (damage _unit)];
+private _gear = [(getUnitLoadout _unit), _vItems];
+private _alive = alive _unit;
+private _position = getPosATL _unit;
+
+
+//Troubleshooting
+diag_log("----------------------sync data-----------------------");
+diag_log format ["Unit: %1", str(_unit)];
+diag_log format ["Cash: %1", str(_cash)];
+diag_log format ["Bank: %1", str(_bank)];
+diag_log format ["Stats: %1", str(_stats)];
+diag_log format ["Arrested: %1", str(_arrested)];
+diag_log format ["Licenses: %1", str(_licenses)];
+diag_log format ["Gear: %1", str(_gear)];
+diag_log format ["UID: %1", str(_uid)];
+diag_log format ["Name: %1", str(_name)];
+diag_log format ["side: %1", str(_side)];
+diag_log format ["alive: %1", str(_alive)];
+diag_log format ["position: %1", str(_position)];
+diag_log ("-------------------------sync data end-------------------");
+
+
+//Error Checks
 if ((_uid isEqualTo "") || (_name isEqualTo "")) exitWith {};
 
 //Parse and setup some data.
@@ -56,9 +83,11 @@ _playtime_update = [_playtime_update] call DB_fnc_mresArray;
 
 switch (_side) do {
     case west: {_query = format ["UPDATE players SET name='%1', cash='%2', bankacc='%3', cop_gear='%4', cop_licenses='%5', cop_stats='%6', playtime='%7' WHERE pid='%8'",_name,_cash,_bank,_gear,_licenses,_stats,_playtime_update,_uid];};
-    case civilian: {_query = format ["UPDATE players SET name='%1', cash='%2', bankacc='%3', civ_licenses='%4', civ_gear='%5', arrested='%6', civ_stats='%7', civ_alive='%8', civ_position='%9', playtime='%10' WHERE pid='%11'",_name,_cash,_bank,_licenses,_gear,[_this select 8] call DB_fnc_bool,_stats,[_alive] call DB_fnc_bool,_position,_playtime_update,_uid];};
+    case civilian: {_query = format ["UPDATE players SET name='%1', cash='%2', bankacc='%3', civ_licenses='%4', civ_gear='%5', arrested='%6', civ_stats='%7', civ_alive='%8', civ_position='%9', playtime='%10' WHERE pid='%11'",_name,_cash,_bank,_licenses,_gear,[_arrested] call DB_fnc_bool,_stats,[_alive] call DB_fnc_bool,_position,_playtime_update,_uid];};
     case independent: {_query = format ["UPDATE players SET name='%1', cash='%2', bankacc='%3', med_licenses='%4', med_gear='%5', med_stats='%6', playtime='%7' WHERE pid='%8'",_name,_cash,_bank,_licenses,_gear,_stats,_playtime_update,_uid];};
 };
 
+//Troubleshooting
+diag_log format ["Sending DB query : %1", _query];
 
 _queryResult = [_query,1] call DB_fnc_asyncCall;

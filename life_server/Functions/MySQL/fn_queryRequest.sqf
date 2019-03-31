@@ -67,9 +67,11 @@ for "_i" from 0 to (count _old)-1 do {
 
 _queryResult set[6,_old];
 
+//Gear
 _new = [(_queryResult select 8)] call DB_fnc_mresToArray;
 if (_new isEqualType "") then {_new = call compile format ["%1", _new];};
 _queryResult set[8,_new];
+
 //Parse data for specific side.
 switch (_side) do {
     case west: {
