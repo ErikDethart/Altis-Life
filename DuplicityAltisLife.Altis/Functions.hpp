@@ -167,6 +167,7 @@ class Life_Client_Core {
         class spawnMenu {};
         class spawnPointCfg {};
         class spawnPointSelected {};
+        class syncNotify {};
         class unimpound {};
         class vehicleGarage {};
         class wireTransfer {};
@@ -216,7 +217,6 @@ class Life_Client_Core {
         class receiveItem {};
         class receiveMoney {};
         class revealObjects {};
-        class saveGear {};
         class simDisable {};
         class stripDownPlayer {};
         class teleport {};
