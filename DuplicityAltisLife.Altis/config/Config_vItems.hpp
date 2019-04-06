@@ -154,17 +154,67 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         icon = "icons\ico_pickaxe.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     class defibrillator {
         variable = "defibrillator";
         displayName = "STR_Item_Defibrillator";
-        weight = 4;
-        buyPrice = 900;
-        sellPrice = 450;
+        weight = 20;
+        buyPrice = 1000;
+        sellPrice = 500;
         illegal = false;
         edible = -1;
         icon = "icons\ico_defibrillator.paa";
+        worldModel = "Land_Defibrillator_F";
+    };
+
+    class firstAidKit {
+        variable = "firstAidKit";
+        displayName = "STR_Item_FirstAid";
+        weight = 1;
+        buyPrice = 50;
+        sellPrice = 25;
+        illegal = false;
+        edible = -1;
+        icon = "\a3\weapons_f\items\data\UI\gear_FirstAidKit_ca.paa";
+        worldModel = "Land_Bandage_F";
+    };
+
+    class medKit {
+        variable = "medKit";
+        displayName = "STR_Item_MedKit";
+        weight = 10;
+        buyPrice = 750;
+        sellPrice = 375;
+        illegal = false;
+        edible = -1;
+        icon = "\a3\weapons_f\items\data\UI\gear_medikit_ca.paa";
+        worldModel = "Land_FirstAidKit_01_closed_F";
+    };
+    
+    class bloodBag {
+        variable = "bloodBag";
+        displayName = "STR_Item_BloodBag";
+        weight = 3;
+        buyPrice = 250;
+        sellPrice = 125;
+        illegal = false;
+        edible = -1;
+        icon = "icons\ico_defibrillator.paa";
+        worldModel = "Land_BloodBag_F";
+    };
+
+    class adrenaline {
+        variable = "adrenaline";
+        displayName = "STR_Item_Adrenaline";
+        weight = 1;
+        buyPrice = 1000;
+        sellPrice = 500;
+        illegal = false;
+        edible = -1;
+        icon = "icons\ico_defibrillator.paa";
+        worldModel = "MedicalGarbage_01_Injector_F";
     };
 
     class toolkit {
@@ -176,6 +226,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         icon = "\a3\weapons_f\items\data\UI\gear_toolkit_ca.paa";
+        worldModel = "Land_Wrench_F";
     };
 
     class fuelEmpty {
@@ -187,6 +238,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         icon = "icons\ico_fuelEmpty.paa";
+        worldModel = "Land_CanisterFuel_F";
     };
 
     class fuelFull {
@@ -198,6 +250,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         icon = "icons\ico_fuel.paa";
+        worldModel = "Land_CanisterFuel_F";
     };
 
     class spikeStrip {
@@ -209,6 +262,7 @@ class VirtualItems {
         illegal = true;
         edible = -1;
         icon = "icons\ico_spikeStrip.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     class lockpick {
@@ -220,6 +274,7 @@ class VirtualItems {
         illegal = true;
         edible = -1;
         icon = "icons\ico_lockpick.paa";
+        worldModel = "Land_Screwdriver_V1_F";
     };
 
     class goldbar {
@@ -231,6 +286,7 @@ class VirtualItems {
         illegal = true;
         edible = -1;
         icon = "icons\ico_goldBar.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     class blastingcharge {
@@ -242,6 +298,7 @@ class VirtualItems {
         illegal = true;
         edible = -1;
         icon = "icons\ico_blastingCharge.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     class boltcutter {
@@ -253,6 +310,7 @@ class VirtualItems {
         illegal = true;
         edible = -1;
         icon = "icons\ico_boltCutter.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     class defusekit {
@@ -264,6 +322,7 @@ class VirtualItems {
         illegal = true;
         edible = -1;
         icon = "icons\ico_defuseKit.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     class storagesmall {
@@ -275,6 +334,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         icon = "icons\ico_storageSmall.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     class storagebig {
@@ -286,6 +346,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         icon = "icons\ico_storageBig.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     //Mined Items
@@ -298,6 +359,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         icon = "icons\ico_oilUnprocessed.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     class oil_processed {
@@ -309,6 +371,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         icon = "icons\ico_oilProcessed.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     class copper_unrefined {
@@ -320,6 +383,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         icon = "icons\ico_copperOre.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     class copper_refined {
@@ -331,6 +395,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         icon = "icons\ico_copper.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     class iron_unrefined {
@@ -342,6 +407,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         icon = "icons\ico_ironOre.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     class iron_refined {
@@ -353,6 +419,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         icon = "icons\ico_iron.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     class salt_unrefined {
@@ -364,6 +431,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         icon = "icons\ico_saltUnprocessed.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     class salt_refined {
@@ -375,6 +443,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         icon = "icons\ico_saltProcessed.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     class sand {
@@ -386,6 +455,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         icon = "icons\ico_sand.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     class glass {
@@ -397,6 +467,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         icon = "icons\ico_glass.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     class diamond_uncut {
@@ -408,6 +479,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         icon = "icons\ico_diamondUncut.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     class diamond_cut {
@@ -419,6 +491,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         icon = "icons\ico_diamondCut.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     class rock {
@@ -430,6 +503,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         icon = "icons\ico_rock.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     class cement {
@@ -441,6 +515,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         icon = "icons\ico_cement.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     //Drugs
@@ -453,6 +528,7 @@ class VirtualItems {
         illegal = true;
         edible = -1;
         icon = "icons\ico_heroinUnprocessed.paa";
+        worldModel = "Land_Suitcase_F";
         processedItem = "heroin_processed";
     };
 
@@ -465,6 +541,7 @@ class VirtualItems {
         illegal = true;
         edible = -1;
         icon = "icons\ico_heroinProcessed.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     class cannabis {
@@ -477,6 +554,7 @@ class VirtualItems {
         edible = -1;
         icon = "icons\ico_cannabis.paa";
         processedItem = "marijuana";
+        worldModel = "Land_Suitcase_F";
     };
 
     class marijuana {
@@ -488,6 +566,7 @@ class VirtualItems {
         illegal = true;
         edible = -1;
         icon = "icons\ico_marijuana.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     class cocaine_unprocessed {
@@ -500,6 +579,7 @@ class VirtualItems {
         edible = -1;
         icon = "icons\ico_cocaineUnprocessed.paa";
         processedItem = "cocaine_processed";
+        worldModel = "Land_Suitcase_F";
     };
 
     class cocaine_processed {
@@ -511,6 +591,7 @@ class VirtualItems {
         illegal = true;
         edible = -1;
         icon = "icons\ico_cocaineProcessed.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     //Drink
@@ -523,6 +604,7 @@ class VirtualItems {
         illegal = false;
         edible = 100;
         icon = "icons\ico_redgull.paa";
+        worldModel = "Land_Can_V3_F";
     };
 
     class coffee {
@@ -534,6 +616,7 @@ class VirtualItems {
         illegal = false;
         edible = 100;
         icon = "icons\ico_coffee.paa";
+        worldModel = "Land_Can_V3_F";
     };
 
     class waterBottle {
@@ -545,6 +628,7 @@ class VirtualItems {
         illegal = false;
         edible = 100;
         icon = "icons\ico_waterBottle.paa";
+        worldModel = "Land_BottlePlastic_V1_F";
     };
 
     //Food
@@ -557,6 +641,7 @@ class VirtualItems {
         illegal = false;
         edible = 10;
         icon = "icons\ico_apple.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     class peach {
@@ -568,6 +653,7 @@ class VirtualItems {
         illegal = false;
         edible = 10;
         icon = "icons\ico_peach.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     class tbacon {
@@ -579,6 +665,7 @@ class VirtualItems {
         illegal = false;
         edible = 40;
         icon = "icons\ico_tBacon.paa";
+        worldModel = "Land_TacticalBacon_F";
     };
 
     class donuts {
@@ -590,6 +677,7 @@ class VirtualItems {
         illegal = false;
         edible = 30;
         icon = "icons\ico_donuts.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     class rabbit_raw {
@@ -601,6 +689,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         icon = "icons\ico_rabbitRaw.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     class rabbit {
@@ -612,6 +701,7 @@ class VirtualItems {
         illegal = false;
         edible = 20;
         icon = "icons\ico_rabbit.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     class salema_raw {
@@ -623,6 +713,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         icon = "icons\ico_salemaRaw.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     class salema {
@@ -634,6 +725,7 @@ class VirtualItems {
         illegal = false;
         edible = 30;
         icon = "icons\ico_cookedFish.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     class ornate_raw {
@@ -645,6 +737,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         icon = "icons\ico_ornateRaw.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     class ornate {
@@ -656,6 +749,7 @@ class VirtualItems {
         illegal = false;
         edible = 25;
         icon = "icons\ico_cookedFish.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     class mackerel_raw {
@@ -667,6 +761,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         icon = "icons\ico_mackerelRaw.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     class mackerel {
@@ -678,6 +773,7 @@ class VirtualItems {
         illegal = false;
         edible = 30;
         icon = "icons\ico_cookedFish.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     class tuna_raw {
@@ -689,6 +785,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         icon = "icons\ico_tunaRaw.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     class tuna {
@@ -700,6 +797,7 @@ class VirtualItems {
         illegal = false;
         edible = 100;
         icon = "icons\ico_cookedFish.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     class mullet_raw {
@@ -711,6 +809,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         icon = "icons\ico_mulletRaw.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     class mullet {
@@ -722,6 +821,7 @@ class VirtualItems {
         illegal = false;
         edible = 80;
         icon = "icons\ico_cookedFish.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     class catshark_raw {
@@ -733,6 +833,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         icon = "icons\ico_catsharkRaw.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     class catshark {
@@ -744,6 +845,7 @@ class VirtualItems {
         illegal = false;
         edible = 100;
         icon = "icons\ico_cookedFish.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     class turtle_raw {
@@ -755,6 +857,7 @@ class VirtualItems {
         illegal = true;
         edible = -1;
         icon = "icons\ico_turtleRaw.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     class turtle_soup {
@@ -766,6 +869,7 @@ class VirtualItems {
         illegal = false;
         edible = 100;
         icon = "icons\ico_turtleSoup.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     class hen_raw {
@@ -777,6 +881,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         icon = "icons\ico_wholeChickenRaw.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     class hen {
@@ -788,6 +893,7 @@ class VirtualItems {
         illegal = false;
         edible = 65;
         icon = "icons\ico_wholeChicken.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     class rooster_raw {
@@ -799,6 +905,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         icon = "icons\ico_chickenDrumstickRaw.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     class rooster {
@@ -810,6 +917,7 @@ class VirtualItems {
         illegal = false;
         edible = 45;
         icon = "icons\ico_chickenDrumstick.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     class sheep_raw {
@@ -821,6 +929,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         icon = "icons\ico_lambChopRaw.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     class sheep {
@@ -832,6 +941,7 @@ class VirtualItems {
         illegal = false;
         edible = 100;
         icon = "icons\ico_lambChop.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     class goat_raw {
@@ -843,6 +953,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         icon = "icons\ico_muttonLegRaw.paa";
+        worldModel = "Land_Suitcase_F";
     };
 
     class goat {
@@ -854,5 +965,6 @@ class VirtualItems {
         illegal = false;
         edible = 100;
         icon = "icons\ico_muttonLeg.paa";
+        worldModel = "Land_Suitcase_F";
     };
 };

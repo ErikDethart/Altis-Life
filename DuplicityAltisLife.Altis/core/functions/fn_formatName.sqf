@@ -15,6 +15,7 @@ private _masks = LIFE_SETTINGS(getArray,"clothing_masks");
 private _name = _unit getVariable ["realname", ""];
 private _color = "#FFFFFF";
 private _icon = "";
+private _iconColor = "#FFFFFF";
 private _tag = "%1";
 
 if (!(alive _unit)) then {
@@ -49,6 +50,7 @@ if (!(alive _unit)) then {
 			};
 			case independent: {
 				_icon = "a3\ui_f\data\map\MapControl\hospital_ca.paa";
+				_iconColor = "#FF0000";
 			};
 			case civilian: {
 				if (group _unit == group player) then {
@@ -61,6 +63,6 @@ if (!(alive _unit)) then {
 
 _name = format [_tag, _name];
 
-_name = format ["<img image='%1'/><t color='%2'> %3</t>", _icon, _color, _name];
+_name = format ["<img image='%1' color='%2'/><t color='%3'> %4</t>", _icon, _iconColor, _color, _name];
 
 _name;

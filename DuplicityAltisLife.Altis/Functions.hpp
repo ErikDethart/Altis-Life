@@ -167,6 +167,7 @@ class Life_Client_Core {
         class spawnMenu {};
         class spawnPointCfg {};
         class spawnPointSelected {};
+        class syncNotify {};
         class unimpound {};
         class vehicleGarage {};
         class wireTransfer {};
@@ -216,7 +217,6 @@ class Life_Client_Core {
         class receiveItem {};
         class receiveMoney {};
         class revealObjects {};
-        class saveGear {};
         class simDisable {};
         class stripDownPlayer {};
         class teleport {};
@@ -276,15 +276,19 @@ class Life_Client_Core {
         class storageBox {};
     };
 
-    class Medical_System {
-        file = "core\medical";
-        class deathScreen {};
+    class Medic {
+        file = "core\medic";
         class medicLights {};
         class medicLoadout {};
         class medicMarkers {};
-        class medicRequest {};
         class medicSiren {};
         class medicSirenLights {};
+    };
+
+    class Medical_System {
+        file = "core\medical";
+        class deathScreen {};
+        class medicRequest {};
         class onPlayerKilled {};
         class onPlayerRespawn {};
         class requestMedic {};
