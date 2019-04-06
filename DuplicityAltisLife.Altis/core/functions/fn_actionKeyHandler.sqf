@@ -94,7 +94,7 @@ if (isPlayer _curObject && _curObject isKindOf "CAManBase") then {
 
     _list = ["landVehicle","Ship","Air"];
     _isVehicle = if (KINDOF_ARRAY(_curObject,_list)) then {true} else {false};
-    _miscItems = ["Land_BottlePlastic_V1_F","Land_TacticalBacon_F","Land_Can_V3_F","Land_CanisterFuel_F","Land_Suitcase_F"];
+    _miscItems = life_itemModels;
 
     //It's a vehicle! open the vehicle interaction key!
     if (_isVehicle) then {

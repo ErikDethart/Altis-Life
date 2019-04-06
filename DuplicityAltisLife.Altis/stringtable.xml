@@ -6275,6 +6275,18 @@
         </Key>
     </Package>
     <Package name="Life_Items">
+        <Key ID="STR_Item_FirstAid">
+            <Original>First Aid Kit</Original>
+        </Key>
+        <Key ID="STR_Item_MedKit">
+            <Original>Med Kit</Original>
+        </Key>
+        <Key ID="STR_Item_BloodBag">
+            <Original>Blood Bag</Original>
+        </Key>
+        <Key ID="STR_Item_Adrenaline">
+            <Original>Adrenaline Shot</Original>
+        </Key>
         <Key ID="STR_Item_Cannabis">
             <Original>Marijuana leaf</Original>
             <Czech>marihuana list</Czech>

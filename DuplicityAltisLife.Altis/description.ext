@@ -60,6 +60,12 @@ class CfgSounds {
         titles[] = {};
     };
 
+    class save {
+        name = "save";
+        sound[] = {"\sounds\save.ogg", 1.0, 1};
+        titles[] = {};
+    };
+
     class harvest {
         name = "harvest";
         sound[] = {"\sounds\harvest.ogg", 1.0, 1};
@@ -68,13 +74,13 @@ class CfgSounds {
 
     class lockCarSound {
         name = "lockCarSound";
-        sound[] = {"\sounds\carLock.ogg", 1.0, 1};
+        sound[] = {"\sounds\carLock.ogg", 0.75, 1};
         titles[] = {};
     };
 
     class unlockCarSound {
         name = "unlockCarSound";
-        sound[] = {"\sounds\carUnlock.ogg", 0.75, 1};
+        sound[] = {"\sounds\carUnlock.ogg", 1, 1};
         titles[] = {};
     };
 };
