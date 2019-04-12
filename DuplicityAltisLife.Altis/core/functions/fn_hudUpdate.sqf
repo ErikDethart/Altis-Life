@@ -18,3 +18,8 @@ LIFEctrl(2200) ctrlSetTextColor [(damage player), (1 - (damage player)), 0, 0.7]
 LIFEctrl(1200) ctrlSetStructuredText parseText format ["<t align='left'></t>%1<img image='icons\ico_health.paa' align='right'/>", floor(100 * (1 - (damage player)))];
 LIFEctrl(1201) ctrlSetStructuredText parseText format ["<t align='left'></t>%1<img image='icons\ico_food.paa' align='right'/>", life_hunger];
 LIFEctrl(1202) ctrlSetStructuredText parseText format ["<t align='left'></t>%1<img image='icons\ico_water.paa' align='right'/>", life_thirst];
+
+if !(alive player) then {
+    LIFEctrl(1200) ctrlSetStructuredText parseText format "<t align='left'></t>DEAD<img image='icons\ico_health.paa' align='right'/>";
+    LIFEctrl(2200) ctrlSetTextColor [1, 0, 0, 0.7];
+};

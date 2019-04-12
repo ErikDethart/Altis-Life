@@ -100,7 +100,6 @@ class Life_Client_Core {
         class jailMe {};
         class knockedOut {};
         class knockoutAction {};
-        class removeLicenses {};
         class robPerson {};
         class robReceive {};
         class tazed {};
@@ -201,7 +200,6 @@ class Life_Client_Core {
         class isUIDActive {};
         class keyHandler {};
         class loadDeadGear {};
-        class loadGear {};
         class nearATM {};
         class nearestDoor {};
         class nearUnits {};

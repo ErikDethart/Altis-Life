@@ -106,12 +106,6 @@ class CfgFunctions {
             file = "\life_server\Functions\Actions";
             class pickupAction {};
         };
-
-        class PlayTime {
-            file = "\life_server\Functions\PlayTime";
-            class setPlayTime {};
-            class getPlayTime {};
-        };
     };
 };
 

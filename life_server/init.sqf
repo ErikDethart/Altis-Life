@@ -174,14 +174,6 @@ cleanupFSM = [] execFSM "\life_server\FSM\cleanup.fsm";
 [] spawn TON_fnc_initHouses;
 cleanup = [] spawn TON_fnc_cleanup;
 
-TON_fnc_playtime_values = [];
-TON_fnc_playtime_values_request = [];
-
-//Just incase the Headless Client connects before anyone else
-publicVariable "TON_fnc_playtime_values";
-publicVariable "TON_fnc_playtime_values_request";
-
-
 /* Setup the federal reserve building(s) */
 private _vaultHouse = [[["Altis", "Land_Research_house_V1_F"], ["Tanoa", "Land_Medevac_house_V1_F"]]] call TON_fnc_terrainSort;
 private _altisArray = [16019.5,16952.9,0];

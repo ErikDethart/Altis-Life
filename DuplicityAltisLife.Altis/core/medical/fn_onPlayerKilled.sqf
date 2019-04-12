@@ -90,20 +90,11 @@ if (!isNull _killer && {!(_killer isEqualTo _unit)} && {!(side _killer isEqualTo
         } else {
             [getPlayerUID _killer,_killer getVariable ["realname",name _killer],"187V"] remoteExecCall ["life_fnc_wantedAdd",RSERV];
         };
-
-        //Get rid of this if you don't want automatic vehicle license removal.
-        if (!local _killer) then {
-            [2] remoteExecCall ["life_fnc_removeLicenses",_killer];
-        };
     } else {
         if (life_HC_isActive) then {
             [getPlayerUID _killer,_killer getVariable ["realname",name _killer],"187"] remoteExecCall ["HC_fnc_wantedAdd",HC_Life];
         } else {
             [getPlayerUID _killer,_killer getVariable ["realname",name _killer],"187"] remoteExecCall ["life_fnc_wantedAdd",RSERV];
-        };
-
-        if (!local _killer) then {
-            [3] remoteExecCall ["life_fnc_removeLicenses",_killer];
         };
     };
 };
@@ -130,7 +121,9 @@ if (!isNull _killer && {!(_killer isEqualTo _unit)}) then {
     life_removeWanted = true;
 };
 
-[_unit] call life_fnc_dropItems;
+if (playerSide isEqualTo civilian) then {
+    [_unit] call life_fnc_dropItems;
+};
 
 life_action_inUse = false;
 life_hunger = 100;

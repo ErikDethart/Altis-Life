@@ -8681,17 +8681,6 @@
         </Key>
     </Package>
     <Package name="Session_Strings">
-        <Key ID="STR_Session_Query">
-            <Original>Sending request to server for player information UID [%1]</Original>
-            <Czech>Odesílání požadavku na server pro informační hráč UID [%1]</Czech>
-            <Spanish>Pidiendo informacion del UID de [%1] del server</Spanish>
-            <Russian></Russian>
-            <German>Frage Spieler Informationen zu UID [%1] ab...</German>
-            <French>Envoi de la requête au serveur pour obtenir des informations lecteur UID [%1]</French>
-            <Italian>Invio richiesta al server per le informazioni del giocatore UID [%1]</Italian>
-            <Portuguese>Obtendo informações do UID [%1] no servidor</Portuguese>
-            <Polish>Wysyłam żądanie do serwera po informację o fraczu UID [%1]</Polish>
-        </Key>
         <Key ID="STR_Session_QueryFail">
             <Original>The server didn't find any player information matching your UID, attempting to add player to system.</Original>
             <Czech>Server nenašel žádné informace hráče nalezen.Chcete UID, pokusu o přidání hráče do systému.</Czech>
