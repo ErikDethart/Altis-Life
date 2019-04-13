@@ -109,16 +109,13 @@ if (LIFE_SETTINGS(getNumber,"drop_weapons_onDeath") isEqualTo 0) then {
 
 //Killed by cop stuff...
 if (side _killer isEqualTo west && !(playerSide isEqualTo west)) then {
-    life_copRecieve = _killer;
+    [getPlayerUID player,player,life_copRecieve,true] remoteExecCall ["life_fnc_wantedBounty",RSERV];
+
     //Did I rob the federal reserve?
     if (!life_use_atm && {CASH > 0}) then {
         [format [localize "STR_Cop_RobberDead",[CASH] call life_fnc_numberText]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
         CASH = 0;
     };
-};
-
-if (!isNull _killer && {!(_killer isEqualTo _unit)}) then {
-    life_removeWanted = true;
 };
 
 if (playerSide isEqualTo civilian) then {

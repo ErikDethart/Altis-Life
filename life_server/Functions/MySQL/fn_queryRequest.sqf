@@ -112,8 +112,17 @@ switch (_side) do {
 };
 
 //Troubleshooting, if you find this in the future feel free to remove it
-diag_log (format ["Packet sent from queryRequest. Contents: %1", str(_packet)]);
-diag_log (format ["db call returned : %1", str(_queryResult)]);
-
+//diag_log (format ["Packet sent from queryRequest. Contents: %1", str(_packet)]);
+//diag_log (format ["db call returned : %1", str(_queryResult)]);
 
 _packet remoteExec ["SOCK_fnc_requestReceived", _unit];
+
+if (_side isEqualTo civilian) then {
+    _query = format ["SELECT wantedBounty FROM wanted WHERE wantedID='%1' AND active='1'", _uid];
+
+    _queryResult = [_query,2] call DB_fnc_asyncCall;
+
+    if !((_queryResult isEqualType "") || (count _queryResult isEqualTo 0)) then {
+        [_queryResult select 0] remoteExecCall ["life_fnc_updateWanted", _unit];
+    };
+};

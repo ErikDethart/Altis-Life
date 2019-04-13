@@ -26,6 +26,7 @@ if !(count _queryResult isEqualTo 0) then {
     if !(_amount isEqualTo 0) then {
         if (_half) then {
             [((_amount) / 2),_amount] remoteExecCall ["life_fnc_bountyReceive",(owner _cop)];
+            [_civ] call life_fnc_wantedRemove;
         } else {
             [_amount,_amount] remoteExecCall ["life_fnc_bountyReceive",(owner _cop)];
         };

@@ -104,7 +104,7 @@ class Life_Client_Core {
         class robReceive {};
         class tazed {};
         class tazeRagdoll {};
-
+        class updateWanted {};
     };
 
     class Config {
@@ -129,7 +129,6 @@ class Life_Client_Core {
         class fedCamDisplay {};
         class licenseCheck {};
         class licensesRead {};
-        class questionDealer {};
         class radar {};
         class repairDoor {};
         class restrain {};

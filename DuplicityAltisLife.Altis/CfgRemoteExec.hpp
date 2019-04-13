@@ -45,6 +45,7 @@ class CfgRemoteExec {
         F(life_fnc_moveIn,CLIENT)
         F(life_fnc_pickupItem,CLIENT)
         F(life_fnc_pickupMoney,CLIENT)
+        F(life_fnc_updateWanted,CLIENT)
         F(life_fnc_receiveItem,CLIENT)
         F(life_fnc_receiveMoney,CLIENT)
         F(life_fnc_removeLicenses,CLIENT)

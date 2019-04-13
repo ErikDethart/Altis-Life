@@ -71,11 +71,7 @@ switch (true) do {
         hint localize "STR_Jail_Paid";
         player setPos (getMarkerPos "jail_release");
 
-        if (life_HC_isActive) then {
-            [getPlayerUID player] remoteExecCall ["HC_fnc_wantedRemove", HC_Life];
-        } else {
-            [getPlayerUID player] remoteExecCall ["life_fnc_wantedRemove", RSERV];
-        };
+        [player] remoteExecCall ["life_fnc_wantedRemove", RSERV];
 
         [5] call SOCK_fnc_updatePartial;
     };
@@ -85,11 +81,7 @@ switch (true) do {
         hint localize "STR_Jail_EscapeSelf";
         [0, "STR_Jail_EscapeNOTF", true, [profileName]] remoteExecCall ["life_fnc_broadcast", RCLIENT];
 
-        if (life_HC_isActive) then {
-            [getPlayerUID player, profileName, "901"] remoteExecCall ["HC_fnc_wantedAdd", HC_Life];
-        } else {
-            [getPlayerUID player, profileName, "901"] remoteExecCall ["life_fnc_wantedAdd", RSERV];
-        };
+        [player, "901"] remoteExecCall ["life_fnc_wantedAdd", RSERV];
 
         [5] call SOCK_fnc_updatePartial;
     };
@@ -98,11 +90,7 @@ switch (true) do {
         life_is_arrested = false;
         hint localize "STR_Jail_Released";
 
-        if (life_HC_isActive) then {
-            [getPlayerUID player] remoteExecCall ["HC_fnc_wantedRemove", HC_Life];
-        } else {
-            [getPlayerUID player] remoteExecCall ["life_fnc_wantedRemove", RSERV];
-        };
+        [player] remoteExecCall ["life_fnc_wantedRemove", RSERV];
 
         player setPos (getMarkerPos "jail_release");
         [5] call SOCK_fnc_updatePartial;

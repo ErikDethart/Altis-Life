@@ -17,9 +17,11 @@ class playerHUD {
         Life_RscProgress_HUDFood,
         Life_RscProgress_HUDHealth,
         Life_RscProgress_HUDWater,
+        Life_RscProgress_HUDWanted,
         Life_RscStructuredText_HUDFood,
         Life_RscStructuredText_HUDHealth,
         Life_RscStructuredText_HUDWater,
+        Life_RscStructuredText_HUDWanted,
         Life_RscPicture_SaveBackground,
         Life_RscPicture_DBIcon,
         Life_RscStructuredText_SaveText
@@ -51,6 +53,12 @@ class playerHUD {
         y = 1.1;
     };
 
+    class Life_RscProgress_HUDWanted: LIFE_RscProgress_HUDCommon {
+        idc = 2203;
+        colorBar[] = {1,0.84,0,0.7};
+        y = 1.15;
+    };
+
     /* Texts */
     class Life_RscStructuredText_HUDCommon: Life_RscStructuredText {
         //SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
@@ -73,6 +81,11 @@ class playerHUD {
     class Life_RscStructuredText_HUDWater: Life_RscStructuredText_HUDCommon {
         idc = 1202;
         y = 1.1;
+    };
+
+    class Life_RscStructuredText_HUDWanted: Life_RscStructuredText_HUDCommon {
+        idc = 1203;
+        y = 1.15;
     };
 
     /* Sync Notification */
