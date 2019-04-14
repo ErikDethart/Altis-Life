@@ -117,9 +117,9 @@ class CfgVehicles {
         class EventHandlers;
     };
 
-    class C_man_1 : Civilian_F {
-        class EventHandlers: EventHandlers {
-            init = "(_this select 0) execVM ""\life_server\fix_headgear.sqf""";
-        };
-    };
+    //class C_man_1 : Civilian_F {
+    //    class EventHandlers: EventHandlers {
+    //        init = "(_this select 0) execVM ""\life_server\fix_headgear.sqf""";
+    //    };
+    //};
 };

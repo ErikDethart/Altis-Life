@@ -88,7 +88,7 @@ if (LIFE_SETTINGS(getNumber,"save_civilian_position_restart") isEqualTo 1) then 
 /* Map-based server side initialization. */
 master_group attachTo[bank_obj,[0,0,0]];
 
-{
+/*{
     _hs = createVehicle ["Land_Hospital_main_F", [0,0,0], [], 0, "NONE"];
     _hs setDir (markerDir _x);
     _hs setPosATL (getMarkerPos _x);
@@ -113,7 +113,7 @@ master_group attachTo[bank_obj,[0,0,0]];
             hospital_assis_2 setPos (_hs modelToWorld [0.0175781,0.0234375,-0.231956]);
         };
     };
-} forEach ["hospital_2","hospital_3"];
+} forEach ["hospital_2","hospital_3"];*/
 
 {
     if (!isPlayer _x) then {
