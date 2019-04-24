@@ -183,7 +183,6 @@ class Life_Client_Core {
         class dropItems {};
         class escInterupt {};
         class fetchCfgDetails {};
-        class fetchDeadGear {};
         class fetchVehInfo {};
         class formatName {};
         class isDamaged {};
@@ -198,7 +197,6 @@ class Life_Client_Core {
         class inventoryOpened {};
         class isUIDActive {};
         class keyHandler {};
-        class loadDeadGear {};
         class nearATM {};
         class nearestDoor {};
         class nearUnits {};

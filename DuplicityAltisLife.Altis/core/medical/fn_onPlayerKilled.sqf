@@ -99,7 +99,7 @@ if (!isNull _killer && {!(_killer isEqualTo _unit)} && {!(side _killer isEqualTo
     };
 };
 
-life_save_gear = [player] call life_fnc_fetchDeadGear;
+life_save_gear = getUnitLoadout player;
 
 if (LIFE_SETTINGS(getNumber,"drop_weapons_onDeath") isEqualTo 0) then {
     _unit removeWeapon (primaryWeapon _unit);
@@ -132,8 +132,4 @@ life_is_alive = false;
 [] call life_fnc_hudUpdate; //Get our HUD updated.
 [player,life_settings_enableSidechannel,playerSide] remoteExecCall ["TON_fnc_manageSC",RSERV];
 
-[0] call SOCK_fnc_updatePartial;
-[3] call SOCK_fnc_updatePartial;
-if (playerSide isEqualTo civilian) then {
-    [4] call SOCK_fnc_updatePartial;
-};
+[] call SOCK_fnc_updateRequest;
