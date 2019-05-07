@@ -153,6 +153,7 @@ class Life_Client_Core {
         class gangDeposit {};
         class depositAll {};
         class garageLBChange {};
+        class getDebitCard {};
         class impoundMenu {};
         class progressBar {};
         class safeFix {};
@@ -178,6 +179,7 @@ class Life_Client_Core {
         class actionKeyHandler {};
         class animSync {};
         class calWeightDiff {};
+        class checkFunds {};
         class checkMap {};
         class clearVehicleAmmo {};
         class dropItems {};
@@ -207,6 +209,7 @@ class Life_Client_Core {
         class playerSkins {};
         class playerTags {};
         class postNewsBroadcast {};
+        class processPayment {};
         class pullOutVeh {};
         class pushObject {};
         class receiveItem {};

@@ -6661,6 +6661,9 @@
             <Portuguese>Carne de Cabra Grelhada</Portuguese>
             <Polish>Grilowana Koza</Polish>
         </Key>
+        <Key ID="STR_Item_DebitCard">
+            <Original>Debit Card</Original>
+        </Key>
         <Key ID="STR_Item_SheepRaw">
             <Original>Raw Sheep</Original>
             <Czech>Raw Ovce</Czech>
