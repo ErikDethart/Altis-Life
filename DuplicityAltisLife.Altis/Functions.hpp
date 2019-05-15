@@ -26,6 +26,7 @@ class Life_Client_Core {
 
     class Master_Directory {
         file = "core";
+        class hideObjects {};
         class initCiv {};
         class initCop {};
         class initMedic {};
@@ -349,12 +350,8 @@ class Life_Client_Core {
         class virt_menu {};
         class virt_sell {};
         class virt_update {};
-        class weaponShopAccs {};
-        class weaponShopBuySell {};
-        class weaponShopFilter {};
-        class weaponShopMags {};
         class weaponShopMenu {};
-        class weaponShopSelection {};
+        class weaponShopBuy {};
     };
 
     class Vehicle {

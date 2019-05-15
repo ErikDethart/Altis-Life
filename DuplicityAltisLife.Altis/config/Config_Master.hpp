@@ -61,10 +61,6 @@ class Life_Settings {
     escapeMenu_displayExtras = true; //Display the players UID & serverName specified below in the escape menu.
     escapeMenu_displayText = "/WEBSITE/"; //Text displayed in the escape menu. Make it short.. around 20 characters.
 
-    /*Rubber Bullets*/
-    rubber_whitelist[] = { "B_9x21_Ball_Tracer_Green", "B_45ACP_Ball_Green", "B_556x45_Ball_Tracer_Green" };//Array Of Projectiles That Will Behave Non-Lethally
-
-
     /* Fuel System Configurations */
     pump_service = false; //Allow users to use pump service on the map. Default = false
     fuel_cost = 80; //Cost of fuel per liter at fuel stations (if not defined for the vehicle already).

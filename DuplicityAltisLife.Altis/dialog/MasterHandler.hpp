@@ -9,7 +9,7 @@
 #include "impound.hpp"
 #include "bank.hpp"
 #include "veh_shop.hpp"
-#include "shops.hpp"
+//#include "shops.hpp"
 #include "hud_stats.hpp"
 #include "admin_menu.hpp"
 #include "cell_phone.hpp"
@@ -28,3 +28,4 @@
 #include "compensate.hpp"
 #include "FuelStat.hpp"
 #include "newsStation.hpp"
+#include "weapon_shop.hpp"

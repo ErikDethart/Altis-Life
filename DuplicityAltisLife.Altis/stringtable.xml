@@ -3892,17 +3892,6 @@
             <Portuguese>Você não é um Policial.</Portuguese>
             <Polish>Nie jesteś policjantem</Polish>
         </Key>
-        <Key ID="STR_NOTF_NoRoom">
-            <Original>You don't have enough room for that item.</Original>
-            <Czech>Nemáte dostatek prostoru pro danou položku.</Czech>
-            <Spanish>No tienes el espacio suficiente.</Spanish>
-            <Russian></Russian>
-            <German>Du hast nicht genug Platz für den Gegenstand.</German>
-            <French>Vous n'avez pas assez de place.</French>
-            <Italian>Non hai abbastanza spazio per quell'oggetto.</Italian>
-            <Portuguese>Você não tem espaço suficiente no seu inventário.</Portuguese>
-            <Polish>Nie masz wystarczająco miejsca na tą rzecz.</Polish>
-        </Key>
         <Key ID="STR_NOTF_ProcessWOLicense">
             <Original>You need $%1 to process without a license!</Original>
             <Czech>Musíte $%1 bez povolení ke zpracování!</Czech>
