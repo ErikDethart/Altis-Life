@@ -26,7 +26,6 @@ class Life_Client_Core {
 
     class Master_Directory {
         file = "core";
-        class hideObjects {};
         class initCiv {};
         class initCop {};
         class initMedic {};

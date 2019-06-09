@@ -29,10 +29,6 @@ diag_log "[Life Client] Setting up user actions";
 [] call life_fnc_setupActions;
 diag_log "[Life Client] User actions completed";
 
-diag_log "[Life Client] Hiding unwanted map objects";
-[] call life_fnc_hideObjects;
-diag_log "[Life Client] Map objects hidden";
-
 diag_log "[Life Client] Waiting for the server to be ready...";
 waitUntil {!isNil "life_server_isReady" && {!isNil "life_server_extDB_notLoaded"}};
 
