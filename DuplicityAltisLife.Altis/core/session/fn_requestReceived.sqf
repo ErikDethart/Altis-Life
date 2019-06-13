@@ -116,7 +116,7 @@ switch (playerSide) do {
         //COPLEVEL % MEDICLEVEL
         life_coplevel = compileFinal str(_SS1);
         mediclevel = compileFinal "0";
-        
+
         //BLACKLIST
         life_blacklisted = _SS2;
     };
@@ -143,10 +143,16 @@ switch (playerSide) do {
 
         //HOUSES
         life_houses = _houses;
+
+        {
+            _house = nearestObject [(call compile format ["%1",(_x select 0)]), "House"];
+            life_vehicles pushBack _house;
+        } forEach life_houses;
+
         [] spawn life_fnc_initHouses;
 
         //GANG
-        life_gangData = _gang;        
+        life_gangData = _gang;
         if !(count life_gangData isEqualTo 0) then {
             [] spawn life_fnc_initGang;
         };

@@ -62,7 +62,7 @@ for "_i" from 0 to 1 step 0 do {
 
     /* Adjustment of carrying capacity based on backpack changes */
     if (backpack player isEqualTo "") then {
-        life_maxWeight = LIFE_SETTINGS(getNumber,"total_maxWeight");
+        life_maxWeight = 64;
         _bp = backpack player;
     } else {
         if (!(backpack player isEqualTo "") && {!(backpack player isEqualTo _bp)}) then {

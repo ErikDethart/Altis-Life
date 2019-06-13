@@ -60,7 +60,7 @@ life_clothing_purchase = [-1, -1, -1, -1, -1];
 ****** Weight Variables *****
 *****************************
 */
-life_maxWeight = LIFE_SETTINGS(getNumber, "total_maxWeight");
+life_maxWeight = 64;
 life_carryWeight = 0; //Represents the players current inventory weight (MUST START AT 0).
 
 /*
@@ -103,6 +103,6 @@ life_itemModels = [];
 
 /* Setup life_hideoutBuildings */
 {
-    _building = nearestBuilding getMarkerPos _x; 
+    _building = nearestBuilding getMarkerPos _x;
     life_hideoutBuildings pushBack _building
 } forEach (LIFE_SETTINGS(getArray,"gang_area"));
