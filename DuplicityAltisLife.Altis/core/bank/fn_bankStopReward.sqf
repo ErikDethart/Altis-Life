@@ -21,5 +21,5 @@ _name = _cop getVariable ["realname", ""];
 
 hint parseText format ["<t align='center' color='#00FF00'size='1.5'>Drill Stopped!</t><br/>Police %1 %2 has stopped the drill! For preventing the bank robbery, all officers have received a bonus of <t color='#00FF00'>$25,000</t> and <t color='#4040FF'>150 XP</t>", _rank, _name];
 
-life_atmBank = life_atmBank + 25000;
+life_atmbank = life_atmbank + 25000;
 [6] call life_fnc_updatePartial;
