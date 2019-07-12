@@ -50,6 +50,12 @@ class CfgFunctions {
         class Client_Code {
             file = "\life_server\Functions\Client";
         };
+
+        class Bank {
+            file = "\life_server\Functions\Bank";
+            class bankRobbery {};
+            class stopBankServer {};
+        };
     };
 
     class TON_System {

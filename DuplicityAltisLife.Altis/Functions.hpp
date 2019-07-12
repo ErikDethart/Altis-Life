@@ -90,6 +90,14 @@ class Life_Client_Core {
         class adminTpHere {};
     };
 
+    class Bank {
+        file = "core\bank";
+        class startBank {};
+        class stopBank {};
+        class bankTimer {};
+        class bankStopReward {};
+    };
+
     class Civilian {
         file = "core\civilian";
         class civLoadout {};

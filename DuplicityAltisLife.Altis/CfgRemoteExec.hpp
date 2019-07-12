@@ -75,6 +75,8 @@ class CfgRemoteExec {
         F(TON_fnc_player_query,CLIENT)
 
         /* Server only functions */
+        F(life_fnc_bankRobbery,SERVER)
+        F(life_fnc_stopBankServer,SERVER)
         F(BIS_fnc_execVM,SERVER)
         F(DB_fnc_insertRequest,SERVER)
         F(DB_fnc_queryRequest,SERVER)

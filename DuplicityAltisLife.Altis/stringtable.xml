@@ -6276,6 +6276,12 @@
         <Key ID="STR_Item_Adrenaline">
             <Original>Adrenaline Shot</Original>
         </Key>
+        <Key ID="STR_Item_Drill">
+            <Original>Diamond Tipped Drill</Original>
+        </Key>
+        <Key ID="STR_Item_Banknotes">
+            <Original>Banded Banknotes</Original>
+        </Key>
         <Key ID="STR_Item_Cannabis">
             <Original>Marijuana leaf</Original>
             <Czech>marihuana list</Czech>

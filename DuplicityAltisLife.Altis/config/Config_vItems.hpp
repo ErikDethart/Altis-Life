@@ -27,7 +27,7 @@ class VirtualShops {
         name = "STR_Shops_Rebel";
         side = "civ";
         conditions = "license_civ_rebel";
-        items[] = { "waterBottle", "rabbit", "apple", "redgull", "tbacon", "lockpick", "pickaxe", "toolkit", "fuelFull", "peach", "boltcutter", "blastingcharge" };
+        items[] = { "waterBottle", "rabbit", "apple", "redgull", "tbacon", "lockpick", "pickaxe", "toolkit", "fuelFull", "peach", "boltcutter", "blastingcharge" , "drill", "banknotes"};
     };
 
     class gang {
@@ -192,7 +192,7 @@ class VirtualItems {
         icon = "\a3\weapons_f\items\data\UI\gear_medikit_ca.paa";
         worldModel = "Land_FirstAidKit_01_closed_F";
     };
-    
+
     class bloodBag {
         variable = "bloodBag";
         displayName = "STR_Item_BloodBag";
@@ -215,6 +215,30 @@ class VirtualItems {
         edible = -1;
         icon = "icons\ico_defibrillator.paa";
         worldModel = "MedicalGarbage_01_Injector_F";
+    };
+
+    class drill {
+        variable = "drill";
+        displayName = "STR_Item_Drill";
+        weight = 1;
+        buyprice = 1500;
+        sellPrice = 750;
+        illegal = true;
+        edible = -1;
+        icon = "icons\ico_drill.paa";
+        worldModel = "Land_DrillAku_F";
+    };
+
+    class banknotes {
+        variable = "banknotes";
+        displayName = "STR_Item_Banknotes";
+        weight = 0;
+        buyprice = -1;
+        sellPrice = 1;
+        illegal = true;
+        edible = -1;
+        icon = "icons\ico_banknotes.paa";
+        worldModel = "Land_Money_F";
     };
 
     class toolkit {

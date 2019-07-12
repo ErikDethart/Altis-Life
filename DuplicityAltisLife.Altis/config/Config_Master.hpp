@@ -37,6 +37,9 @@ class Life_Settings {
     noatm_timer = 10; //Time in minutes that players cannot deposit money after selling stolen gold.
     minimum_cops = 1; //Minimum cops required online to rob the Federal Reserve
 
+    /* BANK */
+    bank_minimum_cops = 0; //Minimum online cops to rob the bank
+
     /*Death settings*/
     drop_weapons_onDeath = false; //Set true to enable weapon dropping on death. False (default) will delete player weapons on death, allowing them to be revived with them instead
 
@@ -71,7 +74,7 @@ class Life_Settings {
     gang_price = 25000; //Gang creation price. --Remember they are persistent so keep it reasonable to avoid millions of gangs.
     gang_upgradeBase = 10000; //The base cost for purchasing additional slots in a gang
     gang_upgradeMultiplier = 2.5; //CURRENTLY NOT IN USE
-    gang_area[] = {"gang_area_1","gang_area_2","gang_area_3"}; //Variable of gang zone markers  
+    gang_area[] = {"gang_area_1","gang_area_2","gang_area_3"}; //Variable of gang zone markers
 
     /* Housing System Configurations */
     house_limit = 5; //Maximum number of houses a player can own.
@@ -202,11 +205,11 @@ class Life_Settings {
         {"STR_Crime_24","10000","24"},
         {"STR_Crime_25","20000","25"}
     };
-    
+
     /* ! --- Do not change --- ! */
     framework_version = "5.0.0";
     /* ------------------------- */
-    
+
 };
 
 #include "Config_Clothing.hpp"
