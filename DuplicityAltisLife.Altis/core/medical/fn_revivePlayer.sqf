@@ -55,7 +55,7 @@ player playActionNow "stop";
 if !(_target getVariable ["Reviving", objNull] isEqualTo player) exitWith {hint localize "STR_Medic_AlreadyReviving"; life_action_inUse = false;};
 _target setVariable ["Reviving", nil, true];
 
-if (!alive player || {life_istazed} || {life_isknocked}) exitWith {life_action_inUse = false;};
+if (!alive player || {life_istazed}) exitWith {life_action_inUse = false;};
 if (_target getVariable ["Revive", false]) exitWith {hint localize "STR_Medic_RevivedRespawned"; life_action_inUse = false;};
 if (player getVariable ["restrained", false]) exitWith {life_action_inUse = false;};
 if (_badDistance) exitWith {titleText[localize "STR_Medic_TooFar","PLAIN"]; life_action_inUse = false;};

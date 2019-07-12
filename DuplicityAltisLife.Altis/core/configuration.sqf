@@ -24,9 +24,7 @@ life_bail_paid = false;
 life_impound_inuse = false;
 life_action_inUse = false;
 life_spikestrip = objNull;
-life_knockout = false;
 life_interrupted = false;
-life_respawned = false;
 life_action_gathering = false;
 life_god = false;
 life_frozen = false;
@@ -78,7 +76,6 @@ life_hunger = 100;
 CASH = 0;
 
 life_istazed = false;
-life_isknocked = false;
 life_vehicles = [];
 
 /*

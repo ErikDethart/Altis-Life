@@ -57,7 +57,6 @@ for "_i" from 0 to 1 step 0 do {
 
     if (_cP >= 1 || !alive player) exitWith {};
     if (life_istazed) exitWith {}; //Tazed
-    if (life_isknocked) exitWith {}; //Knocked
     if (life_interrupted) exitWith {};
     if (player getVariable ["restrained",false]) exitWith {};
     if (player distance _curTarget > _distance) exitWith {_badDistance = true;};
@@ -67,7 +66,7 @@ for "_i" from 0 to 1 step 0 do {
 "progressBar" cutText ["","PLAIN"];
 player playActionNow "stop";
 
-if (!alive player || life_istazed || life_isknocked) exitWith {life_action_inUse = false;};
+if (!alive player || life_istazed) exitWith {life_action_inUse = false;};
 if (player getVariable ["restrained",false]) exitWith {life_action_inUse = false;};
 if (!isNil "_badDistance") exitWith {titleText[localize "STR_ISTR_Lock_TooFar","PLAIN"]; life_action_inUse = false;};
 if (life_interrupted) exitWith {life_interrupted = false; titleText[localize "STR_NOTF_ActionCancel","PLAIN"]; life_action_inUse = false;};

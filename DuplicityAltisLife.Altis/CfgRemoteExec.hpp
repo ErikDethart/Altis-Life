@@ -35,7 +35,6 @@ class CfgRemoteExec {
         F(life_fnc_impoundMenu,CLIENT)
         F(life_fnc_jail,CLIENT)
         F(life_fnc_jailMe,CLIENT)
-        F(life_fnc_knockedOut,CLIENT)
         F(life_fnc_licenseCheck,CLIENT)
         F(life_fnc_licensesRead,CLIENT)
         F(life_fnc_lightHouse,CLIENT)
@@ -167,7 +166,8 @@ class CfgRemoteExec {
         F(life_fnc_setFuel,ANYONE)
         F(life_fnc_simDisable,ANYONE)
         F(SPY_fnc_notifyAdmins,ANYONE)
-        F(BIS_fnc_debugConsoleExec,EVERYONE)
+        F(BIS_fnc_debugConsoleExec,ANYONE)
+        F(BIS_fnc_curatorRespawn,ANYONE)
     };
 
     class Commands {

@@ -106,8 +106,6 @@ class Life_Client_Core {
         class freezePlayer {};
         class jail {};
         class jailMe {};
-        class knockedOut {};
-        class knockoutAction {};
         class robPerson {};
         class robReceive {};
         class tazed {};
@@ -221,7 +219,6 @@ class Life_Client_Core {
         class receiveMoney {};
         class revealObjects {};
         class simDisable {};
-        class stripDownPlayer {};
         class teleport {};
         class whereAmI {};
         class moveIn {};

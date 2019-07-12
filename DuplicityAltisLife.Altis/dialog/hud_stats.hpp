@@ -4,6 +4,19 @@
     File: hud_stats.hpp
 */
 
+class LIFE_RscProgress_HUDCommon: Life_RscProgress {
+    colorFrame[] = {0, 0, 0, 1};
+    x = 1.45;
+    w = 0.25;
+    h = 0.04;
+};
+
+class Life_RscStructuredText_HUDCommon: Life_RscStructuredText {
+    x = 1.45;
+    w = 0.25;
+    h = 0.04;
+};
+
 class playerHUD {
     idd = 457;
     duration = 10e10;
@@ -16,13 +29,6 @@ class playerHUD {
 
     class controls {
         /* Progress Bars */
-        class LIFE_RscProgress_HUDCommon: Life_RscProgress {
-            colorFrame[] = {0, 0, 0, 1};
-            x = 1.45;
-            w = 0.25;
-            h = 0.04;
-        };
-
         class Life_RscProgress_HUDHealth: LIFE_RscProgress_HUDCommon {
             idc = 2200;
             colorBar[] = {1,1,1,0.7};
@@ -48,14 +54,6 @@ class playerHUD {
         };
 
         /* Texts */
-        class Life_RscStructuredText_HUDCommon: Life_RscStructuredText {
-            //SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
-            //style = ST_CENTER;
-            x = 1.45;
-            w = 0.25;
-            h = 0.04;
-        };
-
         class Life_RscStructuredText_HUDHealth: Life_RscStructuredText_HUDCommon {
             idc = 1200;
             y = 1;

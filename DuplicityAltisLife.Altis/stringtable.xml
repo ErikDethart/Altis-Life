@@ -4811,17 +4811,6 @@
         </Key>
     </Package>
     <Package name="Civ_Strings">
-        <Key ID="STR_Civ_KnockedOut">
-            <Original>%1 has knocked you out.</Original>
-            <Czech>%1 zaklepal vás.</Czech>
-            <Spanish>%1 te a noqueado.</Spanish>
-            <Russian></Russian>
-            <German>%1 hat dich niedergeschlagen.</German>
-            <French>%1 vous a assommé.</French>
-            <Italian>%1 ti ha colpito stordendoti.</Italian>
-            <Portuguese>%1 nocauteou você.</Portuguese>
-            <Polish>zostałeś ogłuszony przez %1</Polish>
-        </Key>
         <Key ID="STR_Civ_LicenseRemove_1">
             <Original>You have lost all your motor vehicle licenses for vehicular manslaughter.</Original>
             <Czech>Jste ztratili všechny své licence motorových vozidel pro dopravní zabití.</Czech>
@@ -5373,28 +5362,6 @@
             <Italian>Nessuna Licenza&lt;br/&gt;</Italian>
             <Portuguese>Você não tem licença&lt;br/&gt;</Portuguese>
             <Polish>Brak licencji&lt;br/&gt;</Polish>
-        </Key>
-        <Key ID="STR_Cop_DealerQuestion">
-            <Original>No one has sold to this dealer recently.</Original>
-            <Czech>Nikdo se prodalo tohoto prodejce nedávno.</Czech>
-            <Spanish>Nadie le ha vendido a este comerciante recientemente.</Spanish>
-            <Russian></Russian>
-            <German>Niemand hat kürzlich an diesem Dealer etwas verkauft.</German>
-            <French>Personne n'est venu vendre quelque chose ici récemment.</French>
-            <Italian>Non è stato visto nessuno vendere a questo spacciatore di recente.</Italian>
-            <Portuguese>Ninguém vendeu para esse negociante recentemente</Portuguese>
-            <Polish>Nikt nie sprzedawał ostatnio u dilera.</Polish>
-        </Key>
-        <Key ID="STR_Cop_DealerMSG">
-            <Original>The following people have been selling to this dealer recently.</Original>
-            <Czech>Následující lidé byli prodeji tohoto prodejce nedávno.</Czech>
-            <Spanish>Las siguientes personas le han estado vendiendo a este comerciante recientemente.</Spanish>
-            <Russian></Russian>
-            <German>Folgende Personen haben kürzlich an diesem Dealer etwas verkauft:</German>
-            <French>Les personnes suivantes sont venues vendre quelque chose récemment.</French>
-            <Italian>Le seguenti persone sono state viste vendere a questo spacciatore.</Italian>
-            <Portuguese>Os seguintes jogadores venderam para esse negociante recentemente.</Portuguese>
-            <Polish>Ostatnio u dilera sprzedawali następujący ludzie.</Polish>
         </Key>
         <Key ID="STR_Cop_Radar">
             <Original>Radar</Original>
@@ -10324,17 +10291,6 @@
             <German>Rebellen Markt</German>
             <Portuguese>Mercado Rebelde</Portuguese>
             <Polish>Market rebelianta</Polish>
-        </Key>
-        <Key ID="STR_MAR_Question_Dealer">
-            <Original>Question Dealer</Original>
-            <Czech>Otázka prodejce</Czech>
-            <French>Questionner le dealer</French>
-            <Spanish>Informante</Spanish>
-            <Russian></Russian>
-            <German>Informant</German>
-            <Portuguese>Perguntar ao Traficante</Portuguese>
-            <Polish>Przesłuchaj dilera</Polish>
-            <Italian>Minaccia Spacciatore</Italian>
         </Key>
         <Key ID="STR_MAR_Service_helicopter">
             <Original>Service Helicopter</Original>

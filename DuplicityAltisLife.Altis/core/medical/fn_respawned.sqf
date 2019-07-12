@@ -9,13 +9,13 @@
 private ["_handle"];
 //Reset our weight and other stuff
 
+life_is_alive = true;
 life_action_inUse = false;
 life_use_atm = true;
 life_hunger = 100;
 life_thirst = 100;
 life_carryWeight = 0;
 CASH = 0; //Make sure we don't get our cash back.
-life_respawned = false;
 player playMove "AmovPercMstpSnonWnonDnon";
 
 life_corpse setVariable ["Revive",nil,true];
@@ -29,15 +29,14 @@ player setVariable ["Reviving",nil,true];
 switch (playerSide) do
 {
     case west: {
-        _handle = [] spawn life_fnc_copLoadout;
+        [] call life_fnc_copLoadout;
     };
     case civilian: {
-        _handle = [] spawn life_fnc_civLoadout;
+        [] call life_fnc_civLoadout;
     };
     case independent: {
-        _handle = [] spawn life_fnc_medicLoadout;
+        [] call life_fnc_medicLoadout;
     };
-    waitUntil {scriptDone _handle};
 };
 
 //Cleanup of weapon containers near the body & hide it.

@@ -38,12 +38,12 @@ if (isNull _source || _source isEqualTo _unit || _unit getVariable["Revive",fals
 
     //Handle
     if (_downing) then {
-        if (life_isknocked || (_unit getVariable ["restrained",false])) exitWith {
+        if (_unit getVariable ["restrained",false]) exitWith {
             [] spawn life_fnc_hudUpdate;
             _damage = 0;
             _damage;
         };
-        if ((((getDammage _unit) + _damage) >= 0.90)) then {
+        if (((getDammage _unit) + _damage) >= 0.90) then {
             _damage = 0;
             if (typeOf (vehicle player) == "B_Quadbike_01_F") then { player action ["Eject",vehicle player]; };
             [_unit,_source] spawn life_fnc_tazed;
