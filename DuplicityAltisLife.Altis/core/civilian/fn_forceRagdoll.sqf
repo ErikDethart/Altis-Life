@@ -1,3 +1,11 @@
+/*
+    File: fn_forceRagdoll.sqf
+    Author: Repentz
+
+    Description:
+    ragdoll
+*/
+
 if (!isNull objectParent player) exitWith {};
 
 private _obj = "Land_Can_V3_F" createVehicleLocal [0,0,0];
