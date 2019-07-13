@@ -30,7 +30,7 @@ private _escSync = {
 };
 
 private _canUseControls = {
-    (playerSide isEqualTo west) || {!((player getVariable ["restrained",false]) || {player getVariable ["Escorting",false]} || {player getVariable ["transporting",false]} || {life_is_arrested} || {life_istazed})}
+    (playerSide isEqualTo west) || {!((player getVariable ["restrained",false]) || {player getVariable ["Escorting",false]} || {player getVariable ["transporting",false]} || {life_is_arrested} || {life_isDowned})}
 };
 
 for "_i" from 0 to 1 step 0 do {

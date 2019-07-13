@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=2252;
+		nextID=2257;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=52;
+		nextID=58;
 	};
 	class Camera
 	{
-		pos[]={14895.615,35.116959,10834.124};
-		dir[]={-0.5658024,-0.31633291,-0.76158547};
-		up[]={-0.1887103,0.94859827,-0.25401139};
-		aside[]={-0.80280769,2.499437e-007,0.59641963};
+		pos[]={14701.047,89.797997,10643.67};
+		dir[]={0.3422538,-0.63098913,0.69623023};
+		up[]={0.27836829,0.77578712,0.5662719};
+		aside[]={0.89743882,-3.4691766e-008,-0.44116467};
 	};
 };
 binarizationWanted=0;
@@ -300,24 +300,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -332,6 +314,24 @@ class CustomAttributes
 						};
 					};
 					value=1;
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
 				};
 			};
 		};
@@ -389,7 +389,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=952;
+		items=953;
 		class Item0
 		{
 			dataType="Marker";
@@ -462,7 +462,7 @@ class Mission
 		class Item8
 		{
 			dataType="Marker";
-			position[]={16569.354,11,12735.809};
+			position[]={17418.119,14.59314,13157.098};
 			name="cop_spawn_2";
 			type="Empty";
 			id=9;
@@ -530,12 +530,13 @@ class Mission
 		class Item15
 		{
 			dataType="Marker";
-			position[]={16589.234,11,12763.845};
+			position[]={17444.18,13.749,13178.71};
 			name="police_hq_2";
-			text="@STR_MAR_Police_Station";
+			text="Police HQ";
 			type="mil_box";
-			colorName="Color4_FD_F";
+			colorName="ColorWEST";
 			id=17;
+			atlOffset=-0.00022411346;
 		};
 		class Item16
 		{
@@ -641,12 +642,13 @@ class Mission
 		class Item26
 		{
 			dataType="Marker";
-			position[]={4412.5562,37.095924,12605.266};
+			position[]={18257.275,3436.6423,12919.371};
 			name="copper_mine";
 			text="@STR_MAR_Copper_Mine";
 			type="mil_triangle";
 			colorName="ColorBrown";
 			id=28;
+			atlOffset=3409.781;
 		};
 		class Item27
 		{
@@ -1369,7 +1371,7 @@ class Mission
 		class Item98
 		{
 			dataType="Marker";
-			position[]={16597.652,11,12724.459};
+			position[]={17453.582,14.074911,13156.613};
 			name="cop_car_3";
 			type="Empty";
 			angle=47.457191;
@@ -2434,7 +2436,7 @@ class Mission
 			name="atm_marker_4_2";
 			type="loc_Tourism";
 			colorName="ColorGreen";
-			angle=113.2529;
+			angle=113.25287;
 			id=208;
 			atlOffset=0.00036048889;
 		};
@@ -34369,8 +34371,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={16591.348,11.001439,12719.077};
-						angles[]={0,0.65334654,0};
+						position[]={17426.406,14.637644,13150.396};
+						angles[]={0.0012918708,0.65334654,0};
 					};
 					side="Civilian";
 					flags=4;
@@ -34382,6 +34384,7 @@ class Mission
 					};
 					id=1001;
 					type="B_RangeMaster_F";
+					atlOffset=9.5367432e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -35603,8 +35606,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={16566.492,11.001439,12746.125};
-						angles[]={0,3.4420686,0};
+						position[]={17429.34,14.6319,13154.704};
+						angles[]={0.0012918708,3.4420686,0};
 					};
 					side="Civilian";
 					flags=4;
@@ -37671,14 +37674,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={16651.227,2.9862192,12291.933};
+						position[]={16651.227,2.9862189,12291.933};
 					};
 					side="Civilian";
 					class Attributes
 					{
 						skill=0.60000002;
 						init="this enableSimulation false; this allowDamage false; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""mAir"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""mAir"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""mAir"",0,false,false,"""",' !license_med_mAir && playerSide isEqualTo independent ',5]; this addAction[localize""STR_MAR_EMS_Item_Shop"",life_fnc_weaponShopMenu,""med_basic""]; this addAction[localize""STR_MAR_EMS_Clothing_Shop"",life_fnc_clothingMenu,""med_clothing""]; this addAction[localize""STR_MAR_W_E_Vehicle Shop"",life_fnc_vehicleShopMenu,[""med_shop"",independent,""med_car_2"",""med"",""Pyrgos Hospital""],1.5,true,true,"""",""true"",5]; this addAction[localize""STR_MAR_Helicopter_Shop"", life_fnc_vehicleShopMenu,[""med_air_hs"",independent,""medic_spawn_3"",""med"",""Pyrgos Hospital""],1.5,true,true,"""",""true"",5]; this addAction[localize""STR_MAR_W_Car_Garage"",  {   if (life_HC_isActive) then {    [getPlayerUID player,playerSide,""Car"",player] remoteExecCall [""HC_fnc_getVehicles"",HC_Life]; } else { [getPlayerUID player,playerSide,""Car"",player] remoteExecCall [""TON_fnc_getVehicles"",2];};  createDialog ""Life_impound_menu"";  disableSerialization;  ctrlSetText[2802,""Fetching Vehicles....""];  life_garage_sp = ""med_car_2""; life_garage_type = ""Car""; },"""",0,false,false,"""",'playerSide isEqualTo independent',5]; this addAction[localize""STR_MAR_Helicopter_Garage"",  {   if (life_HC_isActive) then {    [getPlayerUID player,playerSide,""Air"",player] remoteExecCall [""HC_fnc_getVehicles"",HC_Life]; } else { [getPlayerUID player,playerSide,""Air"",player] remoteExecCall [""TON_fnc_getVehicles"",2];};  createDialog ""Life_impound_menu"";  disableSerialization;  ctrlSetText[2802,""Fetching Vehicles....""];  life_garage_sp = ""medic_spawn_3""; life_garage_type = ""Air""; },"""",0,false,false,"""",'playerSide isEqualTo independent ',5]; this addAction[localize""STR_MAR_Store_vehicle_in_Garage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store',5]; this addAction[localize""STR_Shops_Market"",life_fnc_virt_menu,""med_market"",1.5,false,false,"""",' isNull objectParent player && player distance _target < 5 && playerSide isEqualTo independent ',5]; this setObjectTextureGlobal [0,""textures\medic_uniform.jpg""];";
-						disableSimulation=1;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class uniform
@@ -37715,7 +37718,7 @@ class Mission
 					};
 					id=1045;
 					type="B_RangeMaster_F";
-					atlOffset=0.51999998;
+					atlOffset=0.51999974;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -37733,7 +37736,7 @@ class Mission
 											"BOOL"
 										};
 									};
-									value=0;
+									value=1;
 								};
 							};
 						};
@@ -40595,16 +40598,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={16654.75,3.1067586,12294.565};
+						position[]={16654.75,3.1063907,12294.565};
 						angles[]={0,4.712389,0};
 					};
 					side="Civilian";
-					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
 						init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_MAR_Medical_Assistance"",life_fnc_healHospital,"""",1.5,false,false,"""",'isNull objectParent player && player distance _target < 5',5];";
-						disableSimulation=1;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class uniform
@@ -40626,7 +40628,7 @@ class Mission
 					};
 					id=1168;
 					type="C_man_polo_3_F";
-					atlOffset=2.3841858e-007;
+					atlOffset=0.69700003;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -40644,7 +40646,7 @@ class Mission
 											"BOOL"
 										};
 									};
-									value=0;
+									value=1;
 								};
 							};
 						};
@@ -42471,8 +42473,8 @@ class Mission
 		class Item887
 		{
 			dataType="Marker";
-			position[]={14171.281,19.58,16273.482};
-			name="marker_229";
+			position[]={14170.839,19.58,16273.778};
+			name="cop_spawn_4";
 			text="Police Air HQ";
 			type="b_air";
 			colorName="ColorWEST";
@@ -42870,7 +42872,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				disableSimulation=1;
+				init="this allowDamage false; this enableSimulation false;";
 			};
 			id=1242;
 			type="Land_HBarrierWall6_F";
@@ -42891,7 +42893,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -42910,7 +42912,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				disableSimulation=1;
+				init="this allowDamage false; this enableSimulation false;";
 			};
 			id=1243;
 			type="Land_HBarrierWall6_F";
@@ -42931,7 +42933,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -42950,7 +42952,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				disableSimulation=1;
+				init="this allowDamage false; this enableSimulation false;";
 			};
 			id=1244;
 			type="Land_HBarrierWall6_F";
@@ -42971,7 +42973,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -42990,7 +42992,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				disableSimulation=1;
+				init="this allowDamage false; this enableSimulation false;";
 			};
 			id=1245;
 			type="Land_HBarrierWall6_F";
@@ -43011,7 +43013,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -43030,7 +43032,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				disableSimulation=1;
+				init="this allowDamage false; this enableSimulation false;";
 			};
 			id=1246;
 			type="Land_HBarrier_1_F";
@@ -43051,7 +43053,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -43070,7 +43072,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				disableSimulation=1;
+				init="this allowDamage false; this enableSimulation false;";
 			};
 			id=1247;
 			type="Land_HBarrier_1_F";
@@ -43092,7 +43094,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -43111,7 +43113,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				disableSimulation=1;
+				init="this allowDamage false;";
 			};
 			id=1248;
 			type="Land_Medevac_HQ_V1_F";
@@ -43146,7 +43148,7 @@ class Mission
 												"SCALAR"
 											};
 										};
-										value=10;
+										value=0;
 									};
 								};
 								class Item1
@@ -43196,7 +43198,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -43215,7 +43217,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				disableSimulation=1;
+				init="this allowDamage false; this enableSimulation false;";
 			};
 			id=1250;
 			type="Land_HelipadRescue_F";
@@ -43236,7 +43238,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -43255,7 +43257,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				disableSimulation=1;
+				init="this allowDamage false; this enableSimulation false;";
 			};
 			id=1251;
 			type="Land_HelipadRescue_F";
@@ -43276,7 +43278,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -43306,7 +43308,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				disableSimulation=1;
+				init="this allowDamage false;";
 			};
 			id=1260;
 			type="Land_BarGate_F";
@@ -43328,7 +43330,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -43347,7 +43349,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				disableSimulation=1;
+				init="this allowDamage false; this enableSimulation false;";
 			};
 			id=1263;
 			type="Land_Mil_WallBig_4m_F";
@@ -43369,7 +43371,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -43388,7 +43390,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				disableSimulation=1;
+				init="this allowDamage false; this enableSimulation false;";
 			};
 			id=1264;
 			type="Land_Mil_WallBig_4m_F";
@@ -43410,7 +43412,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -43429,7 +43431,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				disableSimulation=1;
+				init="this allowDamage false; this enableSimulation false;";
 			};
 			id=1265;
 			type="Land_Mil_WallBig_4m_F";
@@ -43451,7 +43453,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -43470,7 +43472,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				disableSimulation=1;
+				init="this allowDamage false; this enableSimulation false;";
 			};
 			id=1266;
 			type="Land_Mil_WallBig_4m_F";
@@ -43492,7 +43494,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -43511,7 +43513,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				disableSimulation=1;
+				init="this allowDamage false; this enableSimulation false;";
 			};
 			id=1267;
 			type="Land_Mil_WallBig_4m_F";
@@ -43533,7 +43535,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -43552,7 +43554,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				disableSimulation=1;
+				init="this allowDamage false; this enableSimulation false;";
 			};
 			id=1268;
 			type="Land_Mil_WallBig_4m_F";
@@ -43574,7 +43576,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -43593,7 +43595,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				disableSimulation=1;
+				init="this allowDamage false; this enableSimulation false;";
 			};
 			id=1269;
 			type="Land_Mil_WallBig_4m_F";
@@ -43614,7 +43616,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -43633,7 +43635,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				disableSimulation=1;
+				init="this allowDamage false;";
 			};
 			id=1273;
 			type="Land_Cargo_Patrol_V1_F";
@@ -43655,7 +43657,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -43674,7 +43676,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				disableSimulation=1;
+				init="this allowDamage false;";
 			};
 			id=1275;
 			type="Land_Cargo_Patrol_V1_F";
@@ -43696,7 +43698,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -43715,7 +43717,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				disableSimulation=1;
+				init="this allowDamage false; this enableSimulation false;";
 			};
 			id=1276;
 			type="Land_Mil_WallBig_4m_F";
@@ -43736,7 +43738,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -43755,7 +43757,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				disableSimulation=1;
+				init="this allowDamage false; this enableSimulation false;";
 			};
 			id=1277;
 			type="Land_Mil_WallBig_4m_F";
@@ -43777,7 +43779,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -43796,7 +43798,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				disableSimulation=1;
+				init="this allowDamage false; this enableSimulation false;";
 			};
 			id=1279;
 			type="Land_Mil_WallBig_4m_F";
@@ -43817,7 +43819,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -43836,7 +43838,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				disableSimulation=1;
+				init="this allowDamage false; this enableSimulation false;";
 			};
 			id=1280;
 			type="Land_Mil_WallBig_4m_F";
@@ -43857,7 +43859,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -43876,7 +43878,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				disableSimulation=1;
+				init="this allowDamage false; this enableSimulation false;";
 			};
 			id=1281;
 			type="Land_Mil_WallBig_4m_F";
@@ -43898,7 +43900,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -43917,7 +43919,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				disableSimulation=1;
+				init="this allowDamage false; this enableSimulation false;";
 			};
 			id=1283;
 			type="Land_Mil_WallBig_4m_F";
@@ -43939,7 +43941,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -43958,7 +43960,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				disableSimulation=1;
+				init="this allowDamage false; this enableSimulation false;";
 			};
 			id=1284;
 			type="Land_Mil_WallBig_4m_F";
@@ -43979,7 +43981,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -43998,7 +44000,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				disableSimulation=1;
+				init="this allowDamage false; this enableSimulation false;";
 			};
 			id=1285;
 			type="Land_Mil_WallBig_4m_F";
@@ -44020,7 +44022,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -44039,7 +44041,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				disableSimulation=1;
+				init="this allowDamage false; this enableSimulation false;";
 			};
 			id=1286;
 			type="Land_Mil_WallBig_4m_F";
@@ -44060,7 +44062,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -44079,7 +44081,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				disableSimulation=1;
+				init="this allowDamage false; this enableSimulation false;";
 			};
 			id=1287;
 			type="Land_Mil_WallBig_4m_F";
@@ -44101,7 +44103,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -44120,7 +44122,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				disableSimulation=1;
+				init="this allowDamage false; this enableSimulation false;";
 			};
 			id=1288;
 			type="Land_Mil_WallBig_4m_F";
@@ -44142,7 +44144,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -44161,7 +44163,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				disableSimulation=1;
+				init="this allowDamage false; this enableSimulation false;";
 			};
 			id=1289;
 			type="Land_Mil_WallBig_4m_F";
@@ -44182,7 +44184,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -44201,7 +44203,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				disableSimulation=1;
+				init="this allowDamage false; this enableSimulation false;";
 			};
 			id=1291;
 			type="Land_Mil_WallBig_4m_F";
@@ -44223,7 +44225,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -44242,7 +44244,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				disableSimulation=1;
+				init="this allowDamage false; this enableSimulation false;";
 			};
 			id=1292;
 			type="Land_Mil_WallBig_4m_F";
@@ -44264,7 +44266,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -44283,7 +44285,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				disableSimulation=1;
+				init="this allowDamage false; this enableSimulation false;";
 			};
 			id=1293;
 			type="Land_Mil_WallBig_4m_F";
@@ -44304,7 +44306,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -44323,7 +44325,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				disableSimulation=1;
+				init="this allowDamage false; this enableSimulation false;";
 			};
 			id=1294;
 			type="Land_Mil_WallBig_4m_F";
@@ -44345,7 +44347,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -44364,7 +44366,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				disableSimulation=1;
+				init="this allowDamage false; this enableSimulation false;";
 			};
 			id=1295;
 			type="Land_Mil_WallBig_4m_F";
@@ -44386,7 +44388,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -44405,7 +44407,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				disableSimulation=1;
+				init="this allowDamage false; this enableSimulation false;";
 			};
 			id=1296;
 			type="Land_Mil_WallBig_4m_F";
@@ -44427,7 +44429,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -44446,7 +44448,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				disableSimulation=1;
+				init="this allowDamage false; this enableSimulation false;";
 			};
 			id=1297;
 			type="Land_Mil_WallBig_4m_F";
@@ -44468,7 +44470,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -44487,7 +44489,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				disableSimulation=1;
+				init="this allowDamage false; this enableSimulation false;";
 			};
 			id=1298;
 			type="Land_Mil_WallBig_4m_F";
@@ -44509,7 +44511,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -44528,7 +44530,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				disableSimulation=1;
+				init="this allowDamage false; this enableSimulation false;";
 			};
 			id=1300;
 			type="Land_Mil_WallBig_4m_F";
@@ -44550,7 +44552,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -44569,7 +44571,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				disableSimulation=1;
+				init="this allowDamage false; this enableSimulation false;";
 			};
 			id=1301;
 			type="Land_Mil_WallBig_4m_F";
@@ -44591,7 +44593,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -44610,7 +44612,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				disableSimulation=1;
+				init="this allowDamage false;";
 			};
 			id=1303;
 			type="Land_Cargo_Patrol_V1_F";
@@ -44632,7 +44634,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -44651,7 +44653,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				disableSimulation=1;
+				init="this allowDamage false; this enableSimulation false;";
 			};
 			id=1305;
 			type="Land_Mil_WallBig_4m_F";
@@ -44672,7 +44674,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -44691,7 +44693,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				disableSimulation=1;
+				init="this allowDamage false; this enableSimulation false;";
 			};
 			id=1306;
 			type="Land_Mil_WallBig_4m_F";
@@ -44713,7 +44715,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -44732,7 +44734,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				disableSimulation=1;
+				init="this allowDamage false; this enableSimulation false;";
 			};
 			id=1308;
 			type="Land_Mil_WallBig_4m_F";
@@ -44754,7 +44756,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -44767,13 +44769,13 @@ class Mission
 			class PositionInfo
 			{
 				position[]={16969.586,7.8278689,13385.765};
-				angles[]={0,2.4973514,0};
+				angles[]={0,5.5756369,-0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				disableSimulation=1;
+				init="this allowDamage false;";
 			};
 			id=1309;
 			type="Land_Cargo_Patrol_V1_F";
@@ -44794,7 +44796,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -44813,7 +44815,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				disableSimulation=1;
+				init="this allowDamage false;";
 			};
 			id=1311;
 			type="Land_Cargo_House_V1_F";
@@ -44835,7 +44837,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -44854,7 +44856,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				disableSimulation=1;
+				init="this allowDamage false;";
 			};
 			id=1312;
 			type="Land_Cargo_House_V1_F";
@@ -44876,7 +44878,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -45177,39 +45179,6 @@ class Mission
 		};
 		class Item949
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={16940.027,8.1691608,13415.354};
-				angles[]={0,5.5949745,0};
-			};
-			side="Empty";
-			flags=1;
-			class Attributes
-			{
-			};
-			id=1343;
-			type="Land_LampHalogen_F";
-			atlOffset=0.86113536;
-		};
-		class Item950
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={16930.641,8.1724501,13427.608};
-				angles[]={0,5.5949745,0};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-			};
-			id=1358;
-			type="Land_LampHalogen_F";
-		};
-		class Item951
-		{
 			dataType="Layer";
 			name="Bank";
 			class Entities
@@ -45447,6 +45416,7 @@ class Mission
 							};
 							id=2145;
 							type="Land_Airport_Tower_F";
+							atlOffset=9.5367432e-007;
 						};
 						class Item1
 						{
@@ -46054,6 +46024,7 @@ class Mission
 							};
 							id=2182;
 							type="Land_dp_mainFactory_F";
+							atlOffset=2.3841858e-007;
 						};
 						class Item38
 						{
@@ -46206,7 +46177,7 @@ class Mission
 							};
 							id=2191;
 							type="Land_LampShabby_F";
-							atlOffset=-2.3841858e-007;
+							atlOffset=-3.5762787e-007;
 						};
 						class Item47
 						{
@@ -46224,6 +46195,7 @@ class Mission
 							};
 							id=2192;
 							type="Land_LifeguardTower_01_F";
+							atlOffset=-2.3841858e-007;
 						};
 						class Item48
 						{
@@ -46240,6 +46212,7 @@ class Mission
 							};
 							id=2193;
 							type="Land_Lighthouse_03_red_F";
+							atlOffset=2.3841858e-007;
 						};
 						class Item49
 						{
@@ -46256,7 +46229,6 @@ class Mission
 							};
 							id=2194;
 							type="Land_LightHouse_F";
-							atlOffset=-4.7683716e-007;
 						};
 						class Item50
 						{
@@ -46273,6 +46245,7 @@ class Mission
 							};
 							id=2195;
 							type="Land_Cargo_Patrol_V1_F";
+							atlOffset=-4.7683716e-007;
 						};
 						class Item51
 						{
@@ -46583,6 +46556,7 @@ class Mission
 							};
 							id=2215;
 							type="Land_Sunshade_F";
+							atlOffset=-1.1920929e-007;
 						};
 						class Item69
 						{
@@ -47214,6 +47188,49 @@ class Mission
 			};
 			id=1392;
 			atlOffset=1.7614737;
+		};
+		class Item950
+		{
+			dataType="Marker";
+			position[]={7589.5742,118.781,19993.623};
+			name="hunting_zone";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorYellow";
+			alpha=0.49437299;
+			a=1000;
+			b=1000;
+			id=2252;
+			atlOffset=-5.6210785;
+		};
+		class Item951
+		{
+			dataType="Marker";
+			position[]={7604.667,128.909,19991.012};
+			name="hunting_marker";
+			text="Hunting Grounds";
+			type="mil_box";
+			colorName="ColorYellow";
+			id=2253;
+			atlOffset=1.5258789e-005;
+		};
+		class Item952
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={16940.027,8.1691608,13415.354};
+				angles[]={0,5.5949745,0};
+			};
+			side="Empty";
+			flags=1;
+			class Attributes
+			{
+				init="this allowDamage false; this enableSimulation false;";
+			};
+			id=1343;
+			type="Land_LampHalogen_F";
+			atlOffset=0.86113536;
 		};
 	};
 };

@@ -108,8 +108,8 @@ class Life_Client_Core {
         class jailMe {};
         class robPerson {};
         class robReceive {};
-        class tazed {};
-        class tazeRagdoll {};
+        class downed {};
+        class forceRagdoll {};
         class updateWanted {};
     };
 
@@ -203,6 +203,7 @@ class Life_Client_Core {
         class inventoryOpened {};
         class isUIDActive {};
         class keyHandler {};
+        class killFeed {};
         class nearATM {};
         class nearestDoor {};
         class nearUnits {};

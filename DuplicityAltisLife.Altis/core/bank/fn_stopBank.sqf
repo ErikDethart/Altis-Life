@@ -16,7 +16,7 @@ if !(alive player) exitWith {};
 if !(side player isEqualTo west) exitWith {};
 if (life_action_inUse) exitWith {};
 if (player getVariable ["restrained",false]) exitWith {};
-if (life_istazed) exitWith {};
+if (life_isDowned) exitWith {};
 
 life_interrupted = false;
 life_action_inUse = true;

@@ -13,7 +13,7 @@ if !(alive player) exitWith {};
 if !(side player isEqualTo civilian) exitWith {};
 if (player getVariable ["restrained",false]) exitWith {};
 if (life_is_arrested) exitWith {};
-if (life_istazed) exitWith {};
+if (life_isDowned) exitWith {};
 
 private _copCount = 0;
 private _requiredCops = getNumber(missionConfigFile >> "Life_Settings" >> "bank_minimum_cops");

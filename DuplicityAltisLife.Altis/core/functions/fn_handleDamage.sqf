@@ -2,7 +2,7 @@
 
 /*
     File: fn_handleDamage.sqf
-    Author: Bryan "Tonic" Boardwine
+    Author: Erik
     Description:
     Handles Rubber Bullets
 */
@@ -20,6 +20,7 @@ params [
 //Error Checks
 if (isNull _source || _source isEqualTo _unit || _unit getVariable["Revive",false]) exitWith {};
 
+if !(_unit isEqualTo player) exitWith {};
 
 
 
@@ -38,19 +39,22 @@ if (isNull _source || _source isEqualTo _unit || _unit getVariable["Revive",fals
 
     //Handle
     if (_downing) then {
-        if (_unit getVariable ["restrained",false]) exitWith {
-            [] spawn life_fnc_hudUpdate;
+        if (_unit getVariable ["restrained",false] || life_isDowned) then {
             _damage = 0;
-            _damage;
-        };
-        if (((getDammage _unit) + _damage) >= 0.90) then {
-            _damage = 0;
-            if (typeOf (vehicle player) == "B_Quadbike_01_F") then { player action ["Eject",vehicle player]; };
-            [_unit,_source] spawn life_fnc_tazed;
+        } else {
+            if (((damage _unit) + _damage) >= 0.90) then {
+                _damage = 0;
+
+                if (typeOf (vehicle player) == "B_Quadbike_01_F") then {
+                    player action ["Eject",vehicle player];
+                };
+
+                [_unit,_source] spawn life_fnc_downed;
+            };
         };
     };
 //Downing Script End ==============================================================================================
 
 
-[] spawn life_fnc_hudUpdate;
+[] call life_fnc_hudUpdate;
 _damage;

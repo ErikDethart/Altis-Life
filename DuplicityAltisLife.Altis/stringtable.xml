@@ -3760,17 +3760,6 @@
             <Portuguese>%1 não tem nenhum dinheiro.</Portuguese>
             <Polish>%1 nie ma pieniędzy.</Polish>
         </Key>
-        <Key ID="STR_NOTF_Tazed">
-            <Original>%1 was tazed by %2</Original>
-            <Czech>%1 byl tased%2</Czech>
-            <Spanish>%1 fue paralizado por %2</Spanish>
-            <Russian></Russian>
-            <German>%1 wurde von %2 getazert.</German>
-            <French>%1 a été tazé par %2.</French>
-            <Italian>%1 è stato taserato da %2</Italian>
-            <Portuguese>%1 foi eletrocutado por %2</Portuguese>
-            <Polish>%1 został potraktowany paralizatorem przez %2</Polish>
-        </Key>
         <Key ID="STR_NOTF_VehContraband">
             <Original>A vehicle was searched and has $%1 worth of drugs / contraband.</Original>
             <Czech>Vozidlo byl prohledán a má $%1 v hodnotě drog / kontrabandu.</Czech>

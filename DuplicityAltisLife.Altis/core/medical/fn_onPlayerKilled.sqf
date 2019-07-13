@@ -27,6 +27,8 @@ _unit setVariable ["transporting",false,true];
 _unit setVariable ["playerSurrender",false,true];
 _unit setVariable ["steam64id",(getPlayerUID player),true]; //Set the UID.
 
+[_unit, _killer, "killed"] call life_fnc_killFeed;
+
 //close the esc dialog
 if (dialog) then {
     closeDialog 0;
