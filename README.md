@@ -3,9 +3,6 @@
 Mission development for an Altis Life server.
 
 <p align="center">
-  <a href="https://travis-ci.org/NoobNamedErik/ALTISLIFE">
-    <img src="https://travis-ci.org/NoobNamedErik/ALTISLIFE.svg?branch=master" alt="Build Status">
-  </a>
   <a href="https://discord.gg/tFc2RPd">
     <img src="https://img.shields.io/badge/Discord-Join%20chat%20→-738bd7.svg" alt="Discord">
   </a>

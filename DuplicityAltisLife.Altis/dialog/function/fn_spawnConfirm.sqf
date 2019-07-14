@@ -7,7 +7,7 @@
 */
 private ["_spCfg","_sp","_spawnPos"];
 closeDialog 0;
-cutText ["","BLACK IN"];
+"respawnBackground" cutText ["","BLACK IN"];
 if (life_spawn_point isEqualTo []) then {
     private ["_sp","_spCfg"];
     _spCfg = [playerSide] call life_fnc_spawnPointCfg;

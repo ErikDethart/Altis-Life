@@ -9,11 +9,13 @@
     Adds or appends a unit to the wanted list.
 */
 params [
-    ["_uid","",[""]],
-    ["_name","",[""]],
-    ["_type","",[""]],
-    ["_customBounty",-1,[0]]
+    ["_unit", objNull ,[objNull]],
+    ["_type", "", [""]],
+    ["_customBounty", -1, [0]]
 ];
+
+private _uid = getPlayerUID _unit; 
+private _name = name _unit;
 
 if (_uid isEqualTo "" || {_type isEqualTo ""} || {_name isEqualTo ""}) exitWith {}; //Bad data passed.
 
@@ -39,8 +41,6 @@ if !(count _queryResult isEqualTo 0) then {
     _query = format ["SELECT wantedCrimes, wantedBounty FROM wanted WHERE wantedID='%1'",_uid];
     _queryResult = [_query,2] call DB_fnc_asyncCall;
     _pastCrimes = [_queryResult select 0] call DB_fnc_mresToArray;
-
-    if (_pastCrimes isEqualType "") then {_pastCrimes = call compile format ["%1", _pastCrimes];};
     _pastCrimes pushBack _number;
     _pastCrimes = [_pastCrimes] call DB_fnc_mresArray;
     _query = format ["UPDATE wanted SET wantedCrimes = '%1', wantedBounty = wantedBounty + '%2', active = '1' WHERE wantedID='%3'",_pastCrimes,_val,_uid];
@@ -51,3 +51,5 @@ if !(count _queryResult isEqualTo 0) then {
     _query = format ["INSERT INTO wanted (wantedID, wantedName, wantedCrimes, wantedBounty, active) VALUES('%1', '%2', '%3', '%4', '1')",_uid,_name,_crime,_val];
     [_query,1] call DB_fnc_asyncCall;
 };
+
+[((_queryResult select 1) + (_type select 1))] remoteExecCall ["life_fnc_updateWanted", _unit];

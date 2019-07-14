@@ -27,6 +27,8 @@ _unit setVariable ["transporting",false,true];
 _unit setVariable ["playerSurrender",false,true];
 _unit setVariable ["steam64id",(getPlayerUID player),true]; //Set the UID.
 
+[_unit, _killer, "killed"] call life_fnc_killFeed;
+
 //close the esc dialog
 if (dialog) then {
     closeDialog 0;
@@ -90,25 +92,16 @@ if (!isNull _killer && {!(_killer isEqualTo _unit)} && {!(side _killer isEqualTo
         } else {
             [getPlayerUID _killer,_killer getVariable ["realname",name _killer],"187V"] remoteExecCall ["life_fnc_wantedAdd",RSERV];
         };
-
-        //Get rid of this if you don't want automatic vehicle license removal.
-        if (!local _killer) then {
-            [2] remoteExecCall ["life_fnc_removeLicenses",_killer];
-        };
     } else {
         if (life_HC_isActive) then {
             [getPlayerUID _killer,_killer getVariable ["realname",name _killer],"187"] remoteExecCall ["HC_fnc_wantedAdd",HC_Life];
         } else {
             [getPlayerUID _killer,_killer getVariable ["realname",name _killer],"187"] remoteExecCall ["life_fnc_wantedAdd",RSERV];
         };
-
-        if (!local _killer) then {
-            [3] remoteExecCall ["life_fnc_removeLicenses",_killer];
-        };
     };
 };
 
-life_save_gear = [player] call life_fnc_fetchDeadGear;
+life_save_gear = getUnitLoadout player;
 
 if (LIFE_SETTINGS(getNumber,"drop_weapons_onDeath") isEqualTo 0) then {
     _unit removeWeapon (primaryWeapon _unit);
@@ -118,7 +111,8 @@ if (LIFE_SETTINGS(getNumber,"drop_weapons_onDeath") isEqualTo 0) then {
 
 //Killed by cop stuff...
 if (side _killer isEqualTo west && !(playerSide isEqualTo west)) then {
-    life_copRecieve = _killer;
+    [getPlayerUID player,player,life_copRecieve,true] remoteExecCall ["life_fnc_wantedBounty",RSERV];
+
     //Did I rob the federal reserve?
     if (!life_use_atm && {CASH > 0}) then {
         [format [localize "STR_Cop_RobberDead",[CASH] call life_fnc_numberText]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
@@ -126,11 +120,9 @@ if (side _killer isEqualTo west && !(playerSide isEqualTo west)) then {
     };
 };
 
-if (!isNull _killer && {!(_killer isEqualTo _unit)}) then {
-    life_removeWanted = true;
+if (playerSide isEqualTo civilian) then {
+    [_unit] call life_fnc_dropItems;
 };
-
-[_unit] call life_fnc_dropItems;
 
 life_action_inUse = false;
 life_hunger = 100;
@@ -142,8 +134,4 @@ life_is_alive = false;
 [] call life_fnc_hudUpdate; //Get our HUD updated.
 [player,life_settings_enableSidechannel,playerSide] remoteExecCall ["TON_fnc_manageSC",RSERV];
 
-[0] call SOCK_fnc_updatePartial;
-[3] call SOCK_fnc_updatePartial;
-if (playerSide isEqualTo civilian) then {
-    [4] call SOCK_fnc_updatePartial;
-};
+[] call SOCK_fnc_updateRequest;

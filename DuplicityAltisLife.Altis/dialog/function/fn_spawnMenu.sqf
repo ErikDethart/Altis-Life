@@ -8,15 +8,22 @@
 private ["_spCfg","_sp","_ctrl"];
 disableSerialization;
 
+
+
+params [
+    ["_respawned", false, [false]]
+];
+
 if (life_is_arrested) exitWith {
     [] call life_fnc_respawned;
 };
 
-if (life_respawned) then {
+if (_respawned) then {
     [] call life_fnc_respawned;
 };
-cutText["","BLACK FADED"];
-0 cutFadeOut 9999999;
+
+"respawnBackground" cutText["","BLACK FADED",99999999];
+
 if (!(createDialog "life_spawn_selection")) exitWith {[] call life_fnc_spawnMenu;};
 (findDisplay 38500) displaySetEventHandler ["keyDown","_this call life_fnc_displayHandler"];
 

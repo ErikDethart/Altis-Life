@@ -88,16 +88,13 @@ diag_log "[Life Client] Executing client.fsm";
     };
 };
 
-addMissionEventHandler ["EachFrame", life_fnc_playerTags];
-addMissionEventHandler ["EachFrame", life_fnc_revealObjects];
-
 if (LIFE_SETTINGS(getNumber,"enable_fatigue") isEqualTo 0) then {player enableFatigue false;};
 if (LIFE_SETTINGS(getNumber,"pump_service") isEqualTo 1) then {
     [] execVM "core\fn_setupStationService.sqf";
 };
 
 life_fnc_RequestClientId = player;
-publicVariableServer "life_fnc_RequestClientId"; 
+publicVariableServer "life_fnc_RequestClientId";
 
 /*
     https://feedback.bistudio.com/T117205 - disableChannels settings cease to work when leaving/rejoining mission

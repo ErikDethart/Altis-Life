@@ -28,21 +28,6 @@ if ([false,_type,_amount] call life_fnc_handleInv) then {
     [] call life_fnc_virt_update;
 };
 
-if (life_shop_type isEqualTo "drugdealer") then {
-    private ["_array","_ind","_val"];
-    _array = life_shop_npc getVariable ["sellers",[]];
-    _ind = [getPlayerUID player,_array] call TON_fnc_index;
-    if (!(_ind isEqualTo -1)) then {
-        _val = ((_array select _ind) select 2);
-        _val = _val + _price;
-        _array set[_ind,[getPlayerUID player,profileName,_val]];
-        life_shop_npc setVariable ["sellers",_array,true];
-    } else {
-        _array pushBack [getPlayerUID player,profileName,_price];
-        life_shop_npc setVariable ["sellers",_array,true];
-    };
-};
-
 if (life_shop_type isEqualTo "gold" && (LIFE_SETTINGS(getNumber,"noatm_timer")) > 0) then {
     [] spawn {
         life_use_atm = false;

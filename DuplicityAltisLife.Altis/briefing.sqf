@@ -557,7 +557,6 @@ Left Shift + R: Restrain (police only).<br/><br/>
         [
             "Civilian controls",
                 "
-Left Shift + G: Knock out / stun (Weapon required. Used for robbing).<br/>
 Spacebar: Place storage container.<br/><br/>
                 "
         ]

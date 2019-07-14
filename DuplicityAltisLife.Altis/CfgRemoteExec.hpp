@@ -35,7 +35,6 @@ class CfgRemoteExec {
         F(life_fnc_impoundMenu,CLIENT)
         F(life_fnc_jail,CLIENT)
         F(life_fnc_jailMe,CLIENT)
-        F(life_fnc_knockedOut,CLIENT)
         F(life_fnc_licenseCheck,CLIENT)
         F(life_fnc_licensesRead,CLIENT)
         F(life_fnc_lightHouse,CLIENT)
@@ -45,6 +44,7 @@ class CfgRemoteExec {
         F(life_fnc_moveIn,CLIENT)
         F(life_fnc_pickupItem,CLIENT)
         F(life_fnc_pickupMoney,CLIENT)
+        F(life_fnc_updateWanted,CLIENT)
         F(life_fnc_receiveItem,CLIENT)
         F(life_fnc_receiveMoney,CLIENT)
         F(life_fnc_removeLicenses,CLIENT)
@@ -74,6 +74,8 @@ class CfgRemoteExec {
         F(TON_fnc_player_query,CLIENT)
 
         /* Server only functions */
+        F(life_fnc_bankRobbery,SERVER)
+        F(life_fnc_stopBankServer,SERVER)
         F(BIS_fnc_execVM,SERVER)
         F(DB_fnc_insertRequest,SERVER)
         F(DB_fnc_queryRequest,SERVER)
@@ -164,7 +166,8 @@ class CfgRemoteExec {
         F(life_fnc_setFuel,ANYONE)
         F(life_fnc_simDisable,ANYONE)
         F(SPY_fnc_notifyAdmins,ANYONE)
-        F(BIS_fnc_debugConsoleExec,EVERYONE)
+        F(BIS_fnc_debugConsoleExec,ANYONE)
+        F(BIS_fnc_curatorRespawn,ANYONE)
     };
 
     class Commands {

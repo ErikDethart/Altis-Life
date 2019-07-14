@@ -90,6 +90,14 @@ class Life_Client_Core {
         class adminTpHere {};
     };
 
+    class Bank {
+        file = "core\bank";
+        class startBank {};
+        class stopBank {};
+        class bankTimer {};
+        class bankStopReward {};
+    };
+
     class Civilian {
         file = "core\civilian";
         class civLoadout {};
@@ -98,14 +106,11 @@ class Life_Client_Core {
         class freezePlayer {};
         class jail {};
         class jailMe {};
-        class knockedOut {};
-        class knockoutAction {};
-        class removeLicenses {};
         class robPerson {};
         class robReceive {};
-        class tazed {};
-        class tazeRagdoll {};
-
+        class downed {};
+        class forceRagdoll {};
+        class updateWanted {};
     };
 
     class Config {
@@ -130,7 +135,6 @@ class Life_Client_Core {
         class fedCamDisplay {};
         class licenseCheck {};
         class licensesRead {};
-        class questionDealer {};
         class radar {};
         class repairDoor {};
         class restrain {};
@@ -187,7 +191,6 @@ class Life_Client_Core {
         class dropItems {};
         class escInterupt {};
         class fetchCfgDetails {};
-        class fetchDeadGear {};
         class fetchVehInfo {};
         class formatName {};
         class isDamaged {};
@@ -202,8 +205,7 @@ class Life_Client_Core {
         class inventoryOpened {};
         class isUIDActive {};
         class keyHandler {};
-        class loadDeadGear {};
-        class loadGear {};
+        class killFeed {};
         class nearATM {};
         class nearestDoor {};
         class nearUnits {};
@@ -221,7 +223,6 @@ class Life_Client_Core {
         class receiveMoney {};
         class revealObjects {};
         class simDisable {};
-        class stripDownPlayer {};
         class teleport {};
         class whereAmI {};
         class moveIn {};
@@ -357,12 +358,8 @@ class Life_Client_Core {
         class virt_menu {};
         class virt_sell {};
         class virt_update {};
-        class weaponShopAccs {};
-        class weaponShopBuySell {};
-        class weaponShopFilter {};
-        class weaponShopMags {};
         class weaponShopMenu {};
-        class weaponShopSelection {};
+        class weaponShopBuy {};
     };
 
     class Vehicle {

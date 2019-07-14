@@ -35,7 +35,8 @@ if (player distance (getMarkerPos "jail_marker") > 40) then {
     player setPos (getMarkerPos "jail_marker");
 };
 
-[1] call life_fnc_removeLicenses;
+missionNamespace setVariable [LICENSE_VARNAME("gun","civ"),false];
+[2] call SOCK_fnc_updatePartial;
 
 {
     _amount = ITEM_VALUE(_x);
