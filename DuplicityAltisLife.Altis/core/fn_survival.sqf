@@ -6,8 +6,7 @@
     Description:
     All survival? things merged into one thread.
 */
-private ["_fnc_food","_fnc_water","_foodTime","_waterTime","_bp","_walkDis","_lastPos","_curPos"];
-_fnc_food =  {
+private _fnc_food =  {
     if (life_hunger < 2) then {player setDamage 1; hint localize "STR_NOTF_EatMSG_Death";}
     else
     {
@@ -25,7 +24,7 @@ _fnc_food =  {
     };
 };
 
-_fnc_water = {
+private _fnc_water = {
     if (life_thirst < 2) then {player setDamage 1; hint localize "STR_NOTF_DrinkMSG_Death";}
     else
     {
@@ -47,15 +46,16 @@ _fnc_water = {
 };
 
 //Setup the time-based variables.
-_foodTime = time;
-_waterTime = time;
-_walkDis = 0;
-_bp = "";
-_lastPos = visiblePosition player;
+private _foodTime = time;
+private _waterTime = time;
+private _walkDis = 0;
+private _bp = "";
+private _lastPos = visiblePosition player;
 _lastPos = (_lastPos select 0) + (_lastPos select 1);
-_lastState = vehicle player;
+private _lastState = vehicle player;
+private "_curPos";
 
-for "_i" from 0 to 1 step 0 do {
+while {true} do {
     /* Thirst / Hunger adjustment that is time based */
     if ((time - _waterTime) > 600 && {!life_god}) then {[] call _fnc_water; _waterTime = time;};
     if ((time - _foodTime) > 850 && {!life_god}) then {[] call _fnc_food; _foodTime = time;};
