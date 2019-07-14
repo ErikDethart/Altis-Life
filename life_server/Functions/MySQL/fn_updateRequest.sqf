@@ -39,9 +39,9 @@ _alive = [_alive] call DB_fnc_bool;
 _position = if (_side isEqualTo civilian) then {[_position] call DB_fnc_mresArray} else {[]};
 
 switch (_side) do {
-    case west: {_query = format ["UPDATE players SET name='%1', cash='%2', bankacc='%3', cop_gear='%4', cop_vitems='%5', cop_stats='%6', cop_alive='%7' WHERE pid='%8'",_name,_cash,_bank,_gear,_vItems,_stats, _alive,_uid];};
-    case civilian: {_query = format ["UPDATE players SET name='%1', cash='%2', bankacc='%3', civ_vitems='%4', civ_gear='%5', arrested='%6', civ_stats='%7', civ_alive='%8', civ_position='%9' WHERE pid='%10'",_name,_cash,_bank,_vItems,_gear,[_arrested] call DB_fnc_bool,_stats,_alive,_position,_uid];};
-    case independent: {_query = format ["UPDATE players SET name='%1', cash='%2', bankacc='%3', med_vitems='%4', med_gear='%5', med_stats='%6', med_alive='%7' WHERE pid='%8'",_name,_cash,_bank,_vItems,_gear,_stats, _alive, _uid];};
+    case west: {_query = format ["UPDATE players SET name='%1', cash='%2', bank='%3', cop_gear='%4', cop_vitems='%5', cop_stats='%6', cop_alive='%7' WHERE pid='%8'",_name,_cash,_bank,_gear,_vItems,_stats, _alive,_uid];};
+    case civilian: {_query = format ["UPDATE players SET name='%1', cash='%2', bank='%3', civ_vitems='%4', civ_gear='%5', arrested='%6', civ_stats='%7', civ_alive='%8', civ_position='%9' WHERE pid='%10'",_name,_cash,_bank,_vItems,_gear,[_arrested] call DB_fnc_bool,_stats,_alive,_position,_uid];};
+    case independent: {_query = format ["UPDATE players SET name='%1', cash='%2', bank='%3', med_vitems='%4', med_gear='%5', med_stats='%6', med_alive='%7' WHERE pid='%8'",_name,_cash,_bank,_vItems,_gear,_stats, _alive, _uid];};
 };
 
 _queryResult = [_query,1] call DB_fnc_asyncCall;

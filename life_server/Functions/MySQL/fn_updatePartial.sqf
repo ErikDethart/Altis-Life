@@ -27,7 +27,7 @@ switch (_mode) do {
 
     case 1: {
         _data = [_data] call DB_fnc_numberSafe;
-        _query = format ["UPDATE players SET bankacc='%1' WHERE pid='%2'", _data, _uid];
+        _query = format ["UPDATE players SET bank='%1' WHERE pid='%2'", _data, _uid];
     };
 
     case 2: {
@@ -71,7 +71,7 @@ switch (_mode) do {
         _cash = [(_data select 0)] call DB_fnc_numberSafe;
         _bank = [(_data select 1)] call DB_fnc_numberSafe;
 
-        _query = format ["UPDATE players SET cash='%1', bankacc='%2' WHERE pid='%3'", _cash, _bank, _uid];
+        _query = format ["UPDATE players SET cash='%1', bank='%2' WHERE pid='%3'", _cash, _bank, _uid];
     };
 };
 

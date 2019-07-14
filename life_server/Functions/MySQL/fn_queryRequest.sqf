@@ -22,15 +22,15 @@ if (isNull _unit) exitWith {};
 
 private _query = switch (_side) do {
     case west: {
-        format ["SELECT pid, cash, bankacc, adminLevel, donorLevel, cop_licenses, cop_gear, cop_vitems, cop_alive, cop_stats, coplevel, blacklist FROM players WHERE pid='%1'", _uid];
+        format ["SELECT pid, cash, bank, adminLevel, donorLevel, cop_licenses, cop_gear, cop_vitems, cop_alive, cop_stats, coplevel, blacklist FROM players WHERE pid='%1'", _uid];
     };
 
     case civilian: {
-        format ["SELECT pid, cash, bankacc, adminLevel, donorLevel, civ_licenses, civ_gear, civ_vitems, civ_alive, civ_stats, arrested, civ_position FROM players WHERE pid='%1'", _uid];
+        format ["SELECT pid, cash, bank, adminLevel, donorLevel, civ_licenses, civ_gear, civ_vitems, civ_alive, civ_stats, arrested, civ_position FROM players WHERE pid='%1'", _uid];
     };
 
     case independent: {
-        format ["SELECT pid, cash, bankacc, adminLevel, donorLevel, med_licenses, med_gear, med_vitems, med_alive, med_stats, mediclevel FROM players WHERE pid='%1'", _uid];
+        format ["SELECT pid, cash, bank, adminLevel, donorLevel, med_licenses, med_gear, med_vitems, med_alive, med_stats, mediclevel FROM players WHERE pid='%1'", _uid];
     };
 };
 
