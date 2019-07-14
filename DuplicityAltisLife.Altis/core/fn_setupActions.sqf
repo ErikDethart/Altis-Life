@@ -6,6 +6,8 @@
     Master addAction file handler for all client-based actions.
 */
 
+removeAllActions player;
+
 life_actions = [];
 
 switch (playerSide) do {
@@ -20,12 +22,12 @@ switch (playerSide) do {
         life_actions pushBack (player addAction[localize "STR_pAct_RobPerson",life_fnc_robAction,"",0,false,false,"",'
         !isNull cursorObject && player distance cursorObject < 3.5 && isPlayer cursorObject && animationState cursorObject == "Incapacitated" && !(cursorObject getVariable ["robbed",false]) ']);
     };
-    
+
     //Cops
     case west: {
 
     };
-    
+
     //EMS
     case independent: {
 

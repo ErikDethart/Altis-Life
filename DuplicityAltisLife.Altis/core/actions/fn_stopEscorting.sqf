@@ -8,7 +8,7 @@
 */
 
 private _unit = player getVariable ["escortingPlayer",objNull];
-if (isNull _unit) then {_unit = cursorTarget;}; //Emergency fallback.
+if (isNull _unit) then {_unit = cursorObject;}; //Emergency fallback.
 if (isNull _unit) exitWith {}; //Target not found even after using cursorTarget.
 if (!(_unit getVariable ["Escorting",false])) exitWith {}; //He's not being Escorted.
 detach _unit;
