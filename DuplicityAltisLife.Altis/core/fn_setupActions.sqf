@@ -22,12 +22,39 @@ switch (playerSide) do {
     };
     
     //Cops
-    case west: { };
+    case west: {
+
+    };
     
     //EMS
-    case independent: { };
+    case independent: {
+
+    };
 
 };
 
 //All Sides
-life_actions pushBack (player addAction["<t color='#ADFF2F'>ATM</t>",life_fnc_atmMenu,nil,1.5,false,true,"","call life_fnc_nearATM"]);
+
+//ATM
+life_actions pushBack (player addAction[
+    "<t color='#ADFF2F'>ATM</t>",
+    life_fnc_atmMenu,
+    nil,
+    1.5,
+    false,
+    true,
+    "",
+    "call life_fnc_nearATM"
+]);
+
+//Defibrillator
+life_actions pushBack (player addAction[
+    "<t color='#FF0000'><img image='a3\ui_f\data\map\MapControl\hospital_ca.paa'/> Use Defibrillator</t>",
+    life_fnc_revivePlayer,
+    "",
+    0,
+    false,
+    false,
+    "",
+    '(life_inv_defibrillator > 0) && ((player distance cursorObject) < 5) && !(cursorObject getVariable ["Revive", true])'
+]);

@@ -289,6 +289,7 @@ class Life_Client_Core {
     class Medical_System {
         file = "core\medical";
         class deathScreen {};
+        class heal{};
         class medicRequest {};
         class onPlayerKilled {};
         class onPlayerRespawn {};
