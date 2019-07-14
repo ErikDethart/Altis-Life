@@ -3760,17 +3760,6 @@
             <Portuguese>%1 não tem nenhum dinheiro.</Portuguese>
             <Polish>%1 nie ma pieniędzy.</Polish>
         </Key>
-        <Key ID="STR_NOTF_Tazed">
-            <Original>%1 was tazed by %2</Original>
-            <Czech>%1 byl tased%2</Czech>
-            <Spanish>%1 fue paralizado por %2</Spanish>
-            <Russian></Russian>
-            <German>%1 wurde von %2 getazert.</German>
-            <French>%1 a été tazé par %2.</French>
-            <Italian>%1 è stato taserato da %2</Italian>
-            <Portuguese>%1 foi eletrocutado por %2</Portuguese>
-            <Polish>%1 został potraktowany paralizatorem przez %2</Polish>
-        </Key>
         <Key ID="STR_NOTF_VehContraband">
             <Original>A vehicle was searched and has $%1 worth of drugs / contraband.</Original>
             <Czech>Vozidlo byl prohledán a má $%1 v hodnotě drog / kontrabandu.</Czech>
@@ -3891,17 +3880,6 @@
             <Italian>Non sei un poliziotto.</Italian>
             <Portuguese>Você não é um Policial.</Portuguese>
             <Polish>Nie jesteś policjantem</Polish>
-        </Key>
-        <Key ID="STR_NOTF_NoRoom">
-            <Original>You don't have enough room for that item.</Original>
-            <Czech>Nemáte dostatek prostoru pro danou položku.</Czech>
-            <Spanish>No tienes el espacio suficiente.</Spanish>
-            <Russian></Russian>
-            <German>Du hast nicht genug Platz für den Gegenstand.</German>
-            <French>Vous n'avez pas assez de place.</French>
-            <Italian>Non hai abbastanza spazio per quell'oggetto.</Italian>
-            <Portuguese>Você não tem espaço suficiente no seu inventário.</Portuguese>
-            <Polish>Nie masz wystarczająco miejsca na tą rzecz.</Polish>
         </Key>
         <Key ID="STR_NOTF_ProcessWOLicense">
             <Original>You need $%1 to process without a license!</Original>
@@ -4822,17 +4800,6 @@
         </Key>
     </Package>
     <Package name="Civ_Strings">
-        <Key ID="STR_Civ_KnockedOut">
-            <Original>%1 has knocked you out.</Original>
-            <Czech>%1 zaklepal vás.</Czech>
-            <Spanish>%1 te a noqueado.</Spanish>
-            <Russian></Russian>
-            <German>%1 hat dich niedergeschlagen.</German>
-            <French>%1 vous a assommé.</French>
-            <Italian>%1 ti ha colpito stordendoti.</Italian>
-            <Portuguese>%1 nocauteou você.</Portuguese>
-            <Polish>zostałeś ogłuszony przez %1</Polish>
-        </Key>
         <Key ID="STR_Civ_LicenseRemove_1">
             <Original>You have lost all your motor vehicle licenses for vehicular manslaughter.</Original>
             <Czech>Jste ztratili všechny své licence motorových vozidel pro dopravní zabití.</Czech>
@@ -5384,28 +5351,6 @@
             <Italian>Nessuna Licenza&lt;br/&gt;</Italian>
             <Portuguese>Você não tem licença&lt;br/&gt;</Portuguese>
             <Polish>Brak licencji&lt;br/&gt;</Polish>
-        </Key>
-        <Key ID="STR_Cop_DealerQuestion">
-            <Original>No one has sold to this dealer recently.</Original>
-            <Czech>Nikdo se prodalo tohoto prodejce nedávno.</Czech>
-            <Spanish>Nadie le ha vendido a este comerciante recientemente.</Spanish>
-            <Russian></Russian>
-            <German>Niemand hat kürzlich an diesem Dealer etwas verkauft.</German>
-            <French>Personne n'est venu vendre quelque chose ici récemment.</French>
-            <Italian>Non è stato visto nessuno vendere a questo spacciatore di recente.</Italian>
-            <Portuguese>Ninguém vendeu para esse negociante recentemente</Portuguese>
-            <Polish>Nikt nie sprzedawał ostatnio u dilera.</Polish>
-        </Key>
-        <Key ID="STR_Cop_DealerMSG">
-            <Original>The following people have been selling to this dealer recently.</Original>
-            <Czech>Následující lidé byli prodeji tohoto prodejce nedávno.</Czech>
-            <Spanish>Las siguientes personas le han estado vendiendo a este comerciante recientemente.</Spanish>
-            <Russian></Russian>
-            <German>Folgende Personen haben kürzlich an diesem Dealer etwas verkauft:</German>
-            <French>Les personnes suivantes sont venues vendre quelque chose récemment.</French>
-            <Italian>Le seguenti persone sono state viste vendere a questo spacciatore.</Italian>
-            <Portuguese>Os seguintes jogadores venderam para esse negociante recentemente.</Portuguese>
-            <Polish>Ostatnio u dilera sprzedawali następujący ludzie.</Polish>
         </Key>
         <Key ID="STR_Cop_Radar">
             <Original>Radar</Original>
@@ -6286,6 +6231,12 @@
         </Key>
         <Key ID="STR_Item_Adrenaline">
             <Original>Adrenaline Shot</Original>
+        </Key>
+        <Key ID="STR_Item_Drill">
+            <Original>Diamond Tipped Drill</Original>
+        </Key>
+        <Key ID="STR_Item_Banknotes">
+            <Original>Banded Banknotes</Original>
         </Key>
         <Key ID="STR_Item_Cannabis">
             <Original>Marijuana leaf</Original>
@@ -8681,17 +8632,6 @@
         </Key>
     </Package>
     <Package name="Session_Strings">
-        <Key ID="STR_Session_Query">
-            <Original>Sending request to server for player information UID [%1]</Original>
-            <Czech>Odesílání požadavku na server pro informační hráč UID [%1]</Czech>
-            <Spanish>Pidiendo informacion del UID de [%1] del server</Spanish>
-            <Russian></Russian>
-            <German>Frage Spieler Informationen zu UID [%1] ab...</German>
-            <French>Envoi de la requête au serveur pour obtenir des informations lecteur UID [%1]</French>
-            <Italian>Invio richiesta al server per le informazioni del giocatore UID [%1]</Italian>
-            <Portuguese>Obtendo informações do UID [%1] no servidor</Portuguese>
-            <Polish>Wysyłam żądanie do serwera po informację o fraczu UID [%1]</Polish>
-        </Key>
         <Key ID="STR_Session_QueryFail">
             <Original>The server didn't find any player information matching your UID, attempting to add player to system.</Original>
             <Czech>Server nenašel žádné informace hráče nalezen.Chcete UID, pokusu o přidání hráče do systému.</Czech>
@@ -10340,17 +10280,6 @@
             <German>Rebellen Markt</German>
             <Portuguese>Mercado Rebelde</Portuguese>
             <Polish>Market rebelianta</Polish>
-        </Key>
-        <Key ID="STR_MAR_Question_Dealer">
-            <Original>Question Dealer</Original>
-            <Czech>Otázka prodejce</Czech>
-            <French>Questionner le dealer</French>
-            <Spanish>Informante</Spanish>
-            <Russian></Russian>
-            <German>Informant</German>
-            <Portuguese>Perguntar ao Traficante</Portuguese>
-            <Polish>Przesłuchaj dilera</Polish>
-            <Italian>Minaccia Spacciatore</Italian>
         </Key>
         <Key ID="STR_MAR_Service_helicopter">
             <Original>Service Helicopter</Original>

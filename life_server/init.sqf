@@ -88,7 +88,7 @@ if (LIFE_SETTINGS(getNumber,"save_civilian_position_restart") isEqualTo 1) then 
 /* Map-based server side initialization. */
 master_group attachTo[bank_obj,[0,0,0]];
 
-{
+/*{
     _hs = createVehicle ["Land_Hospital_main_F", [0,0,0], [], 0, "NONE"];
     _hs setDir (markerDir _x);
     _hs setPosATL (getMarkerPos _x);
@@ -113,7 +113,7 @@ master_group attachTo[bank_obj,[0,0,0]];
             hospital_assis_2 setPos (_hs modelToWorld [0.0175781,0.0234375,-0.231956]);
         };
     };
-} forEach ["hospital_2","hospital_3"];
+} forEach ["hospital_2","hospital_3"];*/
 
 {
     if (!isPlayer _x) then {
@@ -162,25 +162,11 @@ life_wanted_list = [];
 
 cleanupFSM = [] execFSM "\life_server\FSM\cleanup.fsm";
 
-[] spawn {
-    for "_i" from 0 to 1 step 0 do {
-        uiSleep (30 * 60);
-        {
-            _x setVariable ["sellers",[],true];
-        } forEach [Dealer_1,Dealer_2,Dealer_3];
-    };
-};
-
 [] spawn TON_fnc_initHouses;
 cleanup = [] spawn TON_fnc_cleanup;
 
-TON_fnc_playtime_values = [];
-TON_fnc_playtime_values_request = [];
-
-//Just incase the Headless Client connects before anyone else
-publicVariable "TON_fnc_playtime_values";
-publicVariable "TON_fnc_playtime_values_request";
-
+life_bankState = 0;
+publicVariable "life_bankState";
 
 /* Setup the federal reserve building(s) */
 private _vaultHouse = [[["Altis", "Land_Research_house_V1_F"], ["Tanoa", "Land_Medevac_house_V1_F"]]] call TON_fnc_terrainSort;

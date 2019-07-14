@@ -15,3 +15,6 @@ player addEventHandler ["InventoryOpened", {_this call life_fnc_inventoryOpened}
 player addEventHandler ["HandleRating", {0}];
 
 addMissionEventHandler ["Map", {_this call life_fnc_checkMap}];
+
+addMissionEventHandler ["EachFrame", life_fnc_playerTags];
+//addMissionEventHandler ["EachFrame", life_fnc_revealObjects];

@@ -50,6 +50,12 @@ class CfgFunctions {
         class Client_Code {
             file = "\life_server\Functions\Client";
         };
+
+        class Bank {
+            file = "\life_server\Functions\Bank";
+            class bankRobbery {};
+            class stopBankServer {};
+        };
     };
 
     class TON_System {
@@ -106,12 +112,6 @@ class CfgFunctions {
             file = "\life_server\Functions\Actions";
             class pickupAction {};
         };
-
-        class PlayTime {
-            file = "\life_server\Functions\PlayTime";
-            class setPlayTime {};
-            class getPlayTime {};
-        };
     };
 };
 
@@ -123,9 +123,9 @@ class CfgVehicles {
         class EventHandlers;
     };
 
-    class C_man_1 : Civilian_F {
-        class EventHandlers: EventHandlers {
-            init = "(_this select 0) execVM ""\life_server\fix_headgear.sqf""";
-        };
-    };
+    //class C_man_1 : Civilian_F {
+    //    class EventHandlers: EventHandlers {
+    //        init = "(_this select 0) execVM ""\life_server\fix_headgear.sqf""";
+    //    };
+    //};
 };

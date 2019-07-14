@@ -56,8 +56,7 @@ for "_i" from 0 to 1 step 0 do {
     _titleText ctrlSetText format ["%3 (%1%2)...",round(_cP * 100),"%",_title];
 
     if (_cP >= 1 || !alive player) exitWith {};
-    if (life_istazed) exitWith {}; //Tazed
-    if (life_isknocked) exitWith {}; //Knocked
+    if (life_isDowned) exitWith {}; //Tazed
     if (life_interrupted) exitWith {};
     if (player getVariable ["restrained",false]) exitWith {};
     if (player distance _curTarget > _distance) exitWith {_badDistance = true;};
@@ -67,7 +66,7 @@ for "_i" from 0 to 1 step 0 do {
 "progressBar" cutText ["","PLAIN"];
 player playActionNow "stop";
 
-if (!alive player || life_istazed || life_isknocked) exitWith {life_action_inUse = false;};
+if (!alive player || life_isDowned) exitWith {life_action_inUse = false;};
 if (player getVariable ["restrained",false]) exitWith {life_action_inUse = false;};
 if (!isNil "_badDistance") exitWith {titleText[localize "STR_ISTR_Lock_TooFar","PLAIN"]; life_action_inUse = false;};
 if (life_interrupted) exitWith {life_interrupted = false; titleText[localize "STR_NOTF_ActionCancel","PLAIN"]; life_action_inUse = false;};
@@ -85,19 +84,10 @@ if (!_isVehicle) then {
         titleText[localize "STR_ISTR_Lock_Success","PLAIN"];
         life_vehicles pushBack _curTarget;
 
-        if (life_HC_isActive) then {
-            [getPlayerUID player,profileName,"487"] remoteExecCall ["HC_fnc_wantedAdd",HC_Life];
-        } else {
-            [getPlayerUID player,profileName,"487"] remoteExecCall ["life_fnc_wantedAdd",RSERV];
-        };
+        [player,"487"] remoteExecCall ["life_fnc_wantedAdd",RSERV];
 
     } else {
-
-        if (life_HC_isActive) then {
-            [getPlayerUID player,profileName,"215"] remoteExecCall ["HC_fnc_wantedAdd",HC_Life];
-        } else {
-            [getPlayerUID player,profileName,"215"] remoteExecCall ["life_fnc_wantedAdd",RSERV];
-        };
+        [player,"215"] remoteExecCall ["life_fnc_wantedAdd",RSERV];
 
         [0,"STR_ISTR_Lock_FailedNOTF",true,[profileName]] remoteExecCall ["life_fnc_broadcast",west];
         titleText[localize "STR_ISTR_Lock_Failed","PLAIN"];

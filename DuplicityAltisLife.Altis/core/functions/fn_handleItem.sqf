@@ -6,19 +6,21 @@
     Description
     Main gear handling functionality.
 */
-private ["_item","_details","_bool","_ispack","_items","_isgun","_ongun","_override","_toUniform","_toVest","_preview"];
-_item = [_this,0,"",[""]] call BIS_fnc_param;
-_bool = [_this,1,false,[false]] call BIS_fnc_param;
-_ispack = [_this,2,false,[false]] call BIS_fnc_param;
-_ongun = [_this,3,false,[false]] call BIS_fnc_param;
-_override = [_this,4,false,[false]] call BIS_fnc_param;
-_toUniform = [_this,5,false,[false]] call BIS_fnc_param; //Manual override to send items specifically to a uniform.
-_toVest = [_this,6,false,[false]] call BIS_fnc_param; //Manual override to send items specifically to a vest
-_preview = [_this,7,false,[false]] call BIS_fnc_param;
+params [
+    ["_item", "", [""]],
+    ["_bool", false, [true]],
+    ["_isPack", false, [true]],
+    ["_onGun", false, [true]],
+    ["_override", false, [true]],
+    ["_toUniform", false, [true]],
+    ["_toVest", false, [false]],
+    ["_preview", false, [false]]
+];
+private ["_details","_items","_isGun"];
 
 //Some checks
 if (_item isEqualTo "") exitWith {};
-_isgun = false;
+_isGun = false;
 
 _details = [_item] call life_fnc_fetchCfgDetails;
 if (count _details isEqualTo 0) exitWith {};
@@ -29,7 +31,7 @@ if (_bool) then {
             if (_toUniform) exitWith {player addItemToUniform _item;};
             if (_toVest) exitWith {player addItemToVest _item;};
 
-            if (_ispack) then {
+            if (_isPack) then {
                 player addItemToBackpack _item;
             } else {
                 if (_override) then {
@@ -60,7 +62,7 @@ if (_bool) then {
         case "CfgMagazines": {
             if (_toUniform) exitWith {player addItemToUniform _item;};
             if (_toVest) exitWith {player addItemToVest _item;};
-            if (_ispack) exitWith {player addItemToBackpack _item;};
+            if (_isPack) exitWith {player addItemToBackpack _item;};
 
             player addMagazine _item;
         };
@@ -69,20 +71,20 @@ if (_bool) then {
             //New addition
             if (_toUniform) exitWith {player addItemToUniform _item;};
             if (_toVest) exitWith {player addItemToVest _item;};
-            if (_ispack) exitWith {player addItemToBackpack _item;};
+            if (_isPack) exitWith {player addItemToBackpack _item;};
 
             if ((_details select 4) in [1,2,4,5,4096]) then {
                 if ((_details select 4) isEqualTo 4096) then {
                     if ((_details select 5) isEqualTo -1) then {
-                        _isgun = true;
+                        _isGun = true;
                     };
                 } else {
-                    _isgun = true;
+                    _isGun = true;
                 };
             };
 
-            if (_isgun) then {
-                if (!_ispack && _override) exitWith {}; //It was in the vest/uniform, try to close to prevent it overriding stuff... (Actual weapon and not an item)
+            if (_isGun) then {
+                if (!_isPack && _override) exitWith {}; //It was in the vest/uniform, try to close to prevent it overriding stuff... (Actual weapon and not an item)
                 if (_item isEqualTo "MineDetector") then {
                     player addItem _item;
                 } else {
@@ -91,7 +93,7 @@ if (_bool) then {
             } else {
                 switch (_details select 5) do {
                     case 0:  {
-                        if (_ispack) then {
+                        if (_isPack) then {
                             player addItemToBackpack _item;
                         } else {
                             if (_override) then {
@@ -107,7 +109,7 @@ if (_bool) then {
                     };
 
                     case 605: {
-                        if (_ispack) then{
+                        if (_isPack) then{
                             player addItemToBackpack _item;
                         } else {
                             if (_override) then {
@@ -124,7 +126,7 @@ if (_bool) then {
                     };
 
                     case 801: {
-                        if (_ispack) then {
+                        if (_isPack) then {
                             player addItemToBackpack _item;
                         } else {
                             if (_override) then {
@@ -164,7 +166,7 @@ if (_bool) then {
                     };
 
                     case 701: {
-                        if (_ispack) then {
+                        if (_isPack) then {
                             player addItemToBackpack _item;
                         } else {
                             if (_override) then{
@@ -189,12 +191,12 @@ if (_bool) then {
                     };
 
                     case 201: {
-                        if (_ispack) then {
+                        if (_isPack) then {
                             player addItemToBackpack _item;
                         } else {
                             private "_type";
                             _type = [_item,201] call life_fnc_accType;
-                            if (_ongun) then {
+                            if (_onGun) then {
                                 switch (_type) do {
                                     case 1: { player addPrimaryWeaponItem _item; };
                                     case 2: { player addSecondaryWeaponItem _item; };
@@ -236,13 +238,13 @@ if (_bool) then {
                     };
 
                     case 301: {
-                        if (_ispack) then {
+                        if (_isPack) then {
                             player addItemToBackpack _item;
                         } else {
                             private "_type";
                             _type = [_item,301] call life_fnc_accType;
 
-                            if (_ongun) then {
+                            if (_onGun) then {
                                 switch (_type) do {
                                     case 1: { player addPrimaryWeaponItem _item; };
                                     case 2: { player addSecondaryWeaponItem _item; };
@@ -284,13 +286,13 @@ if (_bool) then {
                     };
 
                     case 101:{
-                        if (_ispack) then {
+                        if (_isPack) then {
                             player addItemToBackpack _item;
                         } else {
                             private "_type";
                             _type = [_item,101] call life_fnc_accType;
 
-                            if (_ongun) then {
+                            if (_onGun) then {
                                 switch (_type) do {
                                     case 1: { player addPrimaryWeaponItem _item; };
                                     case 2: { player addSecondaryWeaponItem _item; };
@@ -332,7 +334,7 @@ if (_bool) then {
                     };
 
                     case 621: {
-                        if (_ispack) then {
+                        if (_isPack) then {
                             player addItemToBackpack _item;
                         } else {
                             if (_override) then {
@@ -344,7 +346,7 @@ if (_bool) then {
                     };
 
                     case 616: {
-                        if (_ispack) then {
+                        if (_isPack) then {
                             player addItemToBackpack _item;
                         } else {
                             if (_override) then {
@@ -356,7 +358,7 @@ if (_bool) then {
                     };
 
                     default {
-                        if (_ispack) then {
+                        if (_isPack) then {
                             player addItemToBackpack _item;
                         } else {
                             player addItem _item;
@@ -388,20 +390,20 @@ if (_bool) then {
             if ((_details select 4) in [1,2,4,5,4096]) then {
                 if ((_details select 4) isEqualTo 4096) then {
                     if ((_details select 5) isEqualTo 1) then {
-                        _isgun = true;
+                        _isGun = true;
                     };
                 } else {
-                    _isgun = true;
+                    _isGun = true;
                 };
             };
 
-            if (_isgun) then {
+            if (_isGun) then {
                 switch (true) do {
-                    case (primaryWeapon player isEqualTo _item) : {_ispack = false;};
-                    case (secondaryWeapon player isEqualTo _item) : {_ispack = false;};
-                    case (handgunWeapon player isEqualTo _item) : {_ispack = false;};
-                    case (_item in assignedItems player) : {_ispack = false;};
-                    default {_ispack = true;};
+                    case (primaryWeapon player isEqualTo _item) : {_isPack = false;};
+                    case (secondaryWeapon player isEqualTo _item) : {_isPack = false;};
+                    case (handgunWeapon player isEqualTo _item) : {_isPack = false;};
+                    case (_item in assignedItems player) : {_isPack = false;};
+                    default {_isPack = true;};
                 };
 
                 if (_item isEqualTo "MineDetector") then {
@@ -460,7 +462,7 @@ if (_bool) then {
                         };
                     };
 
-                    if (_ispack) then {
+                    if (_isPack) then {
                         _item call _tmpfunction;
                     } else {
                         switch (true) do {

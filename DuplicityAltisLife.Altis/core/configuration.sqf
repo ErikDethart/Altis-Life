@@ -24,10 +24,7 @@ life_bail_paid = false;
 life_impound_inuse = false;
 life_action_inUse = false;
 life_spikestrip = objNull;
-life_knockout = false;
 life_interrupted = false;
-life_respawned = false;
-life_removeWanted = false;
 life_action_gathering = false;
 life_god = false;
 life_frozen = false;
@@ -43,6 +40,7 @@ life_canpay_bail = true;
 life_storagePlacing = scriptNull;
 life_hideoutBuildings = [];
 life_firstSpawn = true;
+life_wanted = 0;
 
 //Settings
 life_settings_enableNewsBroadcast = profileNamespace getVariable ["life_enableNewsBroadcast", true];
@@ -60,7 +58,7 @@ life_clothing_purchase = [-1, -1, -1, -1, -1];
 ****** Weight Variables *****
 *****************************
 */
-life_maxWeight = LIFE_SETTINGS(getNumber, "total_maxWeight");
+life_maxWeight = 64;
 life_carryWeight = 0; //Represents the players current inventory weight (MUST START AT 0).
 
 /*
@@ -77,8 +75,7 @@ life_thirst = 100;
 life_hunger = 100;
 CASH = 0;
 
-life_istazed = false;
-life_isknocked = false;
+life_isDowned = false;
 life_vehicles = [];
 
 /*
@@ -103,6 +100,6 @@ life_itemModels = [];
 
 /* Setup life_hideoutBuildings */
 {
-    _building = nearestBuilding getMarkerPos _x; 
+    _building = nearestBuilding getMarkerPos _x;
     life_hideoutBuildings pushBack _building
 } forEach (LIFE_SETTINGS(getArray,"gang_area"));

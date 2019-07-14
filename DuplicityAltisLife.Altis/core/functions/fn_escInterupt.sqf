@@ -10,7 +10,7 @@
 */
 disableSerialization;
 
-private _escSync = { 
+private _escSync = {
     disableSerialization;
     private _abortButton = CONTROL(49,104);
     private _abortTime = LIFE_SETTINGS(getNumber,"escapeMenu_timer");
@@ -30,7 +30,7 @@ private _escSync = {
 };
 
 private _canUseControls = {
-    (playerSide isEqualTo west) || {!((player getVariable ["restrained",false]) || {player getVariable ["Escorting",false]} || {player getVariable ["transporting",false]} || {life_is_arrested} || {life_istazed} || {life_isknocked})}
+    (playerSide isEqualTo west) || {!((player getVariable ["restrained",false]) || {player getVariable ["Escorting",false]} || {player getVariable ["transporting",false]} || {life_is_arrested} || {life_isDowned})}
 };
 
 for "_i" from 0 to 1 step 0 do {
