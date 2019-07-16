@@ -5739,17 +5739,6 @@
             <Portuguese>Seu som está abafado.</Portuguese>
             <Polish>Dzwięk został ustawiony w tryb wyciszony!</Polish>
         </Key>
-        <Key ID="STR_MISC_overviewText">
-            <Original>An RPG game mode developed by Tonic.</Original>
-            <Czech>Mód RPG hra vyvinutá Tonic.</Czech>
-            <French>Un mode de jeu de RPG développé par Tonic.</French>
-            <Spanish>Un modo de juego de rol desarrollado por Tonic.</Spanish>
-            <Italian>Una modalità di gioco RPG sviluppato da Tonic.</Italian>
-            <Polish>Tryb gry RPG stworzona przez Tonic.</Polish>
-            <Portuguese>Um modo de jogo RPG desenvolvido pela Tonic.</Portuguese>
-            <Russian>Режим RPG игра, разработанная компанией Tonic.</Russian>
-            <German>Ein RPG-Modus entwickelt von Tonic.</German>
-        </Key>
     </Package>
     <Package name="Housing_Strings">
         <Key ID="STR_House_ContainerError">
