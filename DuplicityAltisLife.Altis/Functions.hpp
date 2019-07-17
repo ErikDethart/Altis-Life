@@ -223,6 +223,7 @@ class Life_Client_Core {
         class teleport {};
         class whereAmI {};
         class moveIn {};
+        class interactionMenu {};
     };
 
     class Gangs {
