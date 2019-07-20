@@ -148,6 +148,8 @@ class Life_Client_Core {
         class ticketPrompt {};
         class vehInvSearch {};
         class wantedGrab {};
+        class nearHQ {};
+        class canPullOut {};
     };
 
     class Dialog_Controls {

@@ -1,5 +1,6 @@
 class ActionButton_Common: Life_RscButtonMenu {
 	idc = -1;
+	style = 0;
 	colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.8};
 	text = "";
 	x = 0.0125;

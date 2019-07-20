@@ -64,7 +64,6 @@ CONSTVAR(life_paycheck);
 
 player setVariable ["restrained", false, true];
 player setVariable ["Escorting", false, true];
-player setVariable ["transporting", false, true];
 player setVariable ["playerSurrender", false, true];
 player setVariable ["realname", profileName, true];
 

@@ -21,7 +21,6 @@ if (isNull _cop) exitWith {};
         if (!([west,getPos player,30] call life_fnc_nearUnits) && (player getVariable ["restrained",false]) && isNull objectParent player) exitWith {
             player setVariable ["restrained",false,true];
             player setVariable ["Escorting",false,true];
-            player setVariable ["transporting",false,true];
             detach player;
             titleText[localize "STR_Cop_ExcessiveRestrain","PLAIN"];
         };
@@ -44,7 +43,6 @@ while {player getVariable  "restrained"} do {
     if (!alive player) exitWith {
         player setVariable ["restrained",false,true];
         player setVariable ["Escorting",false,true];
-        player setVariable ["transporting",false,true];
         detach player;
     };
 
@@ -87,6 +85,5 @@ while {player getVariable  "restrained"} do {
 if (alive player) then {
     player switchMove "AmovPercMstpSlowWrflDnon_SaluteIn";
     player setVariable ["Escorting",false,true];
-    player setVariable ["transporting",false,true];
     detach player;
 };

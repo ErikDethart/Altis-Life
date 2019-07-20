@@ -22,6 +22,7 @@ private _time = time;
 
 if (_shooter isKindOf "Man" && alive player && !life_isDowned) then {
     life_isDowned = true;
+    player setVariable ["Downed", true, true];
     "DynamicBlur" ppEffectEnable true;
     "DynamicBlur" ppEffectAdjust [5];
     "DynamicBlur" ppEffectCommit 0;
@@ -59,6 +60,7 @@ if (_shooter isKindOf "Man" && alive player && !life_isDowned) then {
 
     "DynamicBlur" ppEffectEnable false;
     life_isDowned = false;
+    player setVariable ["Downed", false, true];
     disableUserInput false;
     player setUnconscious false;
 
@@ -67,18 +69,3 @@ if (_shooter isKindOf "Man" && alive player && !life_isDowned) then {
         player setdamage 0;
     };
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

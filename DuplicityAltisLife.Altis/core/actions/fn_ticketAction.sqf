@@ -5,9 +5,8 @@
     Description:
     Starts the ticketing process.
 */
-params [
-    ["_unit",objNull,[objNull]]
-];
+private _unit = life_interactionTarget;
+
 disableSerialization;
 if (!(createDialog "life_ticket_give")) exitWith {hint localize "STR_Cop_TicketFail"};
 if (isNull _unit || !isPlayer _unit) exitWith {};

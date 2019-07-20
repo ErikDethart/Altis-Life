@@ -10,27 +10,32 @@
 */
 disableSerialization;
 
-private _escSync = {
+private _escTimer = {
     disableSerialization;
-    private _abortButton = CONTROL(49,104);
-    private _abortTime = LIFE_SETTINGS(getNumber,"escapeMenu_timer");
-    private _timeStamp = time + _abortTime;
+    private _abortButton = ((findDisplay 49) displayCtrl 104);
+    private _suicideButton = ((findDisplay 49) displayCtrl 1010);
+    private _timeStamp = time + 15;
 
     waitUntil {
-        _abortButton ctrlSetText format [localize "STR_NOTF_AbortESC",[(_timeStamp - time),"SS.MS"] call BIS_fnc_secondsToString];
-        _abortButton ctrlCommit 0;
-        if (dialog && {isNull (findDisplay 7300)}) then {closeDialog 0};
+        _abortButton ctrlSetText format ["Quit (%1)",[(_timeStamp - time),"SS.MS"] call BIS_fnc_secondsToString];
+        if !(life_is_arrested) then {
+            _suicideButton ctrlSetText format ["Suicide (%1)",[(_timeStamp - time),"SS.MS"] call BIS_fnc_secondsToString];
+        };
+        if (dialog && {isNull (findDisplay 7300)}) then {closeDialog 0;};
 
-        round(_timeStamp - time) <= 0 || {isNull (findDisplay 49)}
+        (round(_timeStamp - time) <= 0 || {isNull (findDisplay 49)})
     };
 
-    _abortButton ctrlSetText localize "STR_DISP_INT_ABORT";
-    _abortButton ctrlCommit 0;
+    _abortButton ctrlSetText "Quit";
     _abortButton ctrlEnable true;
+    if !(life_is_arrested) then {
+        _suicideButton ctrlSetText "Suicide";
+        _suicideButton ctrlEnable true;
+    };
 };
 
 private _canUseControls = {
-    (playerSide isEqualTo west) || {!((player getVariable ["restrained",false]) || {player getVariable ["Escorting",false]} || {player getVariable ["transporting",false]} || {life_is_arrested} || {life_isDowned})}
+    (!(player getVariable ["restrained", false]) && {!(player getVariable ["playerSurrender", false])} && {!life_isDowned})
 };
 
 for "_i" from 0 to 1 step 0 do {
@@ -42,24 +47,23 @@ for "_i" from 0 to 1 step 0 do {
     private _saveButton = CONTROL(49,103);
     _saveButton ctrlSetText "";
 
-    //Extras
-    if (LIFE_SETTINGS(getNumber,"escapeMenu_displayExtras") isEqualTo 1) then {
-        private _topButton = CONTROL(49,2);
-        _topButton ctrlEnable false;
-        _topButton ctrlSetText format ["%1",LIFE_SETTINGS(getText,"escapeMenu_displayText")];
-        _saveButton ctrlEnable false;
-        _saveButton ctrlSetText format ["Player UID: %1",getPlayerUID player];
-    };
+    private _topButton = CONTROL(49,2);
+    _topButton ctrlEnable false;
+    _topButton ctrlSetText "\WEBSITE PLACEHOLDER\";
+    _saveButton ctrlEnable false;
+    _saveButton ctrlSetText format ["Player ID: %1",getPlayerUID player];
 
     //Block off our buttons first.
     _abortButton ctrlEnable false;
+    _respawnButton ctrlEnable false;
+    _respawnButton ctrlSetText "Cannot Suicide";
     _fieldManual ctrlEnable false; //Never re-enable, blocks an old script executor.
     _fieldManual ctrlShow false;
 
     if (call _canUseControls) then {
-        [] spawn _escSync;
+        [] spawn _escTimer;
     } else {
-        _respawnButton ctrlEnable false;
+        _abortButton ctrlSetText "Cannot Quit";
     };
 
     waitUntil {isNull (findDisplay 49) || {!alive player}};

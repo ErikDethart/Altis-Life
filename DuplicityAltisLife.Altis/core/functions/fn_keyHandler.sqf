@@ -6,6 +6,7 @@
 *    Description:
 *    Main key handler for event 'keyDown'.
 */
+scopeName "main";
 
 params [
     "_ctrl",
@@ -17,10 +18,8 @@ params [
 
 private _speed = speed cursorObject;
 private _handled = false;
-private _interactionKey = if (actionKeys "User10" isEqualTo []) then {219} else {(actionKeys "User10") select 0};
 private _interruptionKeys = [17, 30, 31, 32]; //A,S,W,D
 
-//Vault handling...
 if ((_code in (actionKeys "GetOver") || _code in (actionKeys "salute") || _code in (actionKeys "SitDown") || _code in (actionKeys "Throw") || _code in (actionKeys "GetIn") || _code in (actionKeys "GetOut") || _code in (actionKeys "Fire") || _code in (actionKeys "ReloadMagazine") || _code in [16,18]) && ((player getVariable ["restrained",false]) || (player getVariable ["playerSurrender",false]) || life_isDowned)) exitWith {
     true;
 };
@@ -30,17 +29,16 @@ if (life_action_inUse) exitWith {
     _handled;
 };
 
-//Hotfix for Interaction key not being able to be bound on some operation systems.
-if (!(actionKeys "User10" isEqualTo []) && {(inputAction "User10" > 0)}) exitWith {
-    //Interaction key (default is Left Windows, can be mapped via Controls -> Custom -> User Action 10)
-    if (!life_action_inUse) then {
-        [] spawn {
-            private _handle = [] spawn life_fnc_actionKeyHandler;
-            waitUntil {scriptDone _handle};
-            life_action_inUse = false;
-        };
+if (actionKeys "User1" isEqualTo []) then {
+    if (_code isEqualTo 219) then {
+        [] call life_fnc_actionKeyHandler;
+        true breakOut "main";
     };
-    true;
+} else {
+    if (_code in actionKeys "User1") then {
+        [] call life_fnc_actionKeyHandler;
+        true breakOut "main";
+    };
 };
 
 if (life_container_active) exitwith {
@@ -133,17 +131,6 @@ switch (_code) do {
         if (!_shift && _ctrlKey && !isNil "life_curWep_h" && {!(life_curWep_h isEqualTo "")}) then {
             if (life_curWep_h in [primaryWeapon player,secondaryWeapon player,handgunWeapon player]) then {
                 player selectWeapon life_curWep_h;
-            };
-        };
-    };
-
-    //Interaction key (default is Left Windows, can be mapped via Controls -> Custom -> User Action 10)
-    case _interactionKey: {
-        if (!life_action_inUse) then {
-            [] spawn  {
-                private _handle = [] spawn life_fnc_actionKeyHandler;
-                waitUntil {scriptDone _handle};
-                life_action_inUse = false;
             };
         };
     };
