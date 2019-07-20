@@ -5,9 +5,8 @@
     Description:
     Starts the searching process.
 */
-params [
-    ["_unit",objNull,[objNull]]
-];
+private _unit = life_interactionTarget;
+
 if (isNull _unit) exitWith {};
 hint localize "STR_NOTF_Searching";
 sleep 2;

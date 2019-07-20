@@ -29,3 +29,4 @@
 #include "FuelStat.hpp"
 #include "newsStation.hpp"
 #include "weapon_shop.hpp"
+#include "interactionMenu.hpp"

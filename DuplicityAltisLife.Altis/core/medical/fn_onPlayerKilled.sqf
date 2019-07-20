@@ -23,7 +23,6 @@ _unit setVariable ["Revive",true,true];
 _unit setVariable ["name",profileName,true]; //Set my name so they can say my name.
 _unit setVariable ["restrained",false,true];
 _unit setVariable ["Escorting",false,true];
-_unit setVariable ["transporting",false,true];
 _unit setVariable ["playerSurrender",false,true];
 _unit setVariable ["steam64id",(getPlayerUID player),true]; //Set the UID.
 

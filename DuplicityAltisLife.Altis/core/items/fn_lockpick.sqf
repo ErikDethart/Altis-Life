@@ -77,7 +77,6 @@ life_action_inUse = false;
 if (!_isVehicle) then {
     _curTarget setVariable ["restrained",false,true];
     _curTarget setVariable ["Escorting",false,true];
-    _curTarget setVariable ["transporting",false,true];
 } else {
     _dice = random(100);
     if (_dice < 30) then {
