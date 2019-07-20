@@ -226,6 +226,7 @@ class Life_Client_Core {
         class whereAmI {};
         class moveIn {};
         class interactionMenu {};
+        class groupTags {};
     };
 
     class Gangs {

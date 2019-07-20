@@ -17,4 +17,5 @@ player addEventHandler ["HandleRating", {0}];
 addMissionEventHandler ["Map", {_this call life_fnc_checkMap}];
 
 addMissionEventHandler ["EachFrame", life_fnc_playerTags];
+addMissionEventHandler ["Draw3D", life_fnc_groupTags];
 //addMissionEventHandler ["EachFrame", life_fnc_revealObjects];
