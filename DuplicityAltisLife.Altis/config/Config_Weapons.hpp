@@ -3,7 +3,7 @@ class WeaponShops {
     class gun {
         name = "Jimbo's Guns";
         side = "CIV";
-        conditions = "license_civ_gun"; //Change to license_civ_gun
+        conditions = "license_civ_gun";
         class items {
             class hgun_Rook40_F { //Rook
                 displayName = "";
@@ -270,13 +270,13 @@ class WeaponShops {
             {"optic_Aco", "", 200, "true"},
             {"optic_ACO_grn", "", 200, "true"},
             {"optic_MRD", "", 200, "true"},
+            {"FirstAidKit", "", 50, "true"},
             {"MiniGrenade", "Flashbang Grenade", 1000, "true"},
             {"SmokeShellBlue", "", 75, "true"},
             {"Chemlight_blue", "", 50, "true"},
             {"muzzle_snds_L", "9 mm Supressor", 500, "true"},
             {"muzzle_snds_acp", ".45 ACP Supressor", 500, "true"},
             {"acc_pointer_IR", "", 250, "true"},
-            {"NVGoggles_OPFOR", "", 100, "true"},
             {"Binocular", "", 150, "true"},
             {"Rangefinder", "", 500, "true"},
             {"B_UavTerminal", "", 1000, "true"}
@@ -361,15 +361,6 @@ class WeaponShops {
                     {"30Rnd_556x45_Stanag_Tracer_Red", "", 200, "true"}
                 };
             };
-
-            /*class arifle_TRG21_F { //TRG
-                displayName = "";
-                price = 5250;
-                condition = "true";
-                mags[] = {
-                    {"30Rnd_556x45_Stanag_Tracer_Red", "", 200, "true"}
-                };
-            };*/
 
             class arifle_AKS_F { //AKS
                 displayName = "";
@@ -526,10 +517,10 @@ class WeaponShops {
             };
         };
         accs[] = {
+            {"FirstAidKit", "", 50, "true"},
             {"Binocular", "", 250, "true"},
             {"Rangefinder", "", 1000, "true"},
             {"ItemGPS", "", 100, "true"},
-            {"NVGoggles", "", 250, "true"},
             {"SmokeShell", "", 75, "true"},
             {"HandGrenade", "", 4500, "true"},
             {"optic_ARCO", "ARCO (Sand)", 750, "true"},

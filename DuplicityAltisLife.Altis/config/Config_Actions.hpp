@@ -1,5 +1,11 @@
 class Actions {
     class Person {
+        class bloodbag {
+            text = "Give Blood Transfusion";
+            condition = "(damage life_interactionTarget) > 0 && {life_inv_bloodbag > 0}";
+            action = "[life_interactionTarget] spawn life_fnc_bloodbag;";
+        };
+
         class restrain {
             text = "Restrain";
             condition = "playerSide isEqualTo west && {(side life_interactionTarget in [civilian,independent])} && {!(life_interactionTarget getVariable ['Escorting', false])} && {!(life_interactionTarget getVariable ['restrained', false])} && {speed life_interactionTarget < 1} && {life_interactionTarget getVariable ['Downed', false] || life_interactionTarget getVariable ['playerSurrender', false]}";

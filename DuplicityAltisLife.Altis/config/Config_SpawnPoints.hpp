@@ -39,27 +39,6 @@ class CfgSpawnPoints {
                 icon = "\a3\ui_f\data\map\MapControl\watertower_ca.paa";
                 conditions = "";
             };
-
-            class RebelN {
-                displayName = $STR_SP_Reb_N;
-                spawnMarker = "Rebelop";
-                icon = "\a3\ui_f\data\map\MapControl\bunker_ca.paa";
-                conditions = "license_civ_rebel";
-            };
-
-            class RebelS {
-                displayName = $STR_SP_Reb_S;
-                spawnMarker = "Rebelop_1";
-                icon = "\a3\ui_f\data\map\MapControl\bunker_ca.paa";
-                conditions = "license_civ_rebel";
-            };
-
-            class RebelE {
-                displayName = $STR_SP_Reb_E;
-                spawnMarker = "Rebelop_2";
-                icon = "\a3\ui_f\data\map\MapControl\bunker_ca.paa";
-                conditions = "license_civ_rebel";
-            };
         };
 
         class Cop {

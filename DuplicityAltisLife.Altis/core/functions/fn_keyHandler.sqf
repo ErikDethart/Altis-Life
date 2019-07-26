@@ -41,6 +41,41 @@ if (actionKeys "User1" isEqualTo []) then {
     };
 };
 
+if (_code in actionKeys "nightVision") then {
+	if (currentVisionMode player isEqualTo 0) then {
+		player action ["nvGoggles", player];
+	} else {
+		player action ["nvGogglesOff", player];
+	};
+    true breakOut "main";
+};
+
+if (_code in actionKeys "User11") then {
+    if ([false, "redgull", 1] call life_fnc_handleInv) then {
+        [] spawn life_fnc_redgull;
+    } else {
+        if ([false, "coffee", 1] call life_fnc_handleInv) then {
+            [] spawn life_fnc_redgull;
+        };
+    };
+    true breakOut "main";
+};
+
+if (_code in actionKeys "User10") then {
+    if (soundVolume isEqualTo 1) then {
+        0 fadeSound 0.2; //TODO: change to a user setting
+        systemChat format ["Earplugs inserted, sound volume is now %1%2", soundVolume * 100, "%"];
+    } else {
+        0 fadeSound 1;
+        systemChat format ["Earplugs removed, sound volume is now %1%2", soundVolume * 100, "%"];
+    };
+    true breakOut "main";
+};
+
+if (_code in actionKeys "User8") then {
+    [player] spawn life_fnc_bloodbag;
+};
+
 if (life_container_active) exitwith {
     //ignore movement actions
     private _allowedMoves = [
@@ -227,19 +262,6 @@ switch (_code) do {
                     _jip = [_veh] remoteExec ["life_fnc_medicSiren",RCLIENT,true];
                 };
                 _veh setVariable ["sirenJIP",_jip,true];
-            };
-        };
-    };
-
-    //O Key
-    case 24: {
-        if (_shift) then {
-            if !(soundVolume isEqualTo 1) then {
-                1 fadeSound 1;
-                systemChat localize "STR_MISC_soundnormal";
-            } else {
-                1 fadeSound 0.1;
-                systemChat localize "STR_MISC_soundfade";
             };
         };
     };

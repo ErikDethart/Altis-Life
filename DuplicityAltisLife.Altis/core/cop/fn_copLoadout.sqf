@@ -31,6 +31,5 @@ player linkItem "ItemCompass";
 player linkItem "ItemWatch";
 //player linkItem "ItemRadio";
 player linkItem "ItemGPS";
-player linkItem "O_NVGoggles_urb_F";
 
 [] call life_fnc_playerSkins;

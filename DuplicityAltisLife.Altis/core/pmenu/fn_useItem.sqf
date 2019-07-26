@@ -12,19 +12,23 @@ if ((lbCurSel 2005) isEqualTo -1) exitWith {hint localize "STR_ISTR_SelectItemFi
 _item = CONTROL_DATA(2005);
 
 switch (true) do {
-    case (_item in ["waterBottle","coffee","redgull"]): {
-        if ([false,_item,1] call life_fnc_handleInv) then {
+    case (_item in ["coffee", "redgull"]): {
+        if ([false, _item, 1] call life_fnc_handleInv) then {
+            [] spawn life_fnc_redgull;
+        }
+    };
+
+    case (_item isEqualTo "waterBottle"): {
+        if ((life_thirst + 50) > 100) then {
             life_thirst = 100;
-            if (LIFE_SETTINGS(getNumber,"enable_fatigue") isEqualTo 1) then {player setFatigue 0;};
-            if (_item isEqualTo "redgull" && {LIFE_SETTINGS(getNumber,"enable_fatigue") isEqualTo 1}) then {
-                [] spawn {
-                    life_redgull_effect = time;
-                    titleText[localize "STR_ISTR_RedGullEffect","PLAIN"];
-                    player enableFatigue false;
-                    waitUntil {!alive player || ((time - life_redgull_effect) > (3 * 60))};
-                    player enableFatigue true;
-                };
-            };
+        } else {
+            life_thirst = life_thirst + 10;
+        };
+    };
+
+    case (_item isEqualTo "bloodbag"): {
+        if (life_inv_bloodbag > 0) then {
+            [player] spawn life_fnc_bloodbag;
         };
     };
 

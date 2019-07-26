@@ -16,18 +16,25 @@ class VirtualShops {
         items[] = { "waterBottle", "rabbit", "apple", "redgull", "tbacon", "pickaxe", "toolkit", "fuelFull", "peach", "storagesmall", "storagebig", "rabbit_raw", "hen_raw", "rooster_raw", "sheep_raw", "goat_raw" };
     };
 
+    class medical {
+        name = "STR_Shops_Market";
+        side = "";
+        conditions = "";
+        items[] = {"defibrillator", "bloodbag", "adrenaline"};
+    }
+
     class med_market {
         name = "STR_Shops_Market";
         side = "med";
         conditions = "";
-        items[] = { "waterBottle", "rabbit", "apple", "redgull", "tbacon", "toolkit", "fuelFull", "peach", "defibrillator" };
+        items[] = { "waterBottle", "rabbit", "redgull", "tbacon", "toolkit", "fuelFull", "peach", "defibrillator" };
     };
 
     class rebel {
         name = "STR_Shops_Rebel";
         side = "civ";
         conditions = "license_civ_rebel";
-        items[] = { "waterBottle", "rabbit", "apple", "redgull", "tbacon", "lockpick", "pickaxe", "toolkit", "fuelFull", "peach", "boltcutter", "blastingcharge" , "drill", "banknotes"};
+        items[] = {"defibrillator", "bloodbag", "adrenaline", "waterBottle", "rabbit", "apple", "redgull", "tbacon", "lockpick", "pickaxe", "toolkit", "fuelFull", "peach", "boltcutter", "blastingcharge" , "drill", "banknotes"};
     };
 
     class gang {
@@ -169,7 +176,7 @@ class VirtualItems {
         worldModel = "Land_Defibrillator_F";
     };
 
-    class firstAidKit {
+    /*class firstAidKit {
         variable = "firstAidKit";
         displayName = "STR_Item_FirstAid";
         weight = 1;
@@ -191,17 +198,17 @@ class VirtualItems {
         edible = -1;
         icon = "\a3\weapons_f\items\data\UI\gear_medikit_ca.paa";
         worldModel = "Land_FirstAidKit_01_closed_F";
-    };
+    };*/
 
-    class bloodBag {
-        variable = "bloodBag";
+    class bloodbag {
+        variable = "bloodbag";
         displayName = "STR_Item_BloodBag";
         weight = 3;
         buyPrice = 250;
         sellPrice = 125;
         illegal = false;
         edible = -1;
-        icon = "icons\ico_defibrillator.paa";
+        icon = "icons\ico_bloodbag.paa";
         worldModel = "Land_BloodBag_F";
     };
 
@@ -213,7 +220,7 @@ class VirtualItems {
         sellPrice = 500;
         illegal = false;
         edible = -1;
-        icon = "icons\ico_defibrillator.paa";
+        icon = "icons\ico_adrenaline.paa";
         worldModel = "MedicalGarbage_01_Injector_F";
     };
 
@@ -720,7 +727,7 @@ class VirtualItems {
         variable = "rabbit";
         displayName = "STR_Item_Rabbit";
         weight = 1;
-        buyPrice = 150;
+        buyPrice = -1;
         sellPrice = 115;
         illegal = false;
         edible = 20;

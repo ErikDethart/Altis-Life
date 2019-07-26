@@ -7962,17 +7962,6 @@
             <Portuguese>Outro médico já está revivendo esse jogador</Portuguese>
             <Polish>Ktoś inny aktualnie reanimuje tę osobę</Polish>
         </Key>
-        <Key ID="STR_Medic_Progress">
-            <Original>Reviving %1</Original>
-            <Czech>Oživení %1</Czech>
-            <Spanish>Reviviendo %1</Spanish>
-            <Russian></Russian>
-            <German>Wird wiederbelebt %1...</German>
-            <French>Réanimation de %1</French>
-            <Italian>Rianimando %1</Italian>
-            <Portuguese>Revivendo %1</Portuguese>
-            <Polish>Reanimacja %1</Polish>
-        </Key>
         <Key ID="STR_Medic_RevivedRespawned">
             <Original>This person either respawned or was already revived.</Original>
             <Czech>Tato osoba buď respawned nebo již byl přijat.</Czech>
@@ -7983,17 +7972,6 @@
             <Italian>Questa persona è stata già rianimata o ha fatto respawn.</Italian>
             <Portuguese>Esse jogador já deu respawn ou já foi reanimado.</Portuguese>
             <Polish>Ta osoba wcześniej się odrodziła lub została reanimowana.</Polish>
-        </Key>
-        <Key ID="STR_Medic_RevivePayReceive">
-            <Original>You have revived %1 and received $%2 for your services.</Original>
-            <Czech>Obdrželi jste %1 a získal $%2 za vaše služby.</Czech>
-            <Spanish>Has revivido a %1 y recivido $%2 por tus servicios.</Spanish>
-            <Russian></Russian>
-            <German>Du hast %1 wiederbelebt und $%2 für deine Dienste erhalten.</German>
-            <French>Vous avez réanimé %1, vous avez reçu $%2 pour votre aide</French>
-            <Italian>Hai rianimato %1 e hai ricevuto $%2 per la tua prestazione.</Italian>
-            <Portuguese>Você reviveu %1 e recebeu R$%2 pelo seus serviços prestados.</Portuguese>
-            <Polish>Reanimowałeś %1 i za uratowanie życia otrzymałeś $%2.</Polish>
         </Key>
         <Key ID="STR_Medic_TooFar">
             <Original>You got to far away from the body.</Original>
