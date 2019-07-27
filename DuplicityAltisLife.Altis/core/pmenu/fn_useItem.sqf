@@ -27,7 +27,7 @@ switch (true) do {
     };
 
     case (_item isEqualTo "bloodbag"): {
-        if (life_inv_bloodbag > 0) then {
+        if (life_inv_bloodbag > 0 && (damage player > 0)) then {
             [player] spawn life_fnc_bloodbag;
         };
     };

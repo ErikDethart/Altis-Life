@@ -204,7 +204,8 @@ class Life_Client_Core {
         class inventoryClosed {};
         class inventoryOpened {};
         class isUIDActive {};
-        class keyHandler {};
+        class keyDownHandler {};
+        class keyUpHandler {};
         class killFeed {};
         class nearATM {};
         class nearestDoor {};
@@ -293,6 +294,7 @@ class Life_Client_Core {
 
     class Medical_System {
         file = "core\medical";
+        class bloodbag {};
         class deathScreen {};
         class medicRequest {};
         class onPlayerKilled {};

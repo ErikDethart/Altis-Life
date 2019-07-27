@@ -24,7 +24,8 @@ if (player getVariable ["isEscorting", false]) exitWith {
     [_curObject, "Person", (_curObject getVariable ["realname", ""])] call life_fnc_interactionMenu;
 };
 
-if (isNull _curObject) exitWith {
+//REIMPLEMENT
+/*if (isNull _curObject) exitWith {
     if (surfaceIsWater (visiblePositionASL player)) then {
         _fish = (nearestObjects[player,(LIFE_SETTINGS(getArray,"animaltypes_fish")),3]) select 0;
         if (!isNil "_fish") then {
@@ -52,7 +53,7 @@ if (isNull _curObject) exitWith {
             };
         };
     };
-};
+};*/
 
 if (_curObject isKindOf "CAManBase") exitWith {
     if (player distance _curObject < 5) then {

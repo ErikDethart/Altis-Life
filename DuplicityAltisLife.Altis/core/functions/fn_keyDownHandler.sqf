@@ -1,6 +1,6 @@
 #include "..\..\script_macros.hpp"
 /*
-*    File: fn_keyHandler.sqf
+*    File: fn_keyDownHandler.sqf
 *    Author: Bryan "Tonic" Boardwine
 *
 *    Description:
@@ -73,7 +73,10 @@ if (_code in actionKeys "User10") then {
 };
 
 if (_code in actionKeys "User8") then {
-    [player] spawn life_fnc_bloodbag;
+    if (life_inv_bloodbag > 0 && (damage player > 0)) then {
+        [player] spawn life_fnc_bloodbag;
+    };
+    true breakOut "main";
 };
 
 if (life_container_active) exitwith {
