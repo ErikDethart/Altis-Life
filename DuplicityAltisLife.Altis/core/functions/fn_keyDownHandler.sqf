@@ -79,6 +79,12 @@ if (_code in actionKeys "User8") then {
     true breakOut "main";
 };
 
+if (_code in actionKeys "PushToTalk" || _code in actionKeys "PushToTalkAll" || _code in actionKeys "PushToTalkSide" || _code in actionKeys "PushToTalkCommand" || _code in actionKeys "voiceOverNet") then {
+    if (currentChannel in [0, 1, 2, 6, 7, 8]) then {
+        true breakOut "main";
+    };
+}
+
 if (life_container_active) exitwith {
     //ignore movement actions
     private _allowedMoves = [
