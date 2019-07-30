@@ -55,7 +55,7 @@ private _index = 0;
 
         ctrlSetText [(200 + _index), getText(configFile >> "CfgWeapons" >> _className >> "picture")];
 
-        buttonSetAction [(300 + _index), format ["[%1, %2, %3] call life_fnc_weaponShopBuy;", str(_className), _price, str(_shop)]];
+        buttonSetAction [(300 + _index), format ["[%1, %2, %3] spawn life_fnc_weaponShopBuy;", str(_className), _price, str(_shop)]];
 
         _color = "";
         if ((CASH + BANK) >= _price) then {
@@ -76,7 +76,7 @@ private _index = 0;
                     _displayName = getText(configFile >> "CfgMagazines" >> ((_mags select 0) select 0) >> "displayName");
                 };
                 _price = ((_mags select 0) select 2);
-                buttonSetAction [(600 + _index), format ["[%1, %2, %3] call life_fnc_weaponShopBuy;", str(((_mags select 0) select 0)), _price, str(_shop)]];
+                buttonSetAction [(600 + _index), format ["[%1, %2, %3] spawn life_fnc_weaponShopBuy;", str(((_mags select 0) select 0)), _price, str(_shop)]];
                 if ((CASH + BANK) >= _price) then {
                     _color = "#00FF00";
                 } else {
@@ -98,7 +98,7 @@ private _index = 0;
                     _displayName = getText(configFile >> "CfgMagazines" >> ((_mags select 1) select 0) >> "displayName");
                 };
                 _price = ((_mags select 1) select 2);
-                buttonSetAction [(900 + _index), format ["[%1, %2, %3] call life_fnc_weaponShopBuy;", str(((_mags select 1) select 0)), _price, str(_shop)]];
+                buttonSetAction [(900 + _index), format ["[%1, %2, %3] spawn life_fnc_weaponShopBuy;", str(((_mags select 1) select 0)), _price, str(_shop)]];
                 if ((CASH + BANK) >= _price) then {
                     _color = "#00FF00";
                 } else {
@@ -136,7 +136,7 @@ _index = 0;
         (_display displayCtrl (2000 + _index)) ctrlSetPosition [0.00625, (0.01 + (_index * 0.14))];
         (_display displayCtrl (2000 + _index)) ctrlCommit 0;
         ctrlSetText [(2100 + _index), getText(configFile >> _section >> _className >> "picture")];
-        buttonSetAction [(2200 + _index), format ["[%1, %2, %3] call life_fnc_weaponShopBuy;", str(_className), _price, str(_shop)]];
+        buttonSetAction [(2200 + _index), format ["[%1, %2, %3] spawn life_fnc_weaponShopBuy;", str(_className), _price, str(_shop)]];
         _color = "";
         if ((CASH + BANK) >= _price) then {
             _color = "#00FF00";

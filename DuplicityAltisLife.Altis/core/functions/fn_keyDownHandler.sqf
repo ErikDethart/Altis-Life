@@ -83,7 +83,7 @@ if (_code in actionKeys "PushToTalk" || _code in actionKeys "PushToTalkAll" || _
     if (currentChannel in [0, 1, 2, 6, 7, 8]) then {
         true breakOut "main";
     };
-}
+};
 
 if (life_container_active) exitwith {
     //ignore movement actions
