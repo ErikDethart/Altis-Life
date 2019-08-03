@@ -118,7 +118,7 @@ switch (_side) do {
 _packet remoteExec ["SOCK_fnc_requestReceived", _unit];
 
 if (_side isEqualTo civilian) then {
-    _query = format ["SELECT wantedBounty FROM wanted WHERE wantedID='%1' AND active='1'", _uid];
+    _query = format ["SELECT bounty FROM wanted WHERE pid='%1' AND active='1'", _uid];
 
     _queryResult = [_query,2] call DB_fnc_asyncCall;
 

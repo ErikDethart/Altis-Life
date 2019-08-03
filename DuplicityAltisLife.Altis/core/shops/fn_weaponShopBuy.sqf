@@ -11,10 +11,17 @@ params [
     ["_shop", "", [""]]
 ];
 
+scopeName "main";
+
 private _itemInfo = [_className] call life_fnc_fetchCfgDetails;
 
-if (!(player canAdd _className) && ((_itemInfo select 6) != "CfgVehicles") && ((_itemInfo select 4) in [4096,131072])) exitWith {
-    hint "You don't have enough room for that item.";
+if !((_itemInfo select 6) isEqualTo "CfgVehicles") then {
+    if ((_itemInfo select 4) in [4096,131072] || {_itemInfo select 6 isEqualTo "CfgMagazines"}) then {
+        if !(player canAdd _className) then {
+            hint "You don't have enough room for that item";
+            breakOut "main";
+        };
+    };
 };
 
 if (_price > (CASH + BANK)) exitWith {

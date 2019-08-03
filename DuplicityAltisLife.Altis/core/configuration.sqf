@@ -36,7 +36,6 @@ life_admin_debug = false;
 life_civ_position = [];
 life_markers = false;
 life_markers_active = false;
-life_canpay_bail = true;
 life_storagePlacing = scriptNull;
 life_hideoutBuildings = [];
 life_firstSpawn = true;

@@ -2,6 +2,7 @@
     Master UI Resource File
 */
 #include "common.hpp"
+
 #include "shop_items.hpp"
 #include "player_inv.hpp"
 #include "gang.hpp"
@@ -9,7 +10,6 @@
 #include "impound.hpp"
 #include "bank.hpp"
 #include "veh_shop.hpp"
-//#include "shops.hpp"
 #include "hud_stats.hpp"
 #include "admin_menu.hpp"
 #include "cell_phone.hpp"
@@ -30,3 +30,4 @@
 #include "newsStation.hpp"
 #include "weapon_shop.hpp"
 #include "interactionMenu.hpp"
+

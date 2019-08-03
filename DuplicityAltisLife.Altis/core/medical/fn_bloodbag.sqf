@@ -76,7 +76,7 @@ if !(_inVeh) then {
 if (!alive player) exitWith {};
 if (life_isDowned || {life_interrupted}) exitWith {};
 if (player getVariable ["restrained", false]) exitWith {};
-if (player distance _target > 5) exitWith {};
+if (player distance _unit > 5) exitWith {};
 if !(alive _unit) exitWith {};
 if (_inVeh && {(driver objectParent player) isEqualTo player}) exitWith {};
 if !([false, "bloodbag", 1] call life_fnc_handleInv) exitWith {};

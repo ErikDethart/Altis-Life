@@ -7,15 +7,16 @@
     can be properly inserted into the database without causing
     any problems. The return method is 'hacky' but it's effective.
 */
-private ["_array"];
-_array = [_this,0,"",[""]] call BIS_fnc_param;
+params [
+    ["_array", "", [""]]
+];
 if (_array isEqualTo "") exitWith {[]};
 _array = toArray(_array);
 
 _array = _array - [34];
 
 {
-    if (_x == 96) then {
+    if (_x isEqualTo 96) then {
         _array set [_forEachIndex, 34];
     };
 } forEach _array;

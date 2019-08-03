@@ -75,7 +75,6 @@ diag_log "[Life Client] Executing client.fsm";
 (findDisplay 46) displayAddEventHandler ["KeyUp", "_this call life_fnc_keyUpHandler"];
 [player, life_settings_enableSidechannel, playerSide] remoteExecCall ["TON_fnc_manageSC", RSERV];
 
-[] call life_fnc_hudSetup;
 [] spawn life_fnc_survival;
 
 0 cutText ["","BLACK IN"];
@@ -111,10 +110,10 @@ publicVariableServer "life_fnc_RequestClientId";
 
 } forEach getArray (missionConfigFile >> "disableChannels");
 
-if (life_HC_isActive) then {
-    [getPlayerUID player, player getVariable ["realname", name player]] remoteExec ["HC_fnc_wantedProfUpdate", HC_Life];
-} else {
-    [getPlayerUID player, player getVariable ["realname", name player]] remoteExec ["life_fnc_wantedProfUpdate", RSERV];
+[] spawn {
+    if !(isNull (uiNamespace getVariable ["playerHUD", displayNull])) exitWith {};
+    [] call life_fnc_hudUpdate;
+    sleep 5;
 };
 
 diag_log "----------------------------------------------------------------------------------------------------";

@@ -18,7 +18,7 @@ class Life_RscStructuredText_HUDCommon: Life_RscStructuredText {
 };
 
 class playerHUD {
-    idd = 457;
+    idd = -1;
     duration = 10e10;
     movingEnable = 0;
     fadein = 0;

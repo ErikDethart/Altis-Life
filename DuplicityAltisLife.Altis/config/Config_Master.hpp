@@ -157,7 +157,7 @@ class Life_Settings {
                                  //Commander/tactical view is accessed via pressing . [NUM] by default. It raises the camera significantly higher and steeper above the player in order to give a boarder tactical view of the surrounding area.
 
     /* Wanted System Settings *
-    /* crimes[] = {String, Bounty, Code} */
+    /* crimes[] = {String, Code, Bounty} */
     crimes[] = {
         {"STR_Crime_187V","650","187V"},
         {"STR_Crime_187","2000","187"},
@@ -222,3 +222,4 @@ class Life_Settings {
 #include "Config_Housing.hpp"
 #include "Config_Garages.hpp"
 #include "Config_Actions.hpp"
+#include "Config_Crimes.hpp"

@@ -11,45 +11,51 @@
 params [
     ["_unit", objNull ,[objNull]],
     ["_type", "", [""]],
-    ["_customBounty", -1, [0]]
+    ["_count", 1, [0]]
 ];
 
-private _uid = getPlayerUID _unit; 
-private _name = name _unit;
+private _uid = getPlayerUID _unit;
+private _crimeCfg = (missionConfigFile >> "Crimes" >> _type);
 
-if (_uid isEqualTo "" || {_type isEqualTo ""} || {_name isEqualTo ""}) exitWith {}; //Bad data passed.
+if (isNull _unit) exitWith {};
+if (_type isEqualTo "") exitWith {};
+if (_uid isEqualTo "") exitWith {};
+if !((side _unit) isEqualTo civilian) exitWith {};
+if !(isClass _crimeCfg) exitWith {};
 
-//What is the crime?
-private _crimesConfig = getArray(missionConfigFile >> "Life_Settings" >> "crimes");
-private _index = [_type,_crimesConfig] call TON_fnc_index;
+private _varName = getText(_crimeCfg >> "varName");
+private _bounty = getNumber(_crimeCfg >> "bounty");
 
-if (_index isEqualTo -1) exitWith {};
-
-_type = [_type, parseNumber ((_crimesConfig select _index) select 1)];
-
-if (count _type isEqualTo 0) exitWith {}; //Not our information being passed...
-//Is there a custom bounty being sent? Set that as the pricing.
-if !(_customBounty isEqualTo -1) then {_type set[1,_customBounty];};
-//Search the wanted list to make sure they are not on it.
-
-private _query = format ["SELECT wantedID FROM wanted WHERE wantedID='%1'",_uid];
+private _query = format ["SELECT pid, crimes, bounty FROM wanted WHERE pid='%1'", _uid];
 private _queryResult = [_query,2,true] call DB_fnc_asyncCall;
-private _val = [_type select 1] call DB_fnc_numberSafe;
-private _number = _type select 0;
 
-if !(count _queryResult isEqualTo 0) then {
-    _query = format ["SELECT wantedCrimes, wantedBounty FROM wanted WHERE wantedID='%1'",_uid];
-    _queryResult = [_query,2] call DB_fnc_asyncCall;
-    _pastCrimes = [_queryResult select 0] call DB_fnc_mresToArray;
-    _pastCrimes pushBack _number;
-    _pastCrimes = [_pastCrimes] call DB_fnc_mresArray;
-    _query = format ["UPDATE wanted SET wantedCrimes = '%1', wantedBounty = wantedBounty + '%2', active = '1' WHERE wantedID='%3'",_pastCrimes,_val,_uid];
-    [_query,1] call DB_fnc_asyncCall;
+if (count _queryResult isEqualTo 0) then {
+    _bounty = _bounty * _count;
+    private _crimes = [[_varName, _count]];
+    _query = format ["INSERT INTO wanted (pid, crimes, bounty, active) VALUES('%1', '%2', '%3', 1)", _uid, [_crimes] call DB_fnc_mresArray, [_bounty] call DB_fnc_numberSafe];
+    [_query, 1] call DB_fnc_asyncCall;
 } else {
-    _crime = [_type select 0];
-    _crime = [_crime] call DB_fnc_mresArray;
-    _query = format ["INSERT INTO wanted (wantedID, wantedName, wantedCrimes, wantedBounty, active) VALUES('%1', '%2', '%3', '%4', '1')",_uid,_name,_crime,_val];
-    [_query,1] call DB_fnc_asyncCall;
+    _queryResult = [_queryResult] call DB_fnc_mresToArray;
+    if !(_uid isEqualTo _queryResult select 0) exitWith {};
+    private _crimes = _queryResult select 1;
+    private _oldBounty = _queryResult select 2;
+
+    private _exists = false;
+    {
+        if ((_x select 0) isEqualTo _varName) exitWith {
+            _crimes set [_forEachIndex, [(_x select 0), ((_x select 1) + _count)]];
+            _exists = true;
+        };
+    } forEach _crimes;
+
+    if !(_exists) then {
+        _crimes pushBack [_varName, _count];
+    };
+
+    _bounty = _oldBounty + _bounty;
+
+    _query = format ["UPDATE wanted SET crimes='%1', bounty='%2', active='1' WHERE pid='%3'", [_crimes] call DB_fnc_mresArray, [_bounty] call DB_fnc_numberSafe, _uid];
+    [_query, 1] call DB_fnc_asyncCall;
 };
 
-[((_queryResult select 1) + (_type select 1))] remoteExecCall ["life_fnc_updateWanted", _unit];
+[_bounty] remoteExec ["life_fnc_updateWanted", _unit];

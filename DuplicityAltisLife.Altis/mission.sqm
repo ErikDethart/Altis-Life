@@ -36956,7 +36956,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="removeAllWeapons this; this enableSimulation false; this allowDamage false; this addAction[localize""STR_MAR_Pay_Bail"",life_fnc_postBail,"""",0,false,false,"""",' life_canpay_bail && life_is_arrested ',5];";
+						init="removeAllWeapons this; this enableSimulation false; this allowDamage false; this addAction[localize""STR_MAR_Pay_Bail"",life_fnc_postBail,"""",0,false,false,"""",'life_is_arrested',5];";
 						disableSimulation=1;
 					};
 					id=1049;
